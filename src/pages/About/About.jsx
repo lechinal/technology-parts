@@ -29,7 +29,7 @@ const About = () => {
           <li>Livrare rapida si sigura</li>
         </ul>
       </div>
-      <button type="submit" className={styles.submit}>
+      <button type="button" className={styles.button}>
         Cere o oferta
       </button>
     </section>

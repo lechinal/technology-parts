@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 
 import logoWT from "../../assets/logo/logo-wText-small.svg";
@@ -13,23 +12,25 @@ const Header = ({ openModal }) => {
       </div>
       <div className={styles.content}>
         <div className={styles.inner}>
-          <img src={logoText} alt="logo only text" />
+          <img src={logoText} alt="logo text" />
         </div>
       </div>
       <nav className={styles.nav}>
         <ul>
-          <li>
-            <Link className={styles.linkButton} to="/">
-              {" "}
-              Home{" "}
-            </Link>
-          </li>
           <li>
             <button
               className={styles.linkButton}
               onClick={() => openModal("about")}
             >
               About
+            </button>
+          </li>
+          <li>
+            <button
+              className={styles.linkButton}
+              onClick={() => openModal("services")}
+            >
+              Services
             </button>
           </li>
           <li>

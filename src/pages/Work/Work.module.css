@@ -1,34 +1,73 @@
 .work {
-  padding: 3rem 2rem; /* ajustat conform SCSS original */
+  background: var(--color-bg);
   color: var(--color-fg);
-  background-color: var(--color-bg);
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.work h2 {
-  font-family: var(--font-family);
+.title {
+  font-size: 2.5rem;
   font-weight: var(--font-weight-bold);
-  font-size: 2rem;
-  margin-bottom: var(--element-margin);
+  margin-bottom: 1rem;
+  letter-spacing: var(--letter-spacing-heading);
 }
 
-.work .project {
-  margin-bottom: var(--element-margin);
+.intro {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  color: var(--color-fg-light);
 }
 
-.work .project h3 {
-  font-family: var(--font-family);
+.list {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.subtitle {
+  font-size: 1.75rem;
+  color: var(--color-logo);
+  margin: 3rem 0 1rem;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.projects div {
+  background: var(--color-bg-alt);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--color-border-bg-alt);
+  transition: background var(--transition-base);
+}
+
+.projects div:hover {
+  background: var(--color-border-hover);
+}
+
+.projects strong {
+  display: block;
   font-weight: var(--font-weight-bold);
-  font-size: 1.25rem;
   margin-bottom: 0.5rem;
+  color: var(--color-fg-bold);
 }
 
-.work .project p {
-  font-family: var(--font-family);
-  font-weight: var(--font-weight); /* corectat din --font-weight-normal */
-  font-size: 1rem;
-  line-height: 1.5;
+.projects p {
+  font-size: 0.95rem;
+  color: var(--color-fg-light);
 }
-.submit {
+.buttonBox {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.button {
   padding: 0.75rem 1.5rem;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--color-border);
@@ -40,6 +79,28 @@
   font-weight: var(--font-weight-bold);
 }
 
-.submit:hover {
+.button:hover {
   background-color: var(--color-border-bg);
+}
+
+/* Responsive tweaks */
+@media (max-width: 980px) {
+  .work {
+    padding: 3rem 1.5rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 736px) {
+  .work {
+    padding: 2rem 1rem;
+  }
+  .projects {
+    grid-template-columns: 1fr;
+  }
 }

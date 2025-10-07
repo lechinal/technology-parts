@@ -2,7 +2,7 @@
 import React from "react";
 import styles from "./Contact.module.css";
 
-const Contact = () => {
+const Contact = ({}) => {
   return (
     <section className={styles.contact}>
       <div className={styles.inner}>

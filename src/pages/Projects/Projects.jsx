@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { projectData, projectCategories } from "../../utils/projectsData.js";
 import NavigationButtons from "../../components/NavigationButtons/NavigationButtons";
 import styles from "./Projects.module.css";
+import CloseButton from "../../components/CloseButton/CloseButton.jsx";
+// import CloseButton from "../../components/CloseButton/CloseButton.jsx";
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -63,7 +65,7 @@ const Projects = () => {
             ))
           ) : (
             <p>
-              Nu există proiecte în categoria "{activeCategory}" deocamdată.
+              Nu exista proiecte in categoria "{activeCategory}" deocamdata.
             </p>
           )}
         </div>

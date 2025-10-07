@@ -7,15 +7,13 @@ import {
 } from "react-router-dom";
 
 import Modal from "./components/Modal/Modal";
-
 import Home from "./pages/Home/Home";
 import Work from "./pages/Work/Work";
 import Projects from "./pages/Projects/Projects";
 import ProjectDetails from "./pages/ProjectDetails/ProjectDetails";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
-
-// import projects from "./utils/projects";
+import Services from "./pages/Services/Services";
 
 function App() {
   const [modalContent, setModalContent] = useState(null);
@@ -26,10 +24,13 @@ function App() {
         setModalContent(<Work previewMode closeModal={closeModal} />);
         break;
       case "about":
-        setModalContent(<About />);
+        setModalContent(<About closeModal={closeModal} />);
+        break;
+      case "services":
+        setModalContent(<Services closeModal={closeModal} />);
         break;
       case "contact":
-        setModalContent(<Contact />);
+        setModalContent(<Contact closeModal={closeModal} />);
         break;
       default:
         setModalContent(null);
@@ -42,21 +43,22 @@ function App() {
 
   return (
     <BrowserRouter basename={isGithubPages ? "/technology-parts/" : "/"}>
-      <div className="app-wrapper">
-        <div className="page-center">
-          <Routes>
-            <Route path="/" element={<Home openModal={openModal} />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/projects/:id" element={<ProjectDetails />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </div>
-
-        <Modal isOpen={!!modalContent} onClose={closeModal}>
-          {modalContent}
-        </Modal>
+      {/* <div className="app-wrapper"> */}
+      <div className="page-center">
+        <Routes>
+          <Route path="/" element={<Home openModal={openModal} />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:id" element={<ProjectDetails />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </div>
+
+      <Modal isOpen={!!modalContent} onClose={closeModal}>
+        {modalContent}
+      </Modal>
+      {/* </div> */}
     </BrowserRouter>
   );
 }

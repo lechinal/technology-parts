@@ -25,6 +25,12 @@
   width: 45%;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.images img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .backBtn {
@@ -34,6 +40,10 @@
   font-size: 1rem;
   cursor: pointer;
   margin-bottom: 1rem;
+}
+.images img:hover {
+  transform: scale(1.08);
+  filter: brightness(1.1) contrast(1.1);
 }
 
 .backBtn:hover {

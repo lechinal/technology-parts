@@ -3,6 +3,8 @@
   background-color: var(--color-bg);
   color: var(--color-fg);
   text-align: center;
+
+  position: relative;
 }
 
 .header {
@@ -94,6 +96,23 @@
 .info p {
   font-size: 1rem;
   line-height: 1.4;
+}
+
+.detailsBtn {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--color-border);
+  background-color: transparent;
+  color: var(--color-fg);
+  cursor: pointer;
+  transition: background-color var(--transition-base) ease;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+}
+
+.detailsBtn:hover {
+  background-color: var(--color-border-bg);
+  transform: translateY(-2px);
 }
 
 /* ✅ Responsive - Tablete */

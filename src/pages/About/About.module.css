@@ -1,27 +1,63 @@
 .about {
-  padding: 6rem 2rem; /* exact ca în SCSS */
-  text-align: center;
+  background: var(--color-bg);
   color: var(--color-fg);
-  background-color: var(--color-bg);
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: var(--font-family);
 }
 
-.about h2 {
-  font-family: var(--font-family);
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.header {
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 2.5rem;
   font-weight: var(--font-weight-bold);
-  letter-spacing: var(--letter-spacing-heading); /* adăugat pentru heading */
-  font-size: 2rem;
-  margin-bottom: var(--element-margin);
+  letter-spacing: var(--letter-spacing-heading);
+  margin-bottom: 0.5rem;
 }
 
-.about p {
-  font-family: var(--font-family);
-  font-weight: var(--font-weight); /* normal weight din variabile */
+.description {
+  font-size: 1.125rem;
+  color: var(--color-fg-light);
+  line-height: 1.6;
+}
+
+.paragraph {
   font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: var(--element-margin);
+  color: var(--color-fg);
+  line-height: 1.6;
 }
 
-.submit {
+.features {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.features li {
+  background: var(--color-bg-alt);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--color-border-bg-alt);
+  transition: background var(--transition-base);
+}
+
+.features li:hover {
+  background: var(--color-border-hover);
+}
+
+.button {
   padding: 0.75rem 1.5rem;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--color-border);
@@ -33,6 +69,31 @@
   font-weight: var(--font-weight-bold);
 }
 
-.submit:hover {
+.button:hover {
   background-color: var(--color-border-bg);
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 736px) {
+  .about {
+    padding: 2rem 1rem;
+  }
+
+  .button {
+    width: 100%;
+  }
 }

@@ -9,12 +9,12 @@ const NavigationButtons = () => {
   const goBack = () => navigate(-1);
 
   return (
-    <div className={styles.navButtons}>
-      <button className={styles.btn} onClick={goHome}>
-        <i className="fa-solid fa-house"></i> Home
+    <div type="button" className={styles.navButtons}>
+      <button className={styles.button} onClick={goHome}>
+        Home
       </button>
-      <button className={styles.btn} onClick={goBack}>
-        <i className="fa-solid fa-arrow-left"></i> Înapoi
+      <button type="button" className={styles.button} onClick={goBack}>
+        Înapoi
       </button>
     </div>
   );
