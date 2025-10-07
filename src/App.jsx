@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  BrowserRouter,
+} from "react-router-dom";
 
 import Modal from "./components/Modal/Modal";
 
@@ -10,7 +15,7 @@ import ProjectDetails from "./pages/ProjectDetails/ProjectDetails";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 
-import projects from "./utils/projects";
+// import projects from "./utils/projects";
 
 function App() {
   const [modalContent, setModalContent] = useState(null);
@@ -33,8 +38,10 @@ function App() {
 
   const closeModal = () => setModalContent(null);
 
+  const isGithubPages = import.meta.env.BASE_URL.includes("technology-parts");
+
   return (
-    <Router>
+    <BrowserRouter basename={isGithubPages ? "/technology-parts/" : "/"}>
       <div className="app-wrapper">
         <div className="page-center">
           <Routes>
@@ -50,7 +57,7 @@ function App() {
           {modalContent}
         </Modal>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
