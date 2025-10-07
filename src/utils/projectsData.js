@@ -1,0 +1,556 @@
+// Definirea categoriilor de proiecte pt butoanele de filtrare
+export const projectCategories = [
+  "Toate Proiectele",
+  "Constructii beton",
+  "Constructii lemn",
+  "Constructii metalice",
+  "Constructii zidarie",
+  "Finisaje interioare",
+  "Amenajari pavaje",
+  "Reabilitari",
+];
+
+// Tablou principal al proiectelor
+export const projectData = [
+  //---Amenajari pavaje (ap) ---
+  {
+    id: "ap-001",
+    title: "Amenajare Curte - Casa Alba Iulia",
+    category: "Amenajari pavaje",
+    description:
+      "Proiect de amenajare peisagistică și montare pavaj exterior, incluzând alei pietonale și zonă de acces auto.",
+    images: [
+      "/assets/projects/ap-001/ap-001-1.jpg",
+      "/assets/projects/ap-001/ap-001-2.jpg",
+      "/assets/projects/ap-001/ap-001-3.jpg",
+      "/assets/projects/ap-001/ap-001-4.jpg",
+      "/assets/projects/ap-001/ap-001-5.jpg",
+    ],
+  },
+  {
+    id: "ap-002",
+    title: "Amenajare Curte - Casa Cluj Napoca",
+    category: "Amenajari pavaje",
+    description:
+      "Montare pavaj decorativ și drenaj aferent pentru o reședință privată din zona Cluj.",
+    images: [
+      "/assets/projects/ap-002/ap-002-1.jpg",
+      "/assets/projects/ap-002/ap-002-2.jpg",
+      "/assets/projects/ap-002/ap-002-3.jpg",
+      "/assets/projects/ap-002/ap-002-4.jpg",
+      "/assets/projects/ap-002/ap-002-5.jpg",
+      "/assets/projects/ap-002/ap-002-6.jpg",
+      "/assets/projects/ap-002/ap-002-7.jpg",
+      "/assets/projects/ap-002/ap-002-8.jpg",
+      "/assets/projects/ap-002/ap-002-9.jpg",
+    ],
+  },
+  {
+    id: "ap-003",
+    title: "Pavaj și Alei - Casa Alba Iulia (Ionut)",
+    category: "Amenajari pavaje",
+    description:
+      "Amenajare completă pavaj exterior la Casa Ionuț din Alba Iulia.",
+    images: [
+      "/assets/projects/ap-003/ap-003-1.jpg",
+      "/assets/projects/ap-003/ap-003-2.jpg",
+    ],
+  },
+
+  // --- CONSTRUCTII BETON (cb) ---
+  {
+    id: "cb-001",
+    title: "Structură Beton - Camereta Petrosani",
+    category: "Constructii beton",
+    description:
+      "Execuție structură de rezistență din beton armat pentru clădire Camereta Petrosani.",
+    images: [
+      "/assets/projects/cb-001/cb-001-1.jpg",
+      "/assets/projects/cb-001/cb-001-2.jpg",
+    ],
+  },
+  {
+    id: "cb-002",
+    title: "Platformă și Canal Auto",
+    category: "Constructii beton",
+    description:
+      "Turnare platformă industrială și realizare canal de inspecție auto.",
+    images: [
+      "/assets/projects/cb-002/cb-002-1.jpg",
+      "/assets/projects/cb-002/cb-002-2.jpg",
+    ],
+  },
+  {
+    id: "cb-003",
+    title: "Fundație Casa Alba Iulia",
+    category: "Constructii beton",
+    description:
+      "Săpături și turnare fundație tip radier/continuă pentru o casă în regim propriu.",
+    images: [
+      "/assets/projects/cb-003/cb-003-1.jpg",
+      "/assets/projects/cb-003/cb-003-2.jpg",
+      "/assets/projects/cb-003/cb-003-3.jpg",
+      "/assets/projects/cb-003/cb-003-4.jpg",
+      "/assets/projects/cb-003/cb-003-5.jpg",
+      "/assets/projects/cb-003/cb-003-6.jpg",
+      "/assets/projects/cb-003/cb-003-7.jpg",
+    ],
+  },
+
+  // --- CONSTRUCTII LEMN (cl) ---
+  {
+    id: "cl-001",
+    title: "Casă din Lemn pentru Copii",
+    category: "Constructii lemn",
+    description:
+      "Construcție integrală casă de joacă/mică dependință cu structură din lemn.",
+    images: [
+      "/assets/projects/cl-001/cl-001-1.jpg",
+      "/assets/projects/cl-001/cl-001-2.jpg",
+      "/assets/projects/cl-001/cl-001-3.jpg",
+      "/assets/projects/cl-001/cl-001-4.jpg ",
+      "/assets/projects/cl-001/cl-001-5.jpg ",
+    ],
+  },
+  {
+    id: "cl-002",
+    title: "Filigorie (Foișor) Alba Iulia",
+    category: "Constructii lemn",
+    description:
+      "Proiectare și execuție foișor din lemn masiv cu acoperiș tip șindrilă.",
+    images: [
+      "/assets/projects/cl-002/cl-002-1.jpg",
+      "/assets/projects/cl-002/cl-002-2.jpg",
+      "/assets/projects/cl-002/cl-002-3.jpg",
+    ],
+  },
+  {
+    id: "cl-003",
+    title: "Filigorie (Foișor) Cluj",
+    category: "Constructii lemn",
+    description:
+      "Construcție structură din lemn pentru zonă de relaxare exterioară (Cluj).",
+    images: [
+      "/assets/projects/cl-003/cl-003-1.jpg",
+      "/assets/projects/cl-003/cl-003-2.jpg",
+      "/assets/projects/cl-003/cl-003-3.jpg",
+      "/assets/projects/cl-003/cl-003-4.jpg",
+      "/assets/projects/cl-003/cl-003-5.jpg",
+      "/assets/projects/cl-003/cl-003-6.jpg",
+      "/assets/projects/cl-003/cl-003-7.jpg",
+      "/assets/projects/cl-003/cl-003-8.jpg",
+    ],
+  },
+  {
+    id: "cl-004",
+    title: "Termoizolație Pod Casa Alba Iulia",
+    category: "Constructii lemn",
+    description:
+      "Lucrări de termoizolare cu vată minerală și placare cu OSB pentru pod locuibil.",
+    images: [
+      "/assets/projects/cl-004/cl-004-1.jpg",
+      "/assets/projects/cl-004/cl-004-2.jpg",
+      "/assets/projects/cl-004/cl-004-3.jpg",
+      "/assets/projects/cl-004/cl-004-4.jpg",
+      "/assets/projects/cl-004/cl-004-5.jpg",
+      "/assets/projects/cl-004/cl-004-6.jpg",
+      "/assets/projects/cl-004/cl-004-7.jpg",
+      "/assets/projects/cl-004/cl-004-8.jpg",
+      "/assets/projects/cl-004/cl-004-9.jpg",
+      "/assets/projects/cl-004/cl-004-10.jpg",
+      "/assets/projects/cl-004/cl-004-11.jpg",
+      "/assets/projects/cl-004/cl-004-12.jpg",
+      "/assets/projects/cl-004/cl-004-13.jpg",
+      "/assets/projects/cl-004/cl-004-14.jpg",
+      "/assets/projects/cl-004/cl-004-15.jpg",
+      "/assets/projects/cl-004/cl-004-16.jpg",
+      "/assets/projects/cl-004/cl-004-17.jpg",
+      "/assets/projects/cl-004/cl-004-18.jpg",
+      "/assets/projects/cl-004/cl-004-19.jpg",
+      "/assets/projects/cl-004/cl-004-20.jpg",
+      "/assets/projects/cl-004/cl-004-21.jpg",
+      "/assets/projects/cl-004/cl-004-22.jpg",
+      "/assets/projects/cl-004/cl-004-23.jpg",
+      "/assets/projects/cl-004/cl-004-24.jpg",
+      "/assets/projects/cl-004/cl-004-25.jpg",
+    ],
+  },
+
+  // --- CONSTRUCTII METALICE (cm) ---
+  {
+    id: "cm-001",
+    title: "Structură Industrială (Abus - Germania)",
+    category: "Constructii metalice",
+    description:
+      "Montaj structuri metalice complexe pentru hale industriale în Germania.",
+    images: [
+      "/assets/projects/cm-001/cm-001-1.jpg",
+      "/assets/projects/cm-001/cm-001-2.jpg",
+      "/assets/projects/cm-001/cm-001-3.jpg",
+      "/assets/projects/cm-001/cm-001-4.jpg",
+    ],
+  },
+  {
+    id: "cm-002",
+    title: "Structură Industrială (Bosch/Siemens - Dilingen)",
+    category: "Constructii metalice",
+    description:
+      "Lucrări de construcții metalice pentru extinderea fabricii Bosch/Siemens Hausgerate.",
+    images: [
+      "/assets/projects/cm-002/cm-002-1.jpg",
+      "/assets/projects/cm-002/cm-002-2.jpg",
+    ],
+  },
+  {
+    id: "cm-003",
+    title: "Casă cu Structură Metalică Alba Iulia",
+    category: "Constructii metalice",
+    description:
+      "Construcție integrală casă unifamilială pe structură metalică ușoară/greoaie.",
+    images: [
+      "/assets/projects/cm-003/cm-003-1.jpg",
+      "/assets/projects/cm-003/cm-003-2.jpg",
+      "/assets/projects/cm-003/cm-003-3.jpg",
+      "/assets/projects/cm-003/cm-003-4.jpg",
+      "/assets/projects/cm-003/cm-003-5.jpg",
+      "/assets/projects/cm-003/cm-003-6.jpg",
+      "/assets/projects/cm-003/cm-003-7.jpg",
+    ],
+  },
+  {
+    id: "cm-004",
+    title: "Amenajare Container Modular",
+    category: "Constructii metalice",
+    description:
+      "Reconversie și amenajare container standard într-un spațiu locuibil/birou.",
+    images: [
+      "/assets/projects/cm-004/cm-004-1.jpg",
+      "/assets/projects/cm-004/cm-004-2.jpg",
+      "/assets/projects/cm-004/cm-004-3.jpg",
+    ],
+  },
+  {
+    id: "cm-005",
+    title: "Structură Industrială (Amazon - Koln, Germania)",
+    category: "Constructii metalice",
+    description:
+      "Montaj și asamblare elemente metalice pentru centrul logistic Amazon din Koln.",
+    images: [
+      "/assets/projects/cm-005/cm-005-1.jpg",
+      "/assets/projects/cm-005/cm-005-2.jpg",
+      "/assets/projects/cm-005/cm-005-3.jpg",
+      "/assets/projects/cm-005/cm-005-4.jpg",
+      "/assets/projects/cm-005/cm-005-5.jpg",
+      "/assets/projects/cm-005/cm-005-6.jpg",
+      "/assets/projects/cm-005/cm-005-7.jpg",
+      "/assets/projects/cm-005/cm-005-8.jpg",
+      "/assets/projects/cm-005/cm-005-9.jpg",
+      "/assets/projects/cm-005/cm-005-10.jpg",
+      "/assets/projects/cm-005/cm-005-11.jpg",
+      "/assets/projects/cm-005/cm-005-12.jpg",
+      "/assets/projects/cm-005/cm-005-13.jpg",
+      "/assets/projects/cm-005/cm-005-14.jpg",
+      "/assets/projects/cm-005/cm-005-15.jpg",
+      "/assets/projects/cm-005/cm-005-16.jpg",
+      "/assets/projects/cm-005/cm-005-17.jpg",
+      "/assets/projects/cm-005/cm-005-18.jpg",
+      "/assets/projects/cm-005/cm-005-19.jpg",
+    ],
+  },
+  {
+    id: "cm-006",
+    title: "Structură Industrială (Mercedes - Stuttgard, Germania)",
+    category: "Constructii metalice",
+    description:
+      "Proiect de construcții și sudură metalică conform standardelor Mercedes.",
+    images: [
+      "/assets/projects/cm-006/cm-006-1.jpg",
+      "/assets/projects/cm-006/cm-006-2.jpg",
+      "/assets/projects/cm-006/cm-006-3.jpg",
+      "/assets/projects/cm-006/cm-006-4.jpg",
+      "/assets/projects/cm-006/cm-006-5.jpg",
+      "/assets/projects/cm-006/cm-006-6.jpg",
+      "/assets/projects/cm-006/cm-006-7.jpg",
+    ],
+  },
+  {
+    id: "cm-007",
+    title: "Structură Industrială (Gummerbasch - Germania)",
+    category: "Constructii metalice",
+    description:
+      "Execuție elemente portante metalice pentru o unitate de producție din Gummerbasch.",
+    images: [
+      "/assets/projects/cm-007/cm-007-1.jpg",
+      "/assets/projects/cm-007/cm-007-2.jpg",
+      "/assets/projects/cm-007/cm-007-3.jpg",
+      "/assets/projects/cm-007/cm-007-4.jpg",
+      "/assets/projects/cm-007/cm-007-5.jpg",
+    ],
+  },
+  {
+    id: "cm-008",
+    title: "Hală Metalică (Brașov, România)",
+    category: "Constructii metalice",
+    description:
+      "Proiect complet de hală metalică pe o suprafață de 1500mp, inclusiv închideri și acoperiș.",
+    images: [
+      "/assets/projects/cm-008/cm-008-1.jpg",
+      "/assets/projects/cm-008/cm-008-2.jpg",
+      "/assets/projects/cm-008/cm-008-3.jpg",
+      "/assets/projects/cm-008/cm-008-4.jpg",
+      "/assets/projects/cm-008/cm-008-5.jpg",
+      "/assets/projects/cm-008/cm-008-6.jpg",
+      "/assets/projects/cm-008/cm-008-7.jpg",
+      "/assets/projects/cm-008/cm-008-8.jpg",
+      "/assets/projects/cm-008/cm-008-9.jpg",
+      "/assets/projects/cm-008/cm-008-10.jpg",
+      "/assets/projects/cm-008/cm-008-11.jpg",
+      "/assets/projects/cm-008/cm-008-12.jpg",
+      "/assets/projects/cm-008/cm-008-13.jpg",
+    ],
+  },
+
+  // --- CONSTRUCTII ZIDARIE (cz) ---
+  {
+    id: "cz-001",
+    title: "Zidărie și Compartimentări - Casa Alba Iulia (Ionut)",
+    category: "Constructii zidarie",
+    description:
+      "Lucrări de zidărie portantă și neportantă, inclusiv tencuieli interioare și exterioare.",
+    images: [
+      "/assets/projects/cz-001/cz-001-1.jpg",
+      "/assets/projects/cz-001/cz-001-2.jpg",
+      "/assets/projects/cz-001/cz-001-3.jpg",
+      "/assets/projects/cz-001/cz-001-4.jpg",
+      "/assets/projects/cz-001/cz-001-5.jpg",
+      "/assets/projects/cz-001/cz-001-6.jpg",
+      "/assets/projects/cz-001/cz-001-7.jpg",
+      "/assets/projects/cz-001/cz-001-8.jpg",
+      "/assets/projects/cz-001/cz-001-9.jpg",
+      "/assets/projects/cz-001/cz-001-10.jpg",
+      "/assets/projects/cz-001/cz-001-11.jpg",
+      "/assets/projects/cz-001/cz-001-12.jpg",
+      "/assets/projects/cz-001/cz-001-13.jpg",
+      "/assets/projects/cz-001/cz-001-14.jpg",
+      "/assets/projects/cz-001/cz-001-15.jpg",
+      "/assets/projects/cz-001/cz-001-16.jpg",
+      "/assets/projects/cz-001/cz-001-17.jpg",
+      "/assets/projects/cz-001/cz-001-18.jpg",
+    ],
+  },
+
+  // --- FINISAJE INTERIOARE (fi) ---
+  {
+    id: "fi-001",
+    title: "Finisaje Interioare Complexe - Casa Alba Iulia (Ionut)",
+    category: "Finisaje interioare",
+    description:
+      "Gletuire, vopsitorie, montaj parchet, placări ceramice și alte finisaje de înaltă calitate.",
+    images: [
+      "/assets/projects/fi-001/fi-001-1.jpg",
+      "/assets/projects/fi-001/fi-001-2.jpg",
+      "/assets/projects/fi-001/fi-001-3.jpg",
+      "/assets/projects/fi-001/fi-001-4.jpg",
+      "/assets/projects/fi-001/fi-001-5.jpg",
+      "/assets/projects/fi-001/fi-001-6.jpg",
+      "/assets/projects/fi-001/fi-001-7.jpg",
+      "/assets/projects/fi-001/fi-001-8.jpg",
+      "/assets/projects/fi-001/fi-001-9.jpg",
+      "/assets/projects/fi-001/fi-001-10.jpg",
+      "/assets/projects/fi-001/fi-001-11.jpg",
+      "/assets/projects/fi-001/fi-001-12.jpg",
+      "/assets/projects/fi-001/fi-001-13.jpg",
+    ],
+  },
+
+  // --- REABILITARI (re) ---
+  {
+    id: "re-001",
+    title: "Reabilitare Bazin de Apă Huedin",
+    category: "Reabilitari",
+    description:
+      "Lucrări complexe de hidroizolație și consolidare pentru bazinul de apă potabilă Huedin.",
+    images: [
+      "/assets/projects/re-001/re-001-1.jpg",
+      "/assets/projects/re-001/re-001-2.jpg",
+    ],
+  },
+  {
+    id: "re-002",
+    title: "Reabilitare Biserică Unitariană Târgu Mureș",
+    category: "Reabilitari",
+    description:
+      "Proiect de restaurare și reabilitare a fațadei și structurii Bisericii Unitariene.",
+    images: [
+      "/assets/projects/re-002/re-002-1.jpg",
+      "/assets/projects/re-002/re-002-2.jpg",
+      "/assets/projects/re-002/re-002-3.jpg",
+      "/assets/projects/re-002/re-002-4.jpg",
+      "/assets/projects/re-002/re-002-5.jpg",
+      "/assets/projects/re-002/re-002-6.jpg",
+      "/assets/projects/re-002/re-002-7.jpg",
+      "/assets/projects/re-002/re-002-8.jpg",
+    ],
+  },
+  {
+    id: "re-003",
+    title: "Reabilitare Termică Bloc Locuințe Cluj-Napoca",
+    category: "Reabilitari",
+    description:
+      "Proiect major de termoizolare și reabilitare energetică pentru un bloc de locuințe.",
+    images: [
+      "/assets/projects/re-003/re-003-1.jpg",
+      "/assets/projects/re-003/re-003-2.jpg",
+      "/assets/projects/re-003/re-003-3.jpg",
+      "/assets/projects/re-003/re-003-4.jpg",
+      "/assets/projects/re-003/re-003-5.jpg",
+      "/assets/projects/re-003/re-003-6.jpg",
+      "/assets/projects/re-003/re-003-7.jpg",
+    ],
+  },
+  {
+    id: "re-004",
+    title: "Reabilitare Casa Ighiu, Alba Iulia",
+    category: "Reabilitari",
+    description:
+      "Lucrări de reparații capitale și modernizare la o casă din Ighiu.",
+    images: [
+      "/assets/projects/re-004/re-004-1.jpg",
+      "/assets/projects/re-004/re-004-2.jpg",
+      "/assets/projects/re-004/re-004-3.jpg",
+      "/assets/projects/re-004/re-004-4.jpg",
+      "/assets/projects/re-004/re-004-5.jpg",
+      "/assets/projects/re-004/re-004-6.jpg",
+      "/assets/projects/re-004/re-004-7.jpg",
+      "/assets/projects/re-004/re-004-8.jpg",
+      "/assets/projects/re-004/re-004-9.jpg",
+    ],
+  },
+  {
+    id: "re-005",
+    title: "Reabilitare Casa Neogotică Cluj-Napoca",
+    category: "Reabilitari",
+    description:
+      "Proiect de restaurare a elementelor decorative și structurale ale unei case istorice.",
+    images: [
+      "/assets/projects/re-005/re-005-1.jpg",
+      "/assets/projects/re-005/re-005-2.jpg",
+      "/assets/projects/re-005/re-005-3.jpg",
+      "/assets/projects/re-005/re-005-4.jpg",
+      "/assets/projects/re-005/re-005-5.jpg",
+      "/assets/projects/re-005/re-005-6.jpg",
+      "/assets/projects/re-005/re-005-7.jpg",
+      "/assets/projects/re-005/re-005-8.jpg",
+    ],
+  },
+  {
+    id: "re-006",
+    title: "Reabilitare Clădire Culturală Cluj-Napoca",
+    category: "Reabilitari",
+    description:
+      "Lucrări de reparații și finisaje la interiorul și exteriorul unei clădiri de patrimoniu.",
+    images: [
+      "/assets/projects/re-006/re-006-1.jpg",
+      "/assets/projects/re-006/re-006-2.jpg",
+      "/assets/projects/re-006/re-006-3.jpg",
+      "/assets/projects/re-006/re-006-4.jpg",
+      "/assets/projects/re-006/re-006-5.jpg",
+      "/assets/projects/re-006/re-006-6.jpg",
+      "/assets/projects/re-006/re-006-7.jpg",
+      "/assets/projects/re-006/re-006-8.jpg",
+      "/assets/projects/re-006/re-006-9.jpg",
+      "/assets/projects/re-006/re-006-10.jpg",
+      "/assets/projects/re-006/re-006-11.jpg",
+    ],
+  },
+  {
+    id: "re-007",
+    title: "Consolidare cu Fibră de Sticlă Cluj-Napoca",
+    category: "Reabilitari",
+    description:
+      "Proiect specializat de consolidare structurală utilizând plase din fibră de sticlă.",
+    images: [
+      "/assets/projects/re-007/re-007-1.jpg",
+      "/assets/projects/re-007/re-007-2.jpg",
+      "/assets/projects/re-007/re-007-3.jpg",
+      "/assets/projects/re-007/re-007-4.jpg",
+      "/assets/projects/re-007/re-007-5.jpg",
+      "/assets/projects/re-007/re-007-6.jpg",
+      "/assets/projects/re-007/re-007-7.jpg",
+      "/assets/projects/re-007/re-007-8.jpg",
+      "/assets/projects/re-007/re-007-9.jpg",
+      "/assets/projects/re-007/re-007-10.jpg",
+      "/assets/projects/re-007/re-007-11.jpg",
+      "/assets/projects/re-007/re-007-12.jpg",
+      "/assets/projects/re-007/re-007-13.jpg",
+      "/assets/projects/re-007/re-007-14.jpg",
+      "/assets/projects/re-007/re-007-15.jpg",
+      "/assets/projects/re-007/re-007-16.jpg",
+      "/assets/projects/re-007/re-007-17.jpg",
+      "/assets/projects/re-007/re-007-18.jpg",
+      "/assets/projects/re-007/re-007-19.jpg",
+      "/assets/projects/re-007/re-007-20.jpg",
+    ],
+  },
+  {
+    id: "re-008",
+    title: "Stopare Infiltrații Apă Deva",
+    category: "Reabilitari",
+    description:
+      "Identificare și soluționare definitivă a problemelor de infiltrații de apă în subsol/fundație.",
+    images: [
+      "/assets/projects/re-008/re-008-1.jpg",
+      "/assets/projects/re-008/re-008-2.jpg",
+      "/assets/projects/re-008/re-008-3.jpg",
+      "/assets/projects/re-008/re-008-4.jpg",
+      "/assets/projects/re-008/re-008-5.jpg",
+      "/assets/projects/re-008/re-008-6.jpg",
+      "/assets/projects/re-008/re-008-7.jpg",
+      "/assets/projects/re-008/re-008-8.jpg",
+      "/assets/projects/re-008/re-008-9.jpg",
+      "/assets/projects/re-008/re-008-10.jpg",
+      "/assets/projects/re-008/re-008-11.jpg",
+      "/assets/projects/re-008/re-008-12.jpg",
+      "/assets/projects/re-008/re-008-13.jpg",
+      "/assets/projects/re-008/re-008-14.jpg",
+      "/assets/projects/re-008/re-008-15.jpg",
+      "/assets/projects/re-008/re-008-16.jpg",
+      "/assets/projects/re-008/re-008-17.jpg",
+      "/assets/projects/re-008/re-008-18.jpg",
+    ],
+  },
+  {
+    id: "re-009",
+    title: "Reabilitare Spital Alba Iulia",
+    category: "Reabilitari",
+    description:
+      "Lucrări de reparații și modernizare a secțiilor din cadrul Spitalului Alba Iulia.",
+    images: [
+      "/assets/projects/re-009/re-009-1.jpg",
+      "/assets/projects/re-009/re-009-2.jpg",
+      "/assets/projects/re-009/re-009-3.jpg",
+      "/assets/projects/re-009/re-009-4.jpg",
+      "/assets/projects/re-009/re-009-5.jpg",
+      "/assets/projects/re-009/re-009-6.jpg",
+      "/assets/projects/re-009/re-009-7.jpg",
+      "/assets/projects/re-009/re-009-8.jpg",
+      "/assets/projects/re-009/re-009-9.jpg",
+      "/assets/projects/re-009/re-009-10.jpg",
+      "/assets/projects/re-009/re-009-11.jpg",
+    ],
+  },
+  {
+    id: "re-010",
+    title: "Reabilitare Unitate Militară Sebeș, Alba Iulia",
+    category: "Reabilitari",
+    description:
+      "Reabilitare complexă a clădirilor de cazare și administrative din cadrul unității militare.",
+    images: [
+      "/assets/projects/re-010/re-010-1.jpg",
+      "/assets/projects/re-010/re-010-2.jpg",
+      "/assets/projects/re-010/re-010-3.jpg",
+      "/assets/projects/re-010/re-010-4.jpg",
+      "/assets/projects/re-010/re-010-5.jpg",
+    ],
+  },
+];

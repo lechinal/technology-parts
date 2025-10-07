@@ -1,0 +1,45 @@
+.work {
+  padding: 3rem 2rem; /* ajustat conform SCSS original */
+  color: var(--color-fg);
+  background-color: var(--color-bg);
+}
+
+.work h2 {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+  font-size: 2rem;
+  margin-bottom: var(--element-margin);
+}
+
+.work .project {
+  margin-bottom: var(--element-margin);
+}
+
+.work .project h3 {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.work .project p {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight); /* corectat din --font-weight-normal */
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.submit {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--color-border);
+  background-color: transparent;
+  color: var(--color-fg);
+  cursor: pointer;
+  transition: background-color var(--transition-base) ease;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+}
+
+.submit:hover {
+  background-color: var(--color-border-bg);
+}

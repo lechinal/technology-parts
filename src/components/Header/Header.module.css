@@ -1,0 +1,239 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+  background: radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
+  width: 100%;
+  transition: transform var(--transition-article) ease-in-out,
+    filter var(--transition-article) ease-in-out,
+    opacity var(--transition-article) ease-in-out;
+}
+
+.logo {
+  position: relative;
+  width: 5.5rem;
+  height: 5.5rem;
+  line-height: 5.5rem;
+  border: var(--border-width) solid var(--color-border);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.logo .icon {
+  font-size: 2rem;
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  bottom: calc(-5rem - var(--border-width));
+  left: 49.6%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 3.5rem;
+  background-color: var(--color-border);
+  animation: moveLine 2s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+@keyframes moveLine {
+  0% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 0.7;
+  }
+}
+
+.content {
+  border-top: var(--border-width) solid var(--color-border);
+  border-bottom: var(--border-width) solid var(--color-border);
+
+  padding: 3rem 2rem;
+  margin: 0 auto;
+
+  position: relative;
+
+  width: 30vw;
+  max-width: 900px;
+  min-width: 250px;
+}
+
+.content::after {
+  position: absolute;
+  content: "";
+  bottom: calc(-5rem - var(--border-width));
+  left: 49.8%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 3.5rem;
+  background-color: var(--color-border);
+  animation: moveLine 2s ease-in-out infinite;
+  opacity: 0.8;
+}
+.content .inner img {
+  width: auto;
+  height: 4rem;
+}
+
+.content h1,
+.content h2 {
+  margin: 0;
+  font-family: var(--font-family);
+}
+
+.content h1 {
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-heading);
+}
+
+.content h2 {
+  font-weight: var(--font-weight);
+}
+
+.nav {
+  margin-top: 3rem;
+}
+
+.nav ul {
+  display: flex;
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  border-left: var(--border-width) solid var(--color-border);
+}
+
+.nav li:first-child {
+  border-left: 0;
+}
+
+.nav li button,
+.linkButton {
+  display: block;
+  min-width: 7.5rem;
+  height: var(--element-height);
+  line-height: var(--element-height);
+  padding: 0 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
+  font-size: 0.8rem;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition-base);
+  color: var(--color-fg);
+}
+
+.linkButton:hover,
+.nav li button:hover {
+  background-color: var(--color-border-bg);
+}
+
+.linkButton:active,
+.nav li button:active {
+  background-color: var(--color-border-bg-alt);
+}
+
+/**
+* ! Media Queries
+*/
+/* Responsive Design */
+
+@media (max-width: 1200px) {
+  .content {
+    width: 35vw;
+    max-width: 800px;
+  }
+  .nav ul {
+    flex-wrap: wrap;
+  }
+}
+
+/* 3️⃣ Tablete landscape (max 992px) */
+@media (max-width: 992px) {
+  .content {
+    width: 45vw;
+    max-width: 700px;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .nav ul {
+    flex-wrap: wrap;
+  }
+}
+
+/* 4️⃣ Tablete portrait (max 768px) */
+@media (max-width: 768px) {
+  .content {
+    width: 55vw;
+    max-width: 600px;
+    padding: 2.2rem 1.5rem;
+  }
+  .content .inner img {
+    height: 3.2rem;
+  }
+  .nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .nav li {
+    border-left: 0;
+    border-top: var(--border-width) solid var(--color-border);
+  }
+}
+
+/* 5️⃣ Telefoane mari (max 576px) */
+@media (max-width: 576px) {
+  .content {
+    width: 70vw;
+    max-width: 500px;
+    padding: 2rem 1rem;
+  }
+  .content .inner img {
+    height: 2.8rem;
+  }
+  .nav ul {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .nav li {
+    border-top: var(--border-width) solid var(--color-border);
+  }
+  .nav li:first-child {
+    border-top: 0;
+  }
+}
+
+/* 6️⃣ Telefoane mici (max 400px) */
+@media (max-width: 400px) {
+  .content .inner img {
+    height: 2.5rem;
+  }
+  .nav ul {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}
+
+@media (max-width: 330px) {
+}

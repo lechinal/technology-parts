@@ -1,0 +1,56 @@
+:root {
+  /* Culori principale */
+  --color-bg: #1b1f22;
+  --color-bg-alt: #000000;
+  --color-bg-overlay: rgba(19, 21, 25, 0.5);
+  --color-fg: #ffffff;
+  --color-fg-bold: #ffffff;
+  --color-fg-light: rgba(255, 255, 255, 0.5);
+  --color-logo: #f3904d;
+
+  /* Border și fundaluri */
+  --color-border: #ffffff;
+  --color-border-bg: rgba(255, 255, 255, 0.075);
+  --color-border-bg-alt: rgba(255, 255, 255, 0.175);
+  --color-border-hover: rgba(255, 255, 255, 0.075);
+  --color-border-active: rgba(255, 255, 255, 0.175);
+
+  /* Dimensiuni */
+  --border-width: 1px;
+  --border-radius: 4px;
+  --element-height: 2.75rem;
+  --element-margin: 2rem;
+
+  /* Logo și header */
+  --logo-size: 5.5rem;
+  --logo-size-small: 4.75rem;
+  --header-padding: 3rem 2rem;
+  --header-padding-small: 2.5rem 1rem;
+
+  /* Font */
+  --font-family: "Source Sans Pro", sans-serif;
+  --font-family-fixed: "Courier New", monospace;
+  --font-weight: 300;
+  --font-weight-bold: 600;
+  --letter-spacing: 0.2rem;
+  --letter-spacing-heading: 0.5rem;
+
+  /* Tranziții / animații */
+  --transition-base: 0.2s;
+  --transition-bg: 2.5s;
+  --transition-intro: 0.75s;
+  --transition-article: 0.325s;
+
+  /* Responsive / breakpoints */
+  --break-xlarge-min: 1281px;
+  --break-xlarge-max: 1680px;
+  --break-large-min: 981px;
+  --break-large-max: 1280px;
+  --break-medium-min: 737px;
+  --break-medium-max: 980px;
+  --break-small-min: 481px;
+  --break-small-max: 736px;
+  --break-xsmall-min: 361px;
+  --break-xsmall-max: 480px;
+  --break-xxsmall-max: 360px;
+}
