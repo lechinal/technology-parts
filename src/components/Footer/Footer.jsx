@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./Footer.module.css";
 
 import InfoBadge from "../InfoBadge/InfoBadge";
+import LogoFooter from "../LogoFooter/LogoFooter";
+
 const IconArrowUp = () => (
   <svg
     viewBox="0 0 24 24"
@@ -38,17 +40,7 @@ const Footer = ({ onBackToTop } = {}) => {
       <div className={styles.inner}>
         <div className={styles.grid}>
           <div className={styles.brand}>
-            <div className={styles.logoWrap}>
-              <span className={styles.logoMark} aria-hidden="true">
-                TP
-              </span>
-              <div className={styles.brandText}>
-                <span className={styles.company}>Technology Parts</span>
-                <span className={styles.slogan}>
-                  Calitate germană • Execuție românească
-                </span>
-              </div>
-            </div>
+            <LogoFooter />
 
             <p className={styles.about}>
               Din 2017 oferim soluții complete de construcții: fundații,
