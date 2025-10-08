@@ -1,32 +1,297 @@
 .footer {
-  padding: 3rem 2rem;
-  text-align: center;
-  color: var(--color-fg-light); /* text mai deschis, ca în design */
-  background-color: var(--color-bg-alt);
-  font-family: var(--font-family);
-}
+  /* background: linear-gradient(
+    180deg,
+    var(--color-bg) 0%,
+    rgba(10, 12, 14, 0.95) 100%
+  ); */
 
-.footer .social-links {
-  display: flex;
-  justify-content: center;
-  gap: var(--element-margin); /* folosit pentru distanța dintre icon-uri */
-  margin-bottom: var(--element-margin);
-}
-
-.footer .social-links a {
   color: var(--color-fg);
-  font-size: 1.25rem;
-  text-decoration: none;
-  transition: color var(--transition-base) ease;
-}
-
-.footer .social-links a:hover {
-  color: var(--color-border-bg);
-}
-
-.footer p {
+  padding: 48px 20px;
   font-family: var(--font-family);
-  font-size: 0.875rem;
-  font-weight: var(--font-weight);
-  margin: 0;
+  box-sizing: border-box;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid var(--color-border-bg-alt); /* linia albă subtilă */
+  padding-top: 36px; /* spațiu între linie și conținut */
+}
+
+/* grid layout */
+.grid {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  align-items: start;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  ); /* very subtle */
+  border-radius: calc(var(--border-radius) * 1.5);
+  padding: 20px;
+}
+
+/* îmbunătățește lizibilitatea textului pe fundal variat */
+.brandText .company,
+.links a,
+.contactList a,
+.misc a {
+  color: var(--color-fg);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); /* subtil, pentru contrast */
+}
+
+/* brand */
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.logoWrap {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.logoMark {
+  width: 56px;
+  height: 56px;
+  display: inline-grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--color-logo), #ffb680);
+  color: #081020;
+  font-weight: 800;
+  border-radius: 12px;
+  font-size: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45),
+    0 1px 0 rgba(255, 255, 255, 0.02) inset;
+}
+
+.brandText .company {
+  display: block;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.2px;
+}
+
+.brandText .slogan {
+  display: block;
+  color: var(--color-fg-light);
+  font-size: 0.85rem;
+}
+
+/* about */
+.about {
+  color: var(--color-fg-light);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 44ch;
+}
+
+/* CTA */
+.ctaRow {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.ctaPrimary {
+  background: linear-gradient(90deg, var(--color-logo), #ff9e4a);
+  color: var(--color-bg);
+  padding: 10px 14px;
+  border-radius: calc(var(--border-radius) * 2);
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  box-shadow: 0 6px 20px rgba(243, 144, 77, 0.12);
+}
+
+.ctaGhost {
+  border: 1px solid var(--color-border-bg-alt);
+  padding: 10px 14px;
+  color: var(--color-fg);
+  border-radius: calc(var(--border-radius) * 2);
+  text-decoration: none;
+}
+
+/* Links */
+.links ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+  display: grid;
+  gap: 8px;
+}
+
+.links a {
+  color: var(--color-fg);
+  opacity: 0.95;
+  text-decoration: none;
+  transition: color var(--transition-base) ease,
+    transform var(--transition-base) ease;
+}
+
+.links a:hover {
+  color: var(--color-logo);
+  transform: translateX(4px);
+}
+
+/* contact column */
+.contactList {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+  color: var(--color-fg-light);
+  display: grid;
+  gap: 8px;
+}
+
+.address {
+  color: var(--color-fg-light);
+  line-height: 1.35;
+}
+
+/* map preview */
+.mapPreview {
+  margin-top: 12px;
+  border-radius: calc(var(--border-radius) * 2);
+  overflow: hidden;
+  background: var(--color-bg-overlay);
+  padding: 8px;
+  width: 100%;
+  height: 90px;
+  display: grid;
+  place-items: center;
+  color: var(--color-fg-light);
+  font-size: 0.9rem;
+}
+
+.mapPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: var(--color-fg-light);
+}
+
+/* misc column */
+.misc .social {
+  display: flex;
+  gap: 12px;
+  padding: 0;
+  margin: 8px 0;
+  list-style: none;
+}
+
+.misc a {
+  color: var(--color-fg);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  transition: background var(--transition-base) ease,
+    transform var(--transition-base) ease;
+}
+
+.misc a:hover {
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateY(-3px);
+}
+
+/* hours & legal */
+.hours h5 {
+  margin: 0 0 6px 0;
+  color: var(--color-fg-light);
+  font-size: 0.9rem;
+}
+.legalWrap {
+  margin-top: 14px;
+  color: var(--color-fg-light);
+  font-size: 0.85rem;
+}
+.privacy {
+  display: inline-block;
+  margin-top: 6px;
+  color: var(--color-fg-light);
+  text-decoration: underline;
+}
+
+/* bottom row */
+.rowBottom {
+  border-top: 1px solid var(--color-border-bg-alt);
+  padding-top: 22px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.copy {
+  color: var(--color-fg-light);
+  font-size: 0.9rem;
+}
+.actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.topBtn {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  background: transparent;
+  border: 1px solid var(--color-border-bg-alt);
+  padding: 8px 10px;
+  color: var(--color-fg);
+  border-radius: calc(var(--border-radius) * 2);
+  cursor: pointer;
+  transition: transform var(--transition-base) ease,
+    background var(--transition-base) ease;
+}
+
+.topBtn:hover {
+  transform: translateY(-3px);
+  background: var(--color-bg-overlay);
+}
+
+.topLabel {
+  font-size: 0.85rem;
+  color: var(--color-fg-light);
+}
+
+/* responsive */
+@media (max-width: 980px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .mapPreview {
+    height: 80px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 32px 16px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    background: rgba(0, 0, 0, 0.35);
+  }
+  .rowBottom {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    text-align: center;
+  }
+  .ctaRow {
+    flex-direction: column;
+  }
+  .logoMark {
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
+  }
 }

@@ -4,6 +4,21 @@
   background-color: var(--color-bg);
 }
 
+/* Stiluri suplimentare pentru contextul de pagină */
+.pageView {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+/* Stiluri suplimentare pentru contextul de modal */
+.modalView {
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+}
+
 .contact h2 {
   font-family: var(--font-family);
   font-weight: var(--font-weight-bold);

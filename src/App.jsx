@@ -30,7 +30,7 @@ function App() {
         setModalContent(<Services closeModal={closeModal} />);
         break;
       case "contact":
-        setModalContent(<Contact closeModal={closeModal} />);
+        setModalContent(<Contact previewMode closeModal={closeModal} />);
         break;
       default:
         setModalContent(null);
