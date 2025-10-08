@@ -1,0 +1,19 @@
+/* contact column */
+.contactList {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+  color: var(--color-fg-light);
+  display: grid;
+  gap: 8px;
+}
+
+.address {
+  color: var(--color-fg-light);
+  line-height: 1.35;
+}
+
+.contactList a {
+  color: var(--color-fg);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}

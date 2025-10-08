@@ -1,0 +1,5 @@
+.hours h5 {
+  margin: 0 0 6px 0;
+  color: var(--color-fg-light);
+  font-size: 0.9rem;
+}

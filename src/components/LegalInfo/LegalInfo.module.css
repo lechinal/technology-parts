@@ -1,0 +1,13 @@
+/* legal */
+
+.legalWrap {
+  margin-top: 14px;
+  color: var(--color-fg-light);
+  font-size: 0.85rem;
+}
+.privacy {
+  display: inline-block;
+  margin-top: 6px;
+  color: var(--color-fg-light);
+  text-decoration: underline;
+}
