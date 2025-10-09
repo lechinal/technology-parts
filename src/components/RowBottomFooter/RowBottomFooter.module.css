@@ -13,35 +13,6 @@
   color: var(--color-fg-light);
   font-size: 0.9rem;
 }
-.actions {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-.topBtn {
-  display: inline-flex;
-  gap: 8px;
-  align-items: center;
-  background: transparent;
-  border: 1px solid var(--color-border-bg-alt);
-  padding: 8px 10px;
-  color: var(--color-fg);
-  border-radius: calc(var(--border-radius) * 2);
-  cursor: pointer;
-  transition: transform var(--transition-base) ease,
-    background var(--transition-base) ease;
-}
-
-.topBtn:hover {
-  transform: translateY(-3px);
-  background: var(--color-bg-overlay);
-}
-
-.topLabel {
-  font-size: 0.85rem;
-  color: var(--color-fg-light);
-}
 
 @media (max-width: 640px) {
   .rowBottom {

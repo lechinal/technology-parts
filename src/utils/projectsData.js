@@ -294,6 +294,11 @@ import re010_3 from "../assets/projects/re-010/re-010-3.jpg";
 import re010_4 from "../assets/projects/re-010/re-010-4.jpg";
 import re010_5 from "../assets/projects/re-010/re-010-5.jpg";
 
+// import Services icons
+import { FaBuilding, FaIndustry, FaPaintRoller, FaRoad } from "react-icons/fa6";
+import { BsBricks, BsTools } from "react-icons/bs";
+import { GiWoodFrame } from "react-icons/gi";
+
 // Definirea categoriilor de proiecte pt butoanele de filtrare
 export const projectCategories = [
   "Toate Proiectele",
@@ -764,5 +769,57 @@ export const projectData = [
     description:
       "Reabilitare complexă a clădirilor de cazare și administrative din cadrul unității militare.",
     images: [re010_1, re010_2, re010_3, re010_4, re010_5],
+  },
+];
+
+export const services = [
+  {
+    id: 1,
+    title: "Constructii beton",
+    description:
+      "Structuri solide din beton armat pentru fundatii, stalpi, grinzi si plansee. Executam lucrari de calitate cu respectarea standardelor tehnice.",
+    icon: "FaBuilding",
+  },
+  {
+    id: 2,
+    title: "Constructii lemn",
+    description:
+      "Case si structuri din lemn, de la schelet la finisaje. Utilizam materiale certificate si tehnici moderne de constructie.",
+    icon: "GiWoodFrame",
+  },
+  {
+    id: 3,
+    title: "Constructii metalice",
+    description:
+      "Hale industriale, structuri metalice si confectii metalice. Experienta acumulata in Germania ne permite solutii tehnice avansate.",
+    icon: "FaIndustry",
+  },
+  {
+    id: 4,
+    title: "Constructii zidarie",
+    description:
+      "Zidarie traditionala si moderna din caramida, BCA si alte materiale. Executam pereti portanti si despartitori cu finisaje impecabile.",
+    icon: "BsBricks",
+  },
+  {
+    id: 5,
+    title: "Finisaje interioare",
+    description:
+      "Glet, vopsitorie, montaj rigips, parchet si faianta. Transformam spatiile in conformitate cu viziunea ta.",
+    icon: "FaPaintRoller",
+  },
+  {
+    id: 6,
+    title: "Amenajari pavaje",
+    description:
+      "Pavaje exterioare din beton, piatra naturala si pavele autoblocante. Amenajari durabile pentru alei, curti si parcari.",
+    icon: "FaRoad",
+  },
+  {
+    id: 7,
+    title: "Reabilitari",
+    description:
+      "Consolidari, renovari si modernizari de cladiri existente. Aducem la viata spatii vechi cu solutii tehnice moderne.",
+    icon: "BsTools",
   },
 ];

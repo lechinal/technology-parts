@@ -1,6 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+
+import { FaBuilding, FaIndustry, FaPaintRoller, FaRoad } from "react-icons/fa6";
+import { BsBricks, BsTools } from "react-icons/bs";
+import { GiWoodFrame } from "react-icons/gi";
+
 import styles from "./Services.module.css";
+
+import { services } from "../../utils/projectsData";
 
 const Services = ({ closeModal }) => {
   const navigate = useNavigate();
@@ -9,57 +16,15 @@ const Services = ({ closeModal }) => {
     if (typeof closeModal === "function") closeModal();
   };
 
-  const services = [
-    {
-      id: 1,
-      title: "Constructii beton",
-      description:
-        "Structuri solide din beton armat pentru fundatii, stalpi, grinzi si plansee. Executam lucrari de calitate cu respectarea standardelor tehnice.",
-      icon: "🏗️",
-    },
-    {
-      id: 2,
-      title: "Constructii lemn",
-      description:
-        "Case si structuri din lemn, de la schelet la finisaje. Utilizam materiale certificate si tehnici moderne de constructie.",
-      icon: "🪵",
-    },
-    {
-      id: 3,
-      title: "Constructii metalice",
-      description:
-        "Hale industriale, structuri metalice si confectii metalice. Experienta acumulata in Germania ne permite solutii tehnice avansate.",
-      icon: "🔩",
-    },
-    {
-      id: 4,
-      title: "Constructii zidarie",
-      description:
-        "Zidarie traditionala si moderna din caramida, BCA si alte materiale. Executam pereti portanti si despartitori cu finisaje impecabile.",
-      icon: "🧱",
-    },
-    {
-      id: 5,
-      title: "Finisaje interioare",
-      description:
-        "Glet, vopsitorie, montaj rigips, parchet si faianta. Transformam spatiile in conformitate cu viziunea ta.",
-      icon: "🎨",
-    },
-    {
-      id: 6,
-      title: "Amenajari pavaje",
-      description:
-        "Pavaje exterioare din beton, piatra naturala si pavele autoblocante. Amenajari durabile pentru alei, curti si parcari.",
-      icon: "🛤️",
-    },
-    {
-      id: 7,
-      title: "Reabilitari",
-      description:
-        "Consolidari, renovari si modernizari de cladiri existente. Aducem la viata spatii vechi cu solutii tehnice moderne.",
-      icon: "🔧",
-    },
-  ];
+  const iconMap = {
+    FaBuilding: <FaBuilding />,
+    GiWoodFrame: <GiWoodFrame />,
+    FaIndustry: <FaIndustry />,
+    BsBricks: <BsBricks />,
+    FaPaintRoller: <FaPaintRoller />,
+    FaRoad: <FaRoad />,
+    BsTools: <BsTools />,
+  };
 
   return (
     <section className={styles.services}>
@@ -76,7 +41,7 @@ const Services = ({ closeModal }) => {
         <div className={styles.servicesGrid}>
           {services.map((service) => (
             <div key={service.id} className={styles.serviceCard}>
-              <div className={styles.serviceIcon}>{service.icon}</div>
+              <div className={styles.serviceIcon}>{iconMap[service.icon]}</div>
               <h3 className={styles.serviceTitle}>{service.title}</h3>
               <p className={styles.serviceDescription}>{service.description}</p>
             </div>

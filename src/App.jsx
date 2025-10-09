@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, Suspense, lazy, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -7,16 +7,29 @@ import {
 } from "react-router-dom";
 
 import Modal from "./components/Modal/Modal";
-import Home from "./pages/Home/Home";
-import Work from "./pages/Work/Work";
-import Projects from "./pages/Projects/Projects";
-import ProjectDetails from "./pages/ProjectDetails/ProjectDetails";
-import About from "./pages/About/About";
-import Contact from "./pages/Contact/Contact";
-import Services from "./pages/Services/Services";
+import Loader from "./components/Loader/Loader";
+
+//! Lazy imports
+const Home = lazy(() => import("./pages/Home/Home"));
+const Work = lazy(() => import("./pages/Work/Work"));
+const Projects = lazy(() => import("./pages/Projects/Projects"));
+const ProjectDetails = lazy(() =>
+  import("./pages/ProjectDetails/ProjectDetails")
+);
+const About = lazy(() => import("./pages/About/About"));
+const Contact = lazy(() => import("./pages/Contact/Contact"));
+const Services = lazy(() => import("./pages/Services/Services"));
 
 function App() {
   const [modalContent, setModalContent] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) return <Loader />;
 
   const openModal = (page) => {
     switch (page) {
@@ -43,22 +56,24 @@ function App() {
 
   return (
     <BrowserRouter basename={isGithubPages ? "/technology-parts/" : "/"}>
-      {/* <div className="app-wrapper"> */}
-      <div className="page-center">
-        <Routes>
-          <Route path="/" element={<Home openModal={openModal} />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/projects/:id" element={<ProjectDetails />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </div>
+      <Suspense fallback={<Loader />}>
+        {/* <div className="app-wrapper"> */}
+        <div className="page-center">
+          <Routes>
+            <Route path="/" element={<Home openModal={openModal} />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/:id" element={<ProjectDetails />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
 
-      <Modal isOpen={!!modalContent} onClose={closeModal}>
-        {modalContent}
-      </Modal>
-      {/* </div> */}
+        <Modal isOpen={!!modalContent} onClose={closeModal}>
+          {modalContent}
+        </Modal>
+        {/* </div> */}
+      </Suspense>
     </BrowserRouter>
   );
 }

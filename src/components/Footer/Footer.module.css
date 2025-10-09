@@ -15,7 +15,7 @@
   max-width: 1200px;
   margin: 0 auto;
   border-top: 2px solid var(--color-border-bg-alt);
-  padding-top: 36px; /* spațiu între linie și conținut */
+  padding-top: 36px;
 }
 
 /* grid layout */
@@ -27,7 +27,7 @@
   background: linear-gradient(
     rgba(255, 255, 255, 0.02),
     rgba(255, 255, 255, 0.01)
-  ); /* very subtle */
+  );
   border-radius: calc(var(--border-radius) * 1.5);
   padding: 20px;
 }
@@ -74,8 +74,8 @@
 
 /* misc column */
 .misc {
-  grid-column: 1 / -1; /* ocupă tot rândul grilei */
-  justify-content: center; /* centrează conținutul pe orizontală */
+  grid-column: 1 / -1;
+  justify-content: center;
   display: flex;
   flex-direction: row;
   gap: 12px;
