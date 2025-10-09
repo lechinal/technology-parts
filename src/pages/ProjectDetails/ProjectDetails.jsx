@@ -6,35 +6,59 @@ import NavigationButtons from "../../components/NavigationButtons/NavigationButt
 
 const ProjectDetails = () => {
   const { id } = useParams();
-  // Gasim proiectul dupa id (string, deoarece am id-uri de genul "ap-001")
   const project = projectData.find((p) => p.id === id);
-  const [selectedImage, setSelectedImage] = useState(null);
+
+  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   if (!project)
     return <p>Proiectul nu a fost găsit. Poate a fost mutat sau șters.</p>;
 
-  const handleImageClick = (img) => {
-    setSelectedImage(img);
+  const images = project.images;
+
+  // Deschide imaginea fullscreen (lightbox)
+  const handleImageClick = (index) => {
+    setSelectedImageIndex(index);
+    setImageLoaded(false);
   };
 
+  // Închide imaginea fullscreen
   const closeLightbox = () => {
-    setSelectedImage(null);
+    setSelectedImageIndex(null);
   };
-  /* inchide poza cu tasta ESC */
+
+  // Imagine următoare
+  const showNextImage = (e) => {
+    e.stopPropagation();
+    setSelectedImageIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+    setImageLoaded(false);
+  };
+
+  // Imagine anterioară
+  const showPrevImage = (e) => {
+    e.stopPropagation();
+    setSelectedImageIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+    setImageLoaded(false);
+  };
+
+  // Navigare cu tastatura (← → + ESC)
   useEffect(() => {
+    if (selectedImageIndex === null) return;
+
     const handleKeyDown = (e) => {
-      if (e.key === "Escape") {
-        closeLightbox();
-      }
+      if (e.key === "Escape") closeLightbox();
+      else if (e.key === "ArrowRight") showNextImage(e);
+      else if (e.key === "ArrowLeft") showPrevImage(e);
     };
 
-    if (selectedImage) {
-      document.addEventListener("keydown", handleKeyDown);
-    }
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [selectedImage]);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [selectedImageIndex, images.length]);
+
   return (
     <section className={styles.projectDetails}>
       <NavigationButtons />
@@ -47,19 +71,32 @@ const ProjectDetails = () => {
             key={index}
             src={img}
             alt={`${project.title} ${index + 1}`}
-            onClick={() => handleImageClick(img)}
+            onClick={() => handleImageClick(index)}
             className={styles.thumbnail}
           />
         ))}
       </div>
-      {/*Lightbox */}
-      {selectedImage && (
+
+      {/* LIGHTBOX */}
+      {selectedImageIndex !== null && (
         <div className={styles.lightbox} onClick={closeLightbox}>
+          <button className={styles.arrowLeft} onClick={showPrevImage}>
+            ❮
+          </button>
+
           <img
-            src={selectedImage}
+            src={images[selectedImageIndex]}
             alt="Fullscreen"
-            className={styles.lightboxImage}
+            className={`${styles.lightboxImage} ${
+              imageLoaded ? styles.show : ""
+            }`}
+            onLoad={() => setImageLoaded(true)}
+            onClick={(e) => e.stopPropagation()} // prevenim inchiderea la click pe imagine
           />
+
+          <button className={styles.arrowRight} onClick={showNextImage}>
+            ❯
+          </button>
           <button className={styles.closeBtn} onClick={closeLightbox}>
             ✕
           </button>
