@@ -5,7 +5,7 @@ import styles from "./Footer.module.css";
 import LogoFooter from "../LogoFooter/LogoFooter";
 import LinksFooter from "../LinksFooter/LinksFooter";
 import ContactInfo from "../ContactInfo/ContactInfo";
-import Map from "../Map/Map";
+// import Map from "../../pages/Map/Map";
 import FollowUs from "../FollowUs/FollowUs";
 import WorkingHours from "../WorkingHours/WorkingHours";
 import LegalInfo from "../LegalInfo/LegalInfo";
@@ -43,7 +43,7 @@ const Footer = () => {
           <LinksFooter />
           <div className={styles.contact}>
             <ContactInfo />
-            <Map />
+            {/* <MapFooter/> */}
           </div>
           <FollowUs />
           <div className={styles.misc}>

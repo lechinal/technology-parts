@@ -9,6 +9,7 @@ import {
 import Modal from "./components/Modal/Modal";
 import Loader from "./components/Loader/Loader";
 import NotFound from "./pages/NotFound/NotFound";
+import Map from "./pages/Map/Map";
 
 //! Lazy imports
 const Home = lazy(() => import("./pages/Home/Home"));
@@ -67,6 +68,7 @@ function App() {
             <Route path="/projects/:id" element={<ProjectDetails />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/map" element={<Map />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

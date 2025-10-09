@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Main.module.css";
 
 const Main = () => {
+  const navigate = useNavigate();
   const stats = [
     { number: "8+", label: "Ani de Experiență" },
     { number: "150+", label: "Proiecte Finalizate" },
@@ -31,9 +33,24 @@ const Main = () => {
           </div>
 
           <div className={styles.ctaButtons}>
-            <button className={styles.primaryBtn}>Cere o Ofertă</button>
-            <button className={styles.secondaryBtn}>Vezi Proiecte</button>
-            <button className={styles.secondaryBtn}>Localizare</button>
+            <button
+              className={styles.primaryBtn}
+              onClick={() => navigate("/contact")}
+            >
+              Cere o Ofertă
+            </button>
+            <button
+              className={styles.secondaryBtn}
+              onClick={() => navigate("/projects")}
+            >
+              Vezi Proiecte
+            </button>
+            <button
+              onClick={() => navigate("/map")}
+              className={styles.secondaryBtn}
+            >
+              Localizare
+            </button>
           </div>
         </div>
 
