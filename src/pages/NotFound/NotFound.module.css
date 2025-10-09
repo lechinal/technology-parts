@@ -1,0 +1,122 @@
+.notFoundPage {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f0f0f;
+  color: #fff;
+  padding: 2rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.content {
+  flex: 1;
+}
+
+.errorCode {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #ce9233;
+}
+
+.title {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.message {
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.primaryButton,
+.secondaryButton {
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primaryButton {
+  background: #ce9233;
+  color: #fff;
+}
+
+.secondaryButton {
+  background: transparent;
+  border: 2px solid #ce9233;
+  color: #ce9233;
+}
+
+.primaryButton:hover {
+  background: #b57f2c;
+}
+
+.secondaryButton:hover {
+  background: #ce9233;
+  color: #fff;
+}
+
+.suggestions {
+  margin-top: 2rem;
+}
+
+.suggestionsList {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.suggestionLink {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.suggestionLink:hover {
+  background: #ce9233;
+}
+
+.illustration {
+  flex: 1;
+  font-size: 5rem;
+  position: relative;
+}
+
+.spark {
+  position: absolute;
+  animation: sparkle 1.2s infinite ease-in-out;
+  color: #ffd700;
+}
+
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
