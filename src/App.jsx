@@ -8,6 +8,8 @@ import {
 
 import("./pages/Work/Work");
 import Work from "./pages/Work/Work";
+import Loader from "./components/Loader/Loader";
+import Modal from "./components/Modal/Modal";
 
 //! Lazy imports
 const Home = lazy(() => import("./pages/Home/Home"));
@@ -18,6 +20,7 @@ const ProjectDetails = lazy(() =>
 const About = lazy(() => import("./pages/About/About"));
 const Contact = lazy(() => import("./pages/Contact/Contact"));
 const Services = lazy(() => import("./pages/Services/Services"));
+const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
 
 function App() {
   const [modalContent, setModalContent] = useState(null);
