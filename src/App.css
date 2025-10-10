@@ -8,12 +8,15 @@ html {
   box-sizing: inherit;
 }
 
+body,
 body {
   margin: 0;
   padding: 0;
-
+  box-sizing: border-box;
   color: var(--color-fg);
   font-family: var(--font-family);
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* Reset link-uri */
@@ -36,9 +39,8 @@ ul {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  /* background-attachment: scroll; */
-  background-attachment: fixed;
-  /* background-color: #000; */
+  background-attachment: scroll;
+  /* background-attachment: fixed; */
 
   color: var(--color-fg);
   font-family: var(--font-family);

@@ -6,14 +6,11 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 
-import Modal from "./components/Modal/Modal";
-import Loader from "./components/Loader/Loader";
-import NotFound from "./pages/NotFound/NotFound";
-import Map from "./pages/Map/Map";
+import("./pages/Work/Work");
+import Work from "./pages/Work/Work";
 
 //! Lazy imports
 const Home = lazy(() => import("./pages/Home/Home"));
-const Work = lazy(() => import("./pages/Work/Work"));
 const Projects = lazy(() => import("./pages/Projects/Projects"));
 const ProjectDetails = lazy(() =>
   import("./pages/ProjectDetails/ProjectDetails")
