@@ -8,7 +8,7 @@ import {
 
 import("./pages/Work/Work");
 import Work from "./pages/Work/Work";
-import Loader from "./components/Loader/Loader";
+import Loader from "./components/Loader/Loader.jsx";
 import Modal from "./components/Modal/Modal";
 
 //! Lazy imports
