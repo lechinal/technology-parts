@@ -1,15 +1,10 @@
 import { useState, Suspense, lazy, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  BrowserRouter,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import("./pages/Work/Work");
 import Work from "./pages/Work/Work";
 import Loader from "./components/Loader/Loader.jsx";
 import Modal from "./components/Modal/Modal";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
 
 //! Lazy imports
 const Home = lazy(() => import("./pages/Home/Home"));
@@ -58,20 +53,21 @@ function App() {
 
   return (
     <BrowserRouter basename={isGithubPages ? "/technology-parts/" : "/"}>
+      <ScrollToTop />
       <Suspense fallback={<Loader />}>
         <div className="app-wrapper">
-          <div className="page-center">
-            <Routes>
-              <Route path="/" element={<Home openModal={openModal} />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/projects/:id" element={<ProjectDetails />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/map" element={<Map />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </div>
+          {/* <div className="page-center"> */}
+          <Routes>
+            <Route path="/" element={<Home openModal={openModal} />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/:id" element={<ProjectDetails />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/map" element={<Map />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          {/* </div> */}
 
           <Modal isOpen={!!modalContent} onClose={closeModal}>
             {modalContent}
