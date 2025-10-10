@@ -59,24 +59,24 @@ function App() {
   return (
     <BrowserRouter basename={isGithubPages ? "/technology-parts/" : "/"}>
       <Suspense fallback={<Loader />}>
-        {/* <div className="app-wrapper"> */}
-        <div className="page-center">
-          <Routes>
-            <Route path="/" element={<Home openModal={openModal} />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/projects/:id" element={<ProjectDetails />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/map" element={<Map />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </div>
+        <div className="app-wrapper">
+          <div className="page-center">
+            <Routes>
+              <Route path="/" element={<Home openModal={openModal} />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/projects/:id" element={<ProjectDetails />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/map" element={<Map />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </div>
 
-        <Modal isOpen={!!modalContent} onClose={closeModal}>
-          {modalContent}
-        </Modal>
-        {/* </div> */}
+          <Modal isOpen={!!modalContent} onClose={closeModal}>
+            {modalContent}
+          </Modal>
+        </div>
       </Suspense>
     </BrowserRouter>
   );
