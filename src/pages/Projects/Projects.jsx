@@ -71,7 +71,6 @@ const Projects = () => {
         </div>
       </div>
 
-      {/* Butoanele de navigare */}
       <NavigationButtons />
     </section>
   );

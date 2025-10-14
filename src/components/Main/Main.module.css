@@ -221,11 +221,7 @@
 
 /* =======================================================
    RESPONSIVE DESIGN
-   Desktop (≥1281px)
-   Tablet landscape (737–1280px)
-   Tablet portrait (481–736px)
-   Mobile (≤480px)
-======================================================= */
+ */
 
 /* ---------- Desktop Large: 1281px - 1680px ---------- */
 @media screen and (min-width: 1281px) {

@@ -22,12 +22,12 @@ const ProjectDetails = () => {
     setImageLoaded(false);
   };
 
-  // Închide imaginea fullscreen
+  // Inchide imaginea fullscreen
   const closeLightbox = () => {
     setSelectedImageIndex(null);
   };
 
-  // Imagine următoare
+  // Imagine urmatoare
   const showNextImage = (e) => {
     e.stopPropagation();
     setSelectedImageIndex((prevIndex) =>
@@ -36,7 +36,7 @@ const ProjectDetails = () => {
     setImageLoaded(false);
   };
 
-  // Imagine anterioară
+  // Imagine anterioara
   const showPrevImage = (e) => {
     e.stopPropagation();
     setSelectedImageIndex((prevIndex) =>

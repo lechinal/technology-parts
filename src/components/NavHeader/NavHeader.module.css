@@ -58,14 +58,14 @@
   }
 }
 
-/* 3️⃣ Tablete landscape (max 992px) */
+/*  Tablete landscape (max 992px) */
 @media (max-width: 992px) {
   .nav ul {
     flex-wrap: wrap;
   }
 }
 
-/* 4️⃣ Tablete portrait (max 768px) */
+/*  Tablete portrait (max 768px) */
 @media (max-width: 768px) {
   .nav ul {
     flex-direction: column;
@@ -77,7 +77,7 @@
   }
 }
 
-/* 5️⃣ Telefoane mari (max 576px) */
+/* Telefoane mari (max 576px) */
 @media (max-width: 576px) {
   .nav ul {
     flex-direction: column;
@@ -91,7 +91,7 @@
   }
 }
 
-/* 6️⃣ Telefoane mici (max 400px) */
+/* Telefoane mici (max 400px) */
 @media (max-width: 400px) {
   .nav ul {
     flex-direction: column;

@@ -4,7 +4,7 @@
   background-color: var(--color-bg);
 }
 
-/* Stiluri suplimentare pentru contextul de pagină */
+/* Stiluri suplimentare pentru contextul de pagina */
 .pageView {
   max-width: 1000px;
   margin: 0 auto;
@@ -22,7 +22,7 @@
 .contact h2 {
   font-family: var(--font-family);
   font-weight: var(--font-weight-bold);
-  letter-spacing: var(--letter-spacing-heading); /* adăugat */
+  letter-spacing: var(--letter-spacing-heading);
   font-size: 2rem;
   margin-bottom: var(--element-margin);
 }
@@ -37,7 +37,7 @@
 .contact textarea {
   padding: 0.75rem 1rem;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--color-border-bg-alt); /* corectat */
+  border: var(--border-width) solid var(--color-border-bg-alt);
   background-color: var(--color-bg-alt);
   color: var(--color-fg);
   font-family: var(--font-family);

@@ -83,7 +83,7 @@
   background-color: var(--color-border-bg);
 }
 
-/* Responsive tweaks */
+/* Responsive styles */
 @media (max-width: 980px) {
   .work {
     padding: 3rem 1.5rem;

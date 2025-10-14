@@ -5,7 +5,7 @@ const LegalInfo = () => {
     <div className={styles.legalWrap}>
       <p className={styles.legal}>CUI: RO12345678 • J01/123/2017</p>
       <a className={styles.privacy} href="/privacy">
-        Politica de confidențialitate
+        Politica de confidentialitate
       </a>
     </div>
   );

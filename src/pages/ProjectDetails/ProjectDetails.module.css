@@ -66,7 +66,7 @@
 
 /* Thumbnail selectat - efect overlay */
 .thumbnail.selected {
-  outline: 3px solid #ce9233; /* border portocaliu ca accent */
+  outline: 3px solid #ce9233;
   filter: brightness(1.15) contrast(1.1);
 }
 

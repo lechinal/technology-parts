@@ -8,7 +8,7 @@
   --color-fg-light: rgba(255, 255, 255, 0.5);
   --color-logo: #f3904d;
 
-  /* Border și fundaluri */
+  /* Border si fundaluri */
   --color-border: #ffffff;
   --color-border-bg: rgba(255, 255, 255, 0.274);
   --color-border-bg-alt: rgba(255, 255, 255, 0.175);
@@ -21,7 +21,7 @@
   --element-height: 2.75rem;
   --element-margin: 2rem;
 
-  /* Logo și header */
+  /* Logo si header */
   --logo-size: 5.5rem;
   --logo-size-small: 4.75rem;
   --header-padding: 3rem 2rem;
@@ -35,7 +35,7 @@
   --letter-spacing: 0.2rem;
   --letter-spacing-heading: 0.5rem;
 
-  /* Tranziții / animații */
+  /* Tranzitii / animatii */
   --transition-base: 0.2s;
   --transition-bg: 2.5s;
   --transition-intro: 0.75s;

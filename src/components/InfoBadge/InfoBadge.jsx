@@ -4,11 +4,11 @@ import BsInfos from "./Badges/BsInfos";
 
 /**
  * Props:
- * - content: JSX | string (conținutul din popout)
- * - direction: "top" | "right" | "bottom" | "left" (poziția popout)
+ * - content: JSX | string (continutul din popout)
+ * - direction: "top" | "right" | "bottom" | "left" (pozitia popout)
  * - size: "sm" | "md" | "lg"
  * - ariaLabel: string
- * - className: string (pentru poziționare custom)
+ * - className: string (pentru pozitionare custom)
  */
 const InfoBadge = ({
   content,
@@ -86,16 +86,16 @@ export default InfoBadge;
  * <InfoBadge
              content={
                <div>
-                 <strong>Te interesează structurile metalice?</strong>
+                 <strong>Te intereseaza structurile metalice?</strong>
                  <p>
-                   Avem experiență în hale industriale —{" "}
-                   <em>citește proiectele</em>.
+                   Avem experienta in hale industriale —{" "}
+                   <em>citeste proiectele</em>.
                  </p>
                </div>
              }
              direction="right"
              size="md"
-             ariaLabel="Mai multe informații despre structuri metalice"
+             ariaLabel="Mai multe informatii despre structuri metalice"
            />
  * 
  */
