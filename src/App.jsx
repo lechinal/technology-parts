@@ -16,6 +16,7 @@ const About = lazy(() => import("./pages/About/About"));
 const Contact = lazy(() => import("./pages/Contact/Contact"));
 const Services = lazy(() => import("./pages/Services/Services"));
 const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
+const Map = lazy(() => import("./pages/Map/Map"));
 
 function App() {
   const [modalContent, setModalContent] = useState(null);
