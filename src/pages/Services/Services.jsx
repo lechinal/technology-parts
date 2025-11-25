@@ -13,7 +13,6 @@ const Services = () => {
   const navigate = useNavigate();
   const handleClickOffer = () => {
     navigate("/contact");
-    if (typeof closeModal === "function") closeModal();
   };
 
   const iconMap = {
@@ -53,6 +52,9 @@ const Services = () => {
         </div>
 
         <div className={styles.cta}>
+          <h3 className={styles.ctaTitle}>
+            Transformă-ți Viziunea în Realitate!
+          </h3>
           <p className={styles.ctaText}>
             Ești pregătit să pui bazele viitorului tău proiect? Contactează
             echipa noastră pentru a discuta detaliile, pentru o estimare de cost

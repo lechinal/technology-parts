@@ -93,16 +93,13 @@
 }
 
 .finalSlogan {
-  /* Pentru sloganul final "Cu Technology Parts..." */
-  font-family: var(
-    --font-family-signature
-  ); /* Un font mai distinctiv pentru slogan */
-  font-size: var(--font-size-h5); /* Mărime mai mare */
-  font-weight: var(--font-weight-medium);
-  color: var(--color-logo); /* Culoare portocalie pentru a ieși în evidență */
+  font-family: var(--font-family-signature);
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-logo);
   margin-top: var(--space-md);
-  margin-bottom: var(--space-md); /* Adaugă spațiu și sub slogan */
-  text-shadow: var(--text-shadow-glow); /* Efect de glow puternic */
+  margin-bottom: var(--space-md);
+  text-shadow: var(--text-shadow-glow);
 }
 
 .button {

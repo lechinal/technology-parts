@@ -22,19 +22,21 @@
   font-family: var(--font-family-primary);
   font-size: var(--font-size-h2);
   font-weight: var(--font-weight-bold);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   color: var(--color-fg);
-
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
 .description {
   font-family: var(--font-family-secondary);
   font-size: var(--font-size-base);
-  color: var(--color-fg);
-  line-height: 1.8;
+  font-weight: var(--font-weight-semi);
+  line-height: 1.6;
   max-width: 800px;
-  margin: 0 auto var(--space-md) auto;
+  margin: 0 auto var(--space-sm) auto;
+  color: var(--color-fg);
 }
 .highlight {
   color: var(--color-logo);
@@ -94,14 +96,22 @@
   background: transparent;
   border-radius: var(--border-radius);
 }
-
+.ctaTitle {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-logo);
+  margin-bottom: var(--space-sm);
+  text-shadow: var(--text-shadow-glow);
+  line-height: 1.2;
+}
 .ctaText {
   font-family: var(--font-family-secondary);
-  font-size: var(--font-size-h6); /* Mărime mai mare pentru textul CTA */
+  font-size: var(--font-size-h6);
   color: var(--color-fg);
-  margin-bottom: var(--space-sm); /* Folosim variabila ta */
+  margin-bottom: var(--space-sm);
   line-height: 1.6;
-  max-width: 700px; /* Limitează lățimea textului CTA */
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -111,26 +121,26 @@
   height: var(--element-height);
   line-height: var(--element-height);
   padding: 0 2.25rem;
-  background-color: var(--color-logo); /* Fundal portocaliu */
+  background-color: var(--color-logo);
   border-radius: var(--border-radius);
-  border: solid var(--border-width) var(--color-logo); /* Bordură portocalie */
-  color: var(--color-bg); /* Text închis pe fundal portocaliu */
+  border: solid var(--border-width) var(--color-logo);
+  color: var(--color-bg);
   cursor: pointer;
-  font-size: 0.9rem; /* Puțin mai mare pentru CTA */
+  font-size: 0.9rem;
   font-weight: var(--font-weight-bold);
-  letter-spacing: 0.15rem; /* Păstrează-l pe acesta dacă nu ai o variabilă pentru butoane */
+  letter-spacing: 0.15rem;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   transition: all var(--transition-base) ease;
-  box-shadow: var(--shadow-glow-md); /* Glow pentru buton */
+  box-shadow: var(--shadow-glow-md);
 }
 
 .button:hover {
-  background-color: transparent; /* Sau o nuanță mai închisă de portocaliu */
-  color: var(--color-logo); /* Text portocaliu la hover */
-  border-color: var(--color-logo); /* Bordură portocalie la hover */
-  box-shadow: var(--shadow-glow-lg); /* Glow mai puternic la hover */
+  background-color: transparent;
+  color: var(--color-logo);
+  border-color: var(--color-logo);
+  box-shadow: var(--shadow-glow-lg);
 }
 
 /* Responsive Design */
@@ -153,6 +163,15 @@
   }
   .serviceCard {
     padding: var(--space-xs);
+  }
+  .cta {
+    padding: var(--space-lg) var(--space-md); /* Ajustare padding CTA */
+  }
+  .ctaTitle {
+    font-size: var(--font-size-h4); /* Ajustare font-size titlu CTA */
+  }
+  .ctaText {
+    font-size: var(--font-size-base); /* Ajustare font-size text CTA */
   }
 }
 
@@ -178,7 +197,13 @@
     font-size: var(--font-size-base);
   }
   .cta {
-    padding: var(--space-md) var(--space-xs);
+    padding: var(--space-md) var(--space-xs); /* Ajustare padding CTA */
+  }
+  .ctaTitle {
+    font-size: var(--font-size-h5); /* Ajustare font-size titlu CTA */
+  }
+  .ctaText {
+    font-size: var(--font-size-base); /* Ajustare font-size text CTA */
   }
 }
 
@@ -214,10 +239,13 @@
     font-size: 0.95rem;
   }
   .cta {
-    padding: var(--space-sm) var(--space-xxs);
+    padding: var(--space-sm) var(--space-xxs); /* Ajustare padding CTA */
+  }
+  .ctaTitle {
+    font-size: var(--font-size-h6); /* Ajustare font-size titlu CTA */
   }
   .ctaText {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-base); /* Păstrăm ca în breakpoint-ul original */
   }
 }
 
@@ -252,10 +280,15 @@
     font-size: 0.9rem;
   }
   .cta {
-    padding: var(--space-xs) var(--space-xxs);
+    padding: var(--space-xs) var(--space-xxs); /* Ajustare padding CTA */
   }
-  .ctaText {
+  .ctaTitle {
     font-size: var(--font-size-base);
+    line-height: 1.2;
+  }
+
+  .ctaText {
+    font-size: 0.95rem;
     margin-bottom: var(--space-xs);
   }
   .button {
@@ -274,7 +307,6 @@
   }
   .sectionTitle {
     font-size: var(--font-size-h6);
-    /* letter-spacing: 0.3rem; */ /* Ajustează dacă vrei */
   }
   .description {
     font-size: 0.9rem;
@@ -291,21 +323,23 @@
   }
   .serviceTitle {
     font-size: var(--font-size-base);
-    /* letter-spacing: 0.1rem; */ /* Ajustează dacă vrei */
   }
   .serviceDescription {
     font-size: 0.85rem;
   }
   .cta {
-    padding: var(--space-xs) var(--space-xxs);
+    padding: var(--space-xs) var(--space-xxs); /* Ajustare padding CTA */
+  }
+  .ctaTitle {
+    font-size: var(--font-size-h6); /* Rămâne h6, este cel mai mic titlu */
+    line-height: 1.2;
   }
   .ctaText {
-    font-size: 0.95rem;
+    font-size: 0.9rem; /* Ajustat puțin mai mic */
     margin-bottom: var(--space-xs);
   }
   .button {
     padding: 0 1.25rem;
     font-size: 0.75rem;
-    /* letter-spacing: 0.1rem; */ /* Ajustează dacă vrei */
   }
 }
