@@ -46,12 +46,6 @@ const Main = () => {
             >
               Cere Ofertă
             </button>
-            <button
-              className={styles.primaryBtn}
-              onClick={() => navigate("/map")}
-            >
-              Locatie pt test
-            </button>
           </div>
         </div>
       </div>

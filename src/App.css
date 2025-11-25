@@ -16,8 +16,7 @@ html {
 
   /*Background Global */
 
-  background: url("https://picsum.photos/id/495/1920/1080");
-  background: url("../src/assets/tech-parts-bg-img-9.jpg");
+  background: url("../src/assets/bg-images/tech-parts-bg-img-1.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
