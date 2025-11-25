@@ -1,5 +1,5 @@
 .about {
-  padding: var(--space-lg) var(--space-xs);
+  padding: var(--space-md) var(--space-xs);
   color: var(--color-fg);
   text-align: center;
 }
@@ -17,20 +17,21 @@
   font-family: var(--font-family-primary);
   font-size: var(--font-size-h2);
   font-weight: var(--font-weight-bold);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   color: var(--color-fg);
   margin-bottom: var(--space-sm);
-  text-shadow: var(--text-shadow-logo);
   line-height: 1.2;
+  text-transform: uppercase;
 }
 
-.paragraph {
-  /* Utilizat pentru toate paragrafele standard */
+.description {
   font-family: var(--font-family-secondary);
   font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semi);
   line-height: 1.6;
-  max-width: 800px; /* Limitează lățimea textului pentru lizibilitate */
-  margin: 0 auto var(--space-sm) auto; /* Centrare și spațiere jos */
-  color: var(--color-fg-light); /* Text mai deschis pentru paragrafe */
+  max-width: 800px;
+  margin: 0 auto var(--space-sm) auto;
+  color: var(--color-fg); /* Text mai deschis pentru paragrafe */
 }
 
 .highlight {

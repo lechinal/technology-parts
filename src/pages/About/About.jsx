@@ -8,22 +8,24 @@ const About = () => {
     <section id="about" className={styles.about}>
       <div className={styles.inner}>
         <header className={styles.header}>
-          <h2>Construim Viitorul, Cărămidă cu Cărămidă.</h2>
+          <h2 className={styles.sectionTitle}>
+            Construim Viitorul, Cărămidă cu Cărămidă.
+          </h2>
           <p className={styles.description}>
             Din anul 2017, reîntorși cu experiență acumulată în Germania, frații
-            Corneliu și Ionuț Bisboaca au fondat
-            <strong>Technology Parts SRL, marcând</strong>
-            începutul unei activități inovatoare și dedicate calității.
+            Corneliu și Ionuț Bisboaca au fondat{" "}
+            <strong className={styles.highlight}>Technology Parts</strong>,
+            marcând începutul unei activități inovatoare și dedicate calității.
           </p>
         </header>
         <p className={styles.description}>
-          La <strong>Technology Parts SRL</strong>, marcând transformăm
-          viziunile în realitate solidă, îmbinând precizia standardelor germane
-          cu adaptabilitatea la nevoile locale. Fiecare proiect este o dovadă a
-          angajamentului nostru față de excelență, inovație și satisfacția
-          deplină a clientului. Ne mândrim cu un portofoliu diversificat, care
-          include structuri din beton, lemn și metal, alături de finisaje
-          interioare impecabile.
+          La <strong className={styles.highlight}>Technology Parts</strong>,
+          transformăm viziunile în realitate solidă, îmbinând precizia
+          standardelor germane cu adaptabilitatea la nevoile locale. Fiecare
+          proiect este o dovadă a angajamentului nostru față de excelență,
+          inovație și satisfacția deplină a clientului. Ne mândrim cu un
+          portofoliu diversificat, care include structuri din beton, lemn și
+          metal, alături de finisaje interioare impecabile.
         </p>
         <p className={styles.description}>
           Cu un spirit proactiv și o dedicare permanentă, ne concentrăm pe a

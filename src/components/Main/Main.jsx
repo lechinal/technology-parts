@@ -19,19 +19,6 @@ const Main = () => {
             germană.
           </p>
 
-          {/* <div className={styles.description}>
-            <p>
-              Din anul 2017, reîntorși cu experiență acumulată în Germania,
-              frații Bisboaca, Corneliu și Ionuț, au fondat Technology Parts
-              SRL, marcând începutul unei activități ingenioase!
-            </p>
-            <p>
-              Cu un spirit adaptabil la cerințele clienților, ne-am concentrat
-              permanent pe satisfacerea dorințelor acestora. Fiecare lucrare se
-              transformă în propria noastră carte de vizită.
-            </p>
-          </div> */}
-
           <div className={styles.ctaButtons}>
             <button
               className={styles.secondaryBtn}

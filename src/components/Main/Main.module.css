@@ -43,24 +43,28 @@
 }
 
 .mainTitle {
-  font-size: 4.5rem;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h1);
   font-weight: var(--font-weight-bold);
   color: var(--color-fg-bold);
   letter-spacing: var(--letter-spacing-heading);
   text-transform: uppercase;
   margin-bottom: 1rem;
-  line-height: 1.2;
+  line-height: 1.6;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   animation: fadeInUp 1s ease-out;
 }
 
 .subtitle {
+  text-align: center;
+  font-family: var(--font-family-signature);
+  font-weight: var(--font-weight-medium);
   font-size: 1.8rem;
-  color: var(--color-logo);
   letter-spacing: var(--letter-spacing);
+  color: var(--color-logo);
   text-transform: uppercase;
   margin-bottom: 25px;
-  font-weight: var(--font-weight);
+
   animation: fadeInUp 1.2s ease-out;
 }
 

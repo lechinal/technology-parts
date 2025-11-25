@@ -99,7 +99,7 @@
 
 .quoteText::after {
   content: "”";
-  bottom: -4rem;
+  bottom: -6rem;
   right: 0;
 }
 
