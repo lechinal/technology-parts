@@ -147,12 +147,12 @@ h1,
 }
 
 /* H2–H4 și sloganuri */
-h2,
+/* h2,
 h3,
 h4,
 .slogan {
   text-shadow: var(--text-shadow-logo);
-}
+} */
 ul,
 ol {
   list-style: none;

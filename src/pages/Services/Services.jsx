@@ -9,7 +9,7 @@ import styles from "./Services.module.css";
 
 import { services } from "../../utils/projectsData";
 
-const Services = ({ closeModal }) => {
+const Services = () => {
   const navigate = useNavigate();
   const handleClickOffer = () => {
     navigate("/contact");
@@ -30,11 +30,15 @@ const Services = ({ closeModal }) => {
     <section id="services" className={styles.services}>
       <div className={styles.inner}>
         <header className={styles.header}>
-          <h2>Serviciile Noastre</h2>
+          <h2 className={styles.sectionTitle}>
+            Experiență, Calitate, Inovație.
+          </h2>
           <p className={styles.description}>
-            Oferim o gama completa de servicii de constructii, de la fundatie
-            pana la finisaje. Cu experienta acumulata din 2017 si standardele de
-            calitate germane, garantam lucrari solide si durabile.
+            La <strong className={styles.highlight}>Technology Parts </strong>,
+            oferim o gamă completă de servicii de construcții, acoperind fiecare
+            etapă, de la fundație la finisaje. Cu experiența acumulată din 2017
+            și respectând standardele de calitate germane, garantăm lucrări
+            solide, durabile și adaptate perfect nevoilor tale.
           </p>
         </header>
 
@@ -50,15 +54,17 @@ const Services = ({ closeModal }) => {
 
         <div className={styles.cta}>
           <p className={styles.ctaText}>
-            Ai un proiect in minte? Contacteaza-ne pentru o consultatie gratuita
-            si o oferta personalizata.
+            Ești pregătit să pui bazele viitorului tău proiect? Contactează
+            echipa noastră pentru a discuta detaliile, pentru o estimare de cost
+            gratuită și pentru a vedea cum expertiza noastră poate aduce valoare
+            viziunii tale.
           </p>
           <button
             type="button"
             className={styles.button}
             onClick={handleClickOffer}
           >
-            Cere o oferta
+            Contactează un Expert
           </button>
         </div>
       </div>

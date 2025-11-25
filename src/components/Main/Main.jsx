@@ -11,10 +11,15 @@ const Main = () => {
 
       <div className={styles.content}>
         <div className={styles.hero}>
-          <h1 className={styles.mainTitle}>Construim Visul Tău</h1>
-          <p className={styles.subtitle}>De la Fundație la Finisaje</p>
+          <h1 className={styles.mainTitle}>
+            TEHNOLOGIE. CONSTRUCȚII. PERFORMANȚĂ.
+          </h1>
+          <p className={styles.subtitle}>
+            De la fundație la finisaje, construim cu pasiune și expertiză
+            germană.
+          </p>
 
-          <div className={styles.description}>
+          {/* <div className={styles.description}>
             <p>
               Din anul 2017, reîntorși cu experiență acumulată în Germania,
               frații Bisboaca, Corneliu și Ionuț, au fondat Technology Parts
@@ -25,26 +30,20 @@ const Main = () => {
               permanent pe satisfacerea dorințelor acestora. Fiecare lucrare se
               transformă în propria noastră carte de vizită.
             </p>
-          </div>
+          </div> */}
 
           <div className={styles.ctaButtons}>
-            <button
-              onClick={() => navigate("/services")}
-              className={styles.secondaryBtn}
-            >
-              Servicii
-            </button>
             <button
               className={styles.secondaryBtn}
               onClick={() => navigate("/projects")}
             >
-              Vezi Proiecte
+              Vezi Portofoliul
             </button>
             <button
               className={styles.primaryBtn}
               onClick={() => navigate("/contact")}
             >
-              Cere Ofertă
+              Solicita Ofertă
             </button>
           </div>
         </div>

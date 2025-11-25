@@ -1,103 +1,148 @@
 .about {
-  background: var(--color-bg);
+  padding: var(--space-lg) var(--space-xs);
   color: var(--color-fg);
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  font-family: var(--font-family);
-
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  text-align: center;
 }
 
 .inner {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .header {
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-md);
 }
 
-.title {
-  font-size: 2.5rem;
+.sectionTitle {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h2);
   font-weight: var(--font-weight-bold);
-  letter-spacing: var(--letter-spacing-heading);
-  margin-bottom: 0.5rem;
-}
-
-.description {
-  font-size: 1.125rem;
-  color: var(--color-fg-light);
-  line-height: 1.6;
+  color: var(--color-fg);
+  margin-bottom: var(--space-sm);
+  text-shadow: var(--text-shadow-logo);
+  line-height: 1.2;
 }
 
 .paragraph {
-  font-size: 1rem;
-  color: var(--color-fg);
+  /* Utilizat pentru toate paragrafele standard */
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-base);
   line-height: 1.6;
+  max-width: 800px; /* Limitează lățimea textului pentru lizibilitate */
+  margin: 0 auto var(--space-sm) auto; /* Centrare și spațiere jos */
+  color: var(--color-fg-light); /* Text mai deschis pentru paragrafe */
 }
 
-.features {
-  list-style: none;
-  padding: 0;
-  margin-top: 1rem;
+.highlight {
+  /* Pentru textul "Technology Parts SRL" etc. */
+  color: var(--color-logo); /* Culoarea portocalie pentru evidențieri */
+  font-weight: var(--font-weight-semi);
+}
+
+/* === Gridul cu Puncte Cheie (Beneficii) - Înlocuiește .features === */
+.keyBenefitsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
+  /* 2 coloane pe desktop, 1 pe mobil. auto-fit încearcă să umple spațiul */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-sm); /* Spațiere între carduri */
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-md);
+  /* Nu mai este nevoie de max-width aici dacă .inner are deja o lățime max */
+  /* margin-left: auto; margin-right: auto; */
 }
 
-.features li {
-  background: var(--color-bg-alt);
-  padding: 1rem;
-  border-radius: var(--border-radius);
+.benefitCard {
+  background: var(--color-border-bg);
   border: var(--border-width) solid var(--color-border-bg-alt);
-  transition: background var(--transition-base);
+  border-radius: var(--border-radius);
+  padding: var(--space-sm);
+  text-align: center;
+  transition: transform var(--transition-base),
+    box-shadow var(--transition-base), border-color var(--transition-base);
+  box-shadow: var(--shadow-card-rest);
 }
 
-.features li:hover {
-  background: var(--color-border-hover);
+.benefitCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-logo);
+  cursor: pointer;
+}
+
+.benefitIcon {
+  font-size: var(--font-size-h3);
+  color: var(--color-fg);
+  margin-bottom: var(--space-xxs);
+  text-shadow: var(--text-shadow-logo);
+}
+
+.benefitTitle {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h6);
+  color: var(--color-logo);
+  margin-bottom: var(--space-xxs);
+  text-shadow: var(--text-shadow-subtle);
+}
+
+.benefitDescription {
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--color-fg);
+}
+
+.finalSlogan {
+  /* Pentru sloganul final "Cu Technology Parts..." */
+  font-family: var(
+    --font-family-signature
+  ); /* Un font mai distinctiv pentru slogan */
+  font-size: var(--font-size-h5); /* Mărime mai mare */
+  font-weight: var(--font-weight-medium);
+  color: var(--color-logo); /* Culoare portocalie pentru a ieși în evidență */
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-md); /* Adaugă spațiu și sub slogan */
+  text-shadow: var(--text-shadow-glow); /* Efect de glow puternic */
 }
 
 .button {
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--color-border);
-  background-color: transparent;
-  color: var(--color-fg);
+  /* Păstrează stilul existent al butonului */
+  /* Asigură-te că aceste stiluri sunt definite în _root_.css sau unde este .button */
+  font-family: var(--font-family-signature);
+  font-weight: 700;
   cursor: pointer;
-  transition: background-color var(--transition-base) ease;
-  font-family: var(--font-family);
-  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.15rem;
+  transition: all 0.35s ease;
+  /* Adaugă stiluri specifice pentru butonul din About */
+  background-color: var(--color-logo);
+  color: var(--color-bg); /* Text închis pe fundal portocaliu */
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: var(--border-radius);
+  text-transform: uppercase;
+  box-shadow: var(--shadow-glow-md);
+  margin-top: var(--space-sm); /* Spațiu deasupra butonului */
 }
 
 .button:hover {
-  background-color: var(--color-border-bg);
+  background-color: darken(
+    var(--color-logo),
+    10%
+  ); /* Sau o culoare portocalie puțin mai închisă */
+  box-shadow: var(--shadow-glow-lg);
 }
 
-/* Responsive */
-@media (max-width: 980px) {
-  .title {
-    font-size: 2rem;
+/* === Responsive (se pot adapta la breakpoints-urile tale specifice) === */
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: var(--font-size-h3); /* Mărime mai mică pe mobil */
   }
-
-  .description {
-    font-size: 1rem;
+  .paragraph {
+    font-size: 1rem; /* Mărime text paragrafe puțin mai mică pe mobil */
   }
-
-  .features {
-    grid-template-columns: 1fr;
+  .keyBenefitsGrid {
+    grid-template-columns: 1fr; /* O singură coloană pe ecrane mici */
   }
-}
-
-@media (max-width: 736px) {
-  .about {
-    padding: 2rem 1rem;
-  }
-
-  .button {
-    width: 100%;
+  .finalSlogan {
+    font-size: var(--font-size-h6); /* Mărime mai mică pe mobil */
   }
 }

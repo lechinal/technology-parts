@@ -18,78 +18,92 @@
   margin-bottom: 4rem;
 }
 
-.header h2 {
-  font-size: 2.5rem;
+.sectionTitle {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h2);
   font-weight: var(--font-weight-bold);
-  color: var(--color-fg-bold);
-  letter-spacing: var(--letter-spacing-heading);
-  margin-bottom: 1.5rem;
+  color: var(--color-fg);
+
+  margin-bottom: var(--space-md);
   text-transform: uppercase;
 }
 
 .description {
-  font-size: 1.1rem;
-  color: var(--color-fg-light);
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-base);
+  color: var(--color-fg);
   line-height: 1.8;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto var(--space-md) auto;
+}
+.highlight {
+  color: var(--color-logo);
+  font-weight: var(--font-weight-semi);
 }
 
 .servicesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 4rem;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
 }
 
 .serviceCard {
   background: var(--color-border-bg);
   border: var(--border-width) solid var(--color-border-bg-alt);
   border-radius: var(--border-radius);
-  padding: 2rem;
-  transition: all var(--transition-base) ease;
+  padding: var(--space-sm);
   text-align: center;
+  transition: transform var(--transition-base),
+    box-shadow var(--transition-base), border-color var(--transition-base);
+  box-shadow: var(--shadow-card-rest);
 }
 
 .serviceCard:hover {
-  background: var(--color-border-hover);
-  border-color: var(--color-border-active);
   transform: translateY(-5px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-logo);
+  cursor: pointer;
 }
 
 .serviceIcon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: var(--font-size-h3);
+  margin-bottom: var(--space-xxs);
 }
 
 .serviceTitle {
-  font-size: 1.4rem;
-  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h6);
+  font-weight: var(--font-weight-semi);
   color: var(--color-logo);
-  letter-spacing: var(--letter-spacing);
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-xxs);
   text-transform: uppercase;
+  text-shadow: var(--text-shadow-subtle);
 }
 
 .serviceDescription {
-  font-size: 1rem;
-  color: var(--color-fg-light);
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-base);
   line-height: 1.6;
+  color: var(--color-fg);
 }
 
 .cta {
   text-align: center;
-  padding: 3rem 2rem;
-  background: var(--color-border-bg);
-  border: var(--border-width) solid var(--color-border-bg-alt);
+  padding: var(--space-lg) var(--space-sm);
+  background: transparent;
   border-radius: var(--border-radius);
 }
 
 .ctaText {
-  font-size: 1.2rem;
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-h6); /* Mărime mai mare pentru textul CTA */
   color: var(--color-fg);
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-sm); /* Folosim variabila ta */
   line-height: 1.6;
+  max-width: 700px; /* Limitează lățimea textului CTA */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .button {
@@ -97,24 +111,26 @@
   height: var(--element-height);
   line-height: var(--element-height);
   padding: 0 2.25rem;
-  background-color: transparent;
+  background-color: var(--color-logo); /* Fundal portocaliu */
   border-radius: var(--border-radius);
-  border: solid var(--border-width) var(--color-border);
-  color: var(--color-fg-bold);
+  border: solid var(--border-width) var(--color-logo); /* Bordură portocalie */
+  color: var(--color-bg); /* Text închis pe fundal portocaliu */
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 0.9rem; /* Puțin mai mare pentru CTA */
   font-weight: var(--font-weight-bold);
-  letter-spacing: var(--letter-spacing);
+  letter-spacing: 0.15rem; /* Păstrează-l pe acesta dacă nu ai o variabilă pentru butoane */
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   transition: all var(--transition-base) ease;
+  box-shadow: var(--shadow-glow-md); /* Glow pentru buton */
 }
 
 .button:hover {
-  background-color: var(--color-border-bg-alt);
-  color: var(--color-logo);
-  border-color: var(--color-logo);
+  background-color: transparent; /* Sau o nuanță mai închisă de portocaliu */
+  color: var(--color-logo); /* Text portocaliu la hover */
+  border-color: var(--color-logo); /* Bordură portocalie la hover */
+  box-shadow: var(--shadow-glow-lg); /* Glow mai puternic la hover */
 }
 
 /* Responsive Design */
@@ -127,210 +143,169 @@
 }
 
 /* Desktop Medium (981px - 1280px) */
-@media screen and (min-width: 981px) and (max-width: 1280px) {
+@media screen and (min-width: var(--break-large-min)) and (max-width: var(--break-large-max)) {
   .servicesGrid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: var(--space-xs);
   }
-
-  .header h2 {
-    font-size: 2.2rem;
+  .sectionTitle {
+    font-size: var(--font-size-h3);
   }
-
   .serviceCard {
-    padding: 1.5rem;
+    padding: var(--space-xs);
   }
 }
 
 /* Tableta Landscape (737px - 980px) */
-@media screen and (min-width: 737px) and (max-width: 980px) {
+@media screen and (min-width: var(--break-medium-min)) and (max-width: var(--break-medium-max)) {
   .services {
-    padding: 3rem 1.5rem;
+    padding: var(--space-md) var(--space-xs);
   }
-
   .header {
-    margin-bottom: 3rem;
+    margin-bottom: var(--space-md);
   }
-
-  .header h2 {
-    font-size: 2rem;
+  .sectionTitle {
+    font-size: var(--font-size-h4);
   }
-
   .servicesGrid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: var(--space-xs);
   }
-
   .serviceCard {
-    padding: 1.5rem;
+    padding: var(--space-xs);
   }
-
   .serviceTitle {
-    font-size: 1.2rem;
+    font-size: var(--font-size-base);
   }
-
   .cta {
-    padding: 2.5rem 1.5rem;
+    padding: var(--space-md) var(--space-xs);
   }
 }
 
 /* Tableta Portrait (481px - 736px) */
-@media screen and (min-width: 481px) and (max-width: 736px) {
+@media screen and (min-width: var(--break-small-min)) and (max-width: var(--break-small-max)) {
   .services {
-    padding: 2.5rem 1rem;
+    padding: var(--space-sm) var(--space-xxs);
   }
-
   .header {
-    margin-bottom: 2.5rem;
+    margin-bottom: var(--space-sm);
   }
-
-  .header h2 {
-    font-size: 1.8rem;
+  .sectionTitle {
+    font-size: var(--font-size-h5);
   }
-
   .description {
     font-size: 1rem;
   }
-
   .servicesGrid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin-bottom: 3rem;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-md);
   }
-
   .serviceCard {
-    padding: 1.5rem;
+    padding: var(--space-xs);
   }
-
   .serviceIcon {
-    font-size: 2.5rem;
+    font-size: var(--font-size-h4);
   }
-
   .serviceTitle {
-    font-size: 1.2rem;
+    font-size: var(--font-size-base);
   }
-
   .serviceDescription {
     font-size: 0.95rem;
   }
-
   .cta {
-    padding: 2rem 1rem;
+    padding: var(--space-sm) var(--space-xxs);
   }
-
   .ctaText {
-    font-size: 1.1rem;
+    font-size: var(--font-size-base);
   }
 }
 
 /* Mobile (361px - 480px) */
-@media screen and (min-width: 361px) and (max-width: 480px) {
+@media screen and (min-width: var(--break-xsmall-min)) and (max-width: var(--break-xsmall-max)) {
   .services {
-    padding: 2rem 1rem;
+    padding: var(--space-sm) var(--space-xxs);
   }
-
   .header {
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-xs);
   }
-
-  .header h2 {
-    font-size: 1.6rem;
+  .sectionTitle {
+    font-size: var(--font-size-h6);
   }
-
   .description {
     font-size: 0.95rem;
   }
-
   .servicesGrid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-    margin-bottom: 2.5rem;
+    gap: var(--space-xxs);
+    margin-bottom: var(--space-sm);
   }
-
   .serviceCard {
-    padding: 1.25rem;
+    padding: var(--space-xs);
   }
-
   .serviceIcon {
-    font-size: 2.5rem;
+    font-size: var(--font-size-h4);
   }
-
   .serviceTitle {
-    font-size: 1.1rem;
+    font-size: var(--font-size-base);
   }
-
   .serviceDescription {
     font-size: 0.9rem;
   }
-
   .cta {
-    padding: 1.5rem 1rem;
+    padding: var(--space-xs) var(--space-xxs);
   }
-
   .ctaText {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-xs);
   }
-
-  .submit {
+  .button {
     padding: 0 1.5rem;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
 }
 
 /* Mobile Small (max 360px) */
-@media screen and (max-width: 360px) {
+@media screen and (max-width: var(--break-xxsmall-max)) {
   .services {
-    padding: 1.5rem 0.75rem;
+    padding: var(--space-xs) var(--space-xxs);
   }
-
   .header {
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--space-xs);
   }
-
-  .header h2 {
-    font-size: 1.4rem;
-    letter-spacing: 0.3rem;
+  .sectionTitle {
+    font-size: var(--font-size-h6);
+    /* letter-spacing: 0.3rem; */ /* Ajustează dacă vrei */
   }
-
   .description {
     font-size: 0.9rem;
   }
-
   .servicesGrid {
-    gap: 1rem;
-    margin-bottom: 2rem;
+    gap: var(--space-xxs);
+    margin-bottom: var(--space-xs);
   }
-
   .serviceCard {
-    padding: 1rem;
+    padding: var(--space-xxs);
   }
-
   .serviceIcon {
-    font-size: 2rem;
+    font-size: var(--font-size-h5);
   }
-
   .serviceTitle {
-    font-size: 1rem;
-    letter-spacing: 0.1rem;
+    font-size: var(--font-size-base);
+    /* letter-spacing: 0.1rem; */ /* Ajustează dacă vrei */
   }
-
   .serviceDescription {
     font-size: 0.85rem;
   }
-
   .cta {
-    padding: 1.25rem 0.75rem;
+    padding: var(--space-xs) var(--space-xxs);
   }
-
   .ctaText {
     font-size: 0.95rem;
-    margin-bottom: 1.25rem;
+    margin-bottom: var(--space-xs);
   }
-
-  .submit {
+  .button {
     padding: 0 1.25rem;
-    font-size: 0.7rem;
-    letter-spacing: 0.1rem;
+    font-size: 0.75rem;
+    /* letter-spacing: 0.1rem; */ /* Ajustează dacă vrei */
   }
 }

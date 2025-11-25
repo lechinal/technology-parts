@@ -8,7 +8,7 @@ const Stats = () => {
   ];
   return (
     <section className={styles.statsSection}>
-      <div className={styles.stats}>
+      <div className={styles.statsGrid}>
         {stats.map((stat, index) => (
           <div key={index} className={styles.statCard}>
             <div className={styles.statNumber}>{stat.number}</div>
@@ -18,11 +18,13 @@ const Stats = () => {
       </div>
 
       <div className={styles.quote}>
-        <p>
-          "Recomandările și portofoliul de lucrări au asigurat continuitatea
-          activității, iar portofoliul s-a extins considerabil, motivându-ne să
-          avansăm cu încredere către următoarea etapă în evoluția companiei
-          noastre!"
+        <p className={styles.quoteText}>
+          "Recomandările constante și un portofoliu de lucrări în continuă
+          creștere au asigurat continuitatea activității noastre, motivându-ne
+          să avansăm cu încredere către următoarea etapă în evoluția companiei{" "}
+          <strong className={styles.highlight}>Technology Parts</strong>.
+          Fiecare proiect finalizat este o carte de vizită care reflectă
+          dedicarea noastră pentru excelență și inovație."
         </p>
       </div>
     </section>

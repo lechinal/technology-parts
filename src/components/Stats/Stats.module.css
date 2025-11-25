@@ -1,22 +1,26 @@
 .statsSection {
-  padding: 4rem 2rem;
+  padding: var(--space-lg) var(--space-xs); /* Padding consistent */
+
+  color: var(--color-fg);
+  text-align: center;
 }
 
 /* ===================== STATS ===================== */
-.stats {
+.statsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-bottom: 5rem;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
   animation: fadeInUp 1.8s ease-out;
 }
 
 .statCard {
   text-align: center;
-  padding: 2.5rem 2rem;
   background: var(--color-border-bg);
   border: var(--border-width) solid var(--color-border-bg-alt);
   border-radius: var(--border-radius);
+  padding: var(--space-md) var(--space-sm); /* Padding generos */
+  box-shadow: var(--shadow-card-rest);
   transition: all var(--transition-base) ease;
 }
 
@@ -24,41 +28,84 @@
   background: var(--color-border-hover);
   border-color: var(--color-logo);
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+
+  box-shadow: var(--shadow-glow-md);
+  cursor: pointer;
 }
 
 .statNumber {
-  font-size: 3.5rem;
-  font-weight: var(--font-weight-bold);
-  color: var(--color-logo);
-  margin-bottom: 0.5rem;
-  line-height: 1;
+  font-family: var(
+    --font-family-primary
+  ); /* Fontul pentru titluri/numeri mari */
+  font-size: var(--font-size-h2); /* Numere foarte mari */
+  font-weight: var(--font-weight-black);
+  color: var(--color-logo); /* Culoarea portocalie pentru numere */
+  margin-bottom: var(--space-xxs);
+  text-shadow: var(--text-shadow-glow); /* Efect de glow puternic */
+  line-height: 1; /* Elimină spațiul suplimentar la line-height */
 }
 
 .statLabel {
-  font-size: 1rem;
-  color: var(--color-fg-light);
-  letter-spacing: var(--letter-spacing);
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-h6); /* Etichete mai mici sub număr */
+  font-weight: var(--font-weight-semi);
+  color: var(--color-fg);
   text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }
 
 /* ===================== QUOTE ===================== */
 .quote {
-  max-width: 900px;
-  margin: 0 auto;
   text-align: center;
   padding: 3rem;
   background: var(--color-border-bg);
-  border-left: 4px solid var(--color-logo);
   border-radius: var(--border-radius);
   animation: fadeInUp 2s ease-out;
+
+  border: var(--border-width) solid var(--color-logo);
+  border-radius: var(--border-radius);
+  border-color: var(--color-logo);
+  padding: var(--space-md) var(--space-sm);
+  max-width: 900px; /* Limitează lățimea citatului */
+  margin: 0 auto; /* Centrează citatul */
+  box-shadow: var(--shadow-glow-sm); /* Un glow subtil în jurul citatului */
 }
 
-.quote p {
-  font-size: 1.15rem;
+.quoteText {
+  font-family: var(--font-family-signature);
+  font-size: var(--font-size-base); /* Mărimea de bază */
+  font-style: italic; /* Text cursiv pentru citat */
+  font-weight: var(--font-weight-semi);
   color: var(--color-fg);
-  line-height: 1.8;
-  font-style: italic;
+  line-height: 1.7;
+  position: relative;
+  margin: 0;
+  padding: 0 var(--space-xs); /* Padding pentru a face loc ghilimelelor */
+}
+.quoteText::before,
+.quoteText::after {
+  font-family: var(--font-family-signature);
+  color: var(--color-logo);
+  font-size: var(--font-size-h1);
+  position: absolute;
+  line-height: 1;
+}
+
+.quoteText::before {
+  content: "“";
+  top: -4rem;
+  left: 0;
+}
+
+.quoteText::after {
+  content: "”";
+  bottom: -4rem;
+  right: 0;
+}
+
+.highlight {
+  color: var(--color-logo);
+  font-weight: var(--font-weight-semi);
 }
 
 /* ===================== ANIMATION ===================== */
@@ -74,7 +121,7 @@
 }
 
 @media screen and (min-width: 737px) and (max-width: 1280px) {
-  .stats {
+  .statsGrid {
     grid-template-columns: 1fr;
     gap: 1.25rem;
     margin-bottom: 3rem;
@@ -87,7 +134,7 @@
 
 /* ---------- Tablet Portrait: 481px - 736px ---------- */
 @media screen and (min-width: 481px) and (max-width: 736px) {
-  .stats {
+  .statsGrid {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
@@ -103,7 +150,7 @@
 
 /* ---------- Mobile: ≤480px ---------- */
 @media screen and (max-width: 480px) {
-  .stats {
+  .statsGrid {
     grid-template-columns: 1fr;
     gap: 1rem;
     margin-bottom: 2rem;
