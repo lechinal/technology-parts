@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import styles from "./Map.module.css";
 
 import { LuMapPinHouse } from "react-icons/lu";
@@ -22,15 +22,14 @@ const Map = () => {
             Alba pentru consultații directe și discuții despre proiectele
             dumneavoastră.
           </p>
-          <a
-            href="https://maps.app.goo.gl/EjgrswfkjiNHgACv5"
+          <Link
+            to="https://maps.app.goo.gl/EjgrswfkjiNHgACv5"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.mapButton}
           >
-            Vezi pe Hartă
-            <span className={styles.arrow}>→</span>
-          </a>
+            Vezi Harta
+          </Link>
         </div>
       </div>
     </div>

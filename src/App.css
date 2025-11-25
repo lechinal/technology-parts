@@ -17,10 +17,11 @@ html {
   /*Background Global */
 
   background: url("https://picsum.photos/id/495/1920/1080");
+  background: url("../src/assets/tech-parts-bg-img-9.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: scroll;
+  background-attachment: fixed;
 }
 
 /* Reset link-uri */

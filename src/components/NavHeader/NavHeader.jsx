@@ -1,13 +1,25 @@
 import styles from "./NavHeader.module.css";
+import { useNavigate } from "react-router-dom";
 
-const NavHeader = ({ openModal }) => {
+const NavHeader = () => {
+  const navigate = useNavigate();
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
   return (
     <nav className={styles.nav}>
       <ul>
         <li>
           <button
             className={styles.linkButton}
-            onClick={() => openModal("about")}
+            onClick={() => scrollToSection("about")}
           >
             About
           </button>
@@ -15,7 +27,7 @@ const NavHeader = ({ openModal }) => {
         <li>
           <button
             className={styles.linkButton}
-            onClick={() => openModal("services")}
+            onClick={() => scrollToSection("services")}
           >
             Services
           </button>
@@ -23,16 +35,16 @@ const NavHeader = ({ openModal }) => {
         <li>
           <button
             className={styles.linkButton}
-            onClick={() => openModal("work")}
+            onClick={() => navigate("/projects")}
           >
-            Work
+            Projects
           </button>
         </li>
 
         <li>
           <button
             className={styles.linkButton}
-            onClick={() => openModal("contact")}
+            onClick={() => navigate("/contact")}
           >
             Contact
           </button>

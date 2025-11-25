@@ -12,43 +12,44 @@ const Projects = lazy(() => import("./pages/Projects/Projects"));
 const ProjectDetails = lazy(() =>
   import("./pages/ProjectDetails/ProjectDetails")
 );
-const About = lazy(() => import("./pages/About/About"));
 const Contact = lazy(() => import("./pages/Contact/Contact"));
-const Services = lazy(() => import("./pages/Services/Services"));
 const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
-const Map = lazy(() => import("./pages/Map/Map"));
 
 function App() {
-  const [modalContent, setModalContent] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [showFadeIndicator, setShowFadeIndicator] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 1000);
-    return () => clearTimeout(timer);
+
+    const handleScroll = () => {
+      // pt debugging
+      // console.log("ScrollY:", window.scrollY);
+
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const isAtBottom = scrollY + windowHeight >= documentHeight - 100;
+
+      if (scrollY > 700 || isAtBottom) {
+        setShowFadeIndicator(false);
+      } else {
+        setShowFadeIndicator(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Apelează o data la inceput sa verifice starea initiala
+    handleScroll();
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   if (loading) return <Loader />;
-
-  const openModal = (page) => {
-    switch (page) {
-      case "work":
-        setModalContent(<Work previewMode closeModal={closeModal} />);
-        break;
-      case "about":
-        setModalContent(<About closeModal={closeModal} />);
-        break;
-      case "services":
-        setModalContent(<Services closeModal={closeModal} />);
-        break;
-      case "contact":
-        setModalContent(<Contact previewMode closeModal={closeModal} />);
-        break;
-      default:
-        setModalContent(null);
-    }
-  };
-
-  const closeModal = () => setModalContent(null);
 
   const isGithubPages = import.meta.env.BASE_URL.includes("technology-parts");
 
@@ -59,20 +60,22 @@ function App() {
         <div className="app-wrapper">
           {/* <div className="page-center"> */}
           <Routes>
-            <Route path="/" element={<Home openModal={openModal} />} />
-            <Route path="/services" element={<Services />} />
+            <Route path="/" element={<Home />} />
+
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:id" element={<ProjectDetails />} />
-            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/map" element={<Map />} />
+
             <Route path="*" element={<NotFound />} />
           </Routes>
           {/* </div> */}
 
-          <Modal isOpen={!!modalContent} onClose={closeModal}>
-            {modalContent}
-          </Modal>
+          {/* EFECTUL DE FADE(scroll-fade-indicator) LA BAZA ECRANULUI */}
+          <div
+            className={`scroll-fade-indicator ${
+              !showFadeIndicator ? "hidden" : ""
+            }`}
+          ></div>
         </div>
       </Suspense>
     </BrowserRouter>

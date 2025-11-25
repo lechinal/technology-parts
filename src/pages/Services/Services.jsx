@@ -27,7 +27,7 @@ const Services = ({ closeModal }) => {
   };
 
   return (
-    <section className={styles.services}>
+    <section id="services" className={styles.services}>
       <div className={styles.inner}>
         <header className={styles.header}>
           <h2>Serviciile Noastre</h2>

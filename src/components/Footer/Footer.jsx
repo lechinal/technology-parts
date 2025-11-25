@@ -47,7 +47,7 @@ const Footer = () => {
           </div>
           <FollowUs />
           <div className={styles.misc}>
-            <WorkingHours />
+            {/* <WorkingHours /> */}
             <LegalInfo />
           </div>
         </div>

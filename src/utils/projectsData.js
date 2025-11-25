@@ -548,7 +548,7 @@ export const projectData = [
   // --- CONSTRUCTII ZIDARIE (cz) ---
   {
     id: "cz-001",
-    title: "Zidărie și Compartimentări - Casa Alba Iulia (Ionut)",
+    title: "Zidărie și Compartimentări - Casa Alba Iulia",
     category: "Constructii zidarie",
     description:
       "Lucrări de zidărie portantă și neportantă, inclusiv tencuieli interioare și exterioare.",
@@ -576,7 +576,7 @@ export const projectData = [
   // --- FINISAJE INTERIOARE (fi) ---
   {
     id: "fi-001",
-    title: "Finisaje Interioare Complexe - Casa Alba Iulia (Ionut)",
+    title: "Finisaje Interioare Complexe - Casa Alba Iulia",
     category: "Finisaje interioare",
     description:
       "Gletuire, vopsitorie, montaj parchet, placări ceramice și alte finisaje de înaltă calitate.",

@@ -36,6 +36,10 @@
 .hero {
   text-align: center;
   margin-bottom: 5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .mainTitle {
@@ -55,7 +59,7 @@
   color: var(--color-logo);
   letter-spacing: var(--letter-spacing);
   text-transform: uppercase;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   font-weight: var(--font-weight);
   animation: fadeInUp 1.2s ease-out;
 }
@@ -65,13 +69,15 @@
   max-width: 800px;
   margin: 0 auto 3rem;
   animation: fadeInUp 1.4s ease-out;
+
+  /* border: 2px solid red;  */
 }
 
 .description p {
-  font-size: 1.1rem;
-  color: var(--color-fg-light);
+  font-size: var(--font-size-h6);
+  color: var(-color-fg-bold);
   line-height: 1.8;
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
 }
 
 .description p:last-child {
@@ -146,77 +152,6 @@
 .secondaryBtn:focus {
   outline: 2px solid var(--color-border);
   outline-offset: 3px;
-}
-
-/* ===================== STATS ===================== */
-.stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-bottom: 5rem;
-  animation: fadeInUp 1.8s ease-out;
-}
-
-.statCard {
-  text-align: center;
-  padding: 2.5rem 2rem;
-  background: var(--color-border-bg);
-  border: var(--border-width) solid var(--color-border-bg-alt);
-  border-radius: var(--border-radius);
-  transition: all var(--transition-base) ease;
-}
-
-.statCard:hover {
-  background: var(--color-border-hover);
-  border-color: var(--color-logo);
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-}
-
-.statNumber {
-  font-size: 3.5rem;
-  font-weight: var(--font-weight-bold);
-  color: var(--color-logo);
-  margin-bottom: 0.5rem;
-  line-height: 1;
-}
-
-.statLabel {
-  font-size: 1rem;
-  color: var(--color-fg-light);
-  letter-spacing: var(--letter-spacing);
-  text-transform: uppercase;
-}
-
-/* ===================== QUOTE ===================== */
-.quote {
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 3rem;
-  background: var(--color-border-bg);
-  border-left: 4px solid var(--color-logo);
-  border-radius: var(--border-radius);
-  animation: fadeInUp 2s ease-out;
-}
-
-.quote p {
-  font-size: 1.15rem;
-  color: var(--color-fg);
-  line-height: 1.8;
-  font-style: italic;
-}
-
-/* ===================== ANIMATION ===================== */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* =======================================================
