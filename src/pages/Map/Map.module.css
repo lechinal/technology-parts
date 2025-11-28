@@ -4,6 +4,8 @@
   align-items: center;
   padding: 2rem;
   background: var(--color-bg-overlay);
+
+  border: 2px solid red;
 }
 
 .mapContainer {

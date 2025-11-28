@@ -16,7 +16,7 @@ const NavHeader = () => {
   return (
     <nav className={styles.nav}>
       <ul>
-        <li>
+        <li className={styles.link}>
           <button
             className={styles.linkButton}
             onClick={() => scrollToSection("about")}

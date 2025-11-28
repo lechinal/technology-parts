@@ -1,6 +1,9 @@
 import { useState, Suspense, lazy, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import "./utils/variables.css";
+import "./App.css";
+
 import Work from "./pages/Work/Work";
 import Loader from "./components/Loader/Loader.jsx";
 import Modal from "./components/Modal/Modal";
@@ -31,7 +34,7 @@ function App() {
       const documentHeight = document.documentElement.scrollHeight;
       const isAtBottom = scrollY + windowHeight >= documentHeight - 100;
 
-      if (scrollY > 700 || isAtBottom) {
+      if (scrollY > 4000 || isAtBottom) {
         setShowFadeIndicator(false);
       } else {
         setShowFadeIndicator(true);

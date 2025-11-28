@@ -1,6 +1,6 @@
 .main {
   position: relative;
-  margin-top: 120px;
+  margin-top: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,9 +27,11 @@
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  display: grid;
+  padding: 1.6rem;
+
+  /* display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 2rem; */
 }
 
 /* ===================== HERO ===================== */
@@ -43,49 +45,14 @@
 }
 
 .mainTitle {
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-h1);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-fg-bold);
-  letter-spacing: var(--letter-spacing-heading);
+  color: var(--color-text);
   text-transform: uppercase;
-  margin-bottom: 1rem;
-  line-height: 1.6;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  animation: fadeInUp 1s ease-out;
+  text-shadow: var(--shadow-lg);
 }
 
 .subtitle {
-  text-align: center;
-  font-family: var(--font-family-signature);
-  font-weight: var(--font-weight-medium);
-  font-size: 1.8rem;
-  letter-spacing: var(--letter-spacing);
-  color: var(--color-logo);
+  color: var(--color-accent);
   text-transform: uppercase;
-  margin-bottom: 25px;
-
-  animation: fadeInUp 1.2s ease-out;
-}
-
-/* ===================== DESCRIPTION ===================== */
-.description {
-  max-width: 800px;
-  margin: 0 auto 3rem;
-  animation: fadeInUp 1.4s ease-out;
-
-  /* border: 2px solid red;  */
-}
-
-.description p {
-  font-size: var(--font-size-h6);
-  color: var(-color-fg-bold);
-  line-height: 1.8;
-  /* margin-bottom: 1.5rem; */
-}
-
-.description p:last-child {
-  margin-bottom: 0;
 }
 
 /* ===================== CTA BUTTONS ===================== */
@@ -94,33 +61,33 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 1.5rem;
-  animation: fadeInUp 1.6s ease-out;
 }
 
 .primaryBtn,
 .secondaryBtn {
-  height: var(--element-height);
-  line-height: var(--element-height);
-  padding: 0 2.5rem;
-  border-radius: var(--border-radius);
-  font-size: 0.85rem;
-  font-weight: var(--font-weight-bold);
-  letter-spacing: var(--letter-spacing);
-  text-transform: uppercase;
   cursor: pointer;
-  transition: all var(--transition-base) ease;
+  font-size: var(--font-size-small);
+  transition: var(--transition-base);
+
+  padding: 0 2.5rem;
+
+  border-radius: var(--border-radius);
+
+  text-transform: uppercase;
   border: none;
 }
 
 .primaryBtn {
-  background: var(--color-logo);
-  color: var(--color-bg);
-  border: solid var(--border-width) var(--color-logo);
+  background: var(--color-accent-dark);
+  color: var(--color-text);
+  border: solid var(--border-width) var(--color-accent-dark);
 }
 
 .primaryBtn:hover {
   background: transparent;
-  color: var(--color-logo);
+  color: var(--color-text);
+  border: solid var(--border-width) var(--color-text);
+
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(243, 144, 77, 0.3);
 }
@@ -131,30 +98,31 @@
 }
 
 .primaryBtn:focus {
-  outline: 2px solid var(--color-logo);
+  outline: 2px solid var(--color-accent-dark);
   outline-offset: 3px;
 }
 
 .secondaryBtn {
   background: transparent;
-  color: var(--color-fg-bold);
-  border: solid var(--border-width) var(--color-border);
+  color: var(--color-text);
+  border: solid var(--border-width) var(--color-text);
 }
 
 .secondaryBtn:hover {
-  background: var(--color-border-bg-alt);
-  border-color: var(--color-logo);
+  background: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
   color: var(--color-logo);
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+  /* box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1); */
 }
 
 .secondaryBtn:active {
   transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(243, 144, 77, 0.4);
 }
 
 .secondaryBtn:focus {
-  outline: 2px solid var(--color-border);
+  outline: 2px solid var(--color-accent-dark);
   outline-offset: 3px;
 }
 
@@ -163,33 +131,20 @@
  */
 
 /* ---------- Desktop Large: 1281px - 1680px ---------- */
-@media screen and (min-width: 1281px) {
+/* @media screen and (min-width: 1281px) {
   .mainTitle {
     font-size: 4rem;
   }
-}
+} */
 
 /* ---------- Tablet Landscape: 737px - 1280px ---------- */
 @media screen and (min-width: 737px) and (max-width: 1280px) {
-  .content {
-    grid-template-columns: 1fr 320px;
-  }
-  .stats {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-    margin-bottom: 3rem;
-  }
-
   .mainTitle {
     font-size: clamp(2.5rem, 3.5vw, 3.8rem);
   }
 
   .subtitle {
-    font-size: 1.6rem;
-  }
-
-  .statNumber {
-    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-size: clamp(1.3rem, 1.5vw, 1.8rem);
   }
 }
 
@@ -200,29 +155,12 @@
   }
 
   .mainTitle {
-    font-size: 3rem;
+    font-size: clamp(2.25rem, 2.5vw, 2.6rem);
   }
 
   .subtitle {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-  }
-
-  .description p {
-    font-size: 1rem;
-  }
-
-  .stats {
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-
-  .statCard {
-    padding: 1.5rem 1rem;
-  }
-
-  .quote {
-    padding: 2rem;
+    font-size: clamp(1rem, 1.3vw, 1.5rem);
+    /* margin-bottom: 1rem; */
   }
 }
 
@@ -237,17 +175,13 @@
   }
 
   .mainTitle {
-    font-size: 2rem;
+    font-size: clamp(2rem, 2.3vw, 2.5rem);
     letter-spacing: 0.15rem;
   }
 
   .subtitle {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .description p {
-    font-size: 0.9rem;
+    font-size: clamp(1rem, 1.3vw, 1.5rem);
+    /* margin-bottom: 1.5rem; */
   }
 
   .ctaButtons {
@@ -261,28 +195,6 @@
     width: 100%;
     padding: 0 1.5rem;
     font-size: 0.8rem;
-  }
-
-  .stats {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .statNumber {
-    font-size: 2.5rem;
-  }
-
-  .statLabel {
-    font-size: 0.9rem;
-  }
-
-  .quote {
-    padding: 1.5rem 1rem;
-  }
-
-  .quote p {
-    font-size: 0.95rem;
   }
 }
 
@@ -302,23 +214,11 @@
     font-size: 0.75rem;
     padding: 0 1.25rem;
   }
-
-  .statNumber {
-    font-size: 2rem;
-  }
-
-  .quote p {
-    font-size: 0.9rem;
-  }
 }
 
 /* ---------- Extra Small: ≤320px ---------- */
 @media screen and (max-width: 320px) {
   .mainTitle {
     font-size: 1.5rem;
-  }
-
-  .statNumber {
-    font-size: 1.6rem;
   }
 }

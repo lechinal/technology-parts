@@ -3,7 +3,7 @@
   width: 5.5rem;
   height: 5.5rem;
   line-height: 5.5rem;
-  border: var(--border-width) solid var(--color-border);
+  border: var(--border-width) solid var(--color-border-button);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -24,7 +24,7 @@
   transform: translateX(-50%);
   width: 2px;
   height: 3.5rem;
-  background-color: var(--color-border);
+  background-color: var(--color-border-button);
   animation: moveLine 2s ease-in-out infinite,
     pulseColor 1s ease-in-out infinite;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
@@ -47,22 +47,22 @@
 }
 @keyframes pulseColor {
   0% {
-    background-color: var(--color-border);
+    background-color: var(--color-accent);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
   }
   50% {
-    background-color: var(--color-logo);
+    background-color: var(--color-accent);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
   }
   100% {
-    background-color: var(--color-border);
+    background-color: var(--color-accent);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
   }
 }
 
 .content {
-  border-top: var(--border-width) solid var(--color-border);
-  border-bottom: var(--border-width) solid var(--color-border);
+  border-top: var(--border-width) solid var(--color-border-button);
+  border-bottom: var(--border-width) solid var(--color-border-button);
 
   padding: 3rem 2rem;
   margin: 0 auto;
@@ -78,11 +78,11 @@
   position: absolute;
   content: "";
   bottom: calc(-5rem - var(--border-width));
-  left: 49.8%;
+  left: 49.6%;
   transform: translateX(-50%);
   width: 2px;
   height: 3.5rem;
-  background-color: var(--color-border);
+  background-color: var(--color-border-button);
   animation: moveLine 2s ease-in-out infinite,
     pulseColor 1s ease-in-out infinite;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
@@ -103,26 +103,11 @@
     filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.3));
   }
   50% {
-    filter: drop-shadow(0 0 12px var(--color-logo));
+    filter: drop-shadow(0 0 12px var(--color-accent));
   }
   100% {
     filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.3));
   }
-}
-
-.content h1,
-.content h2 {
-  margin: 0;
-  font-family: var(--font-family);
-}
-
-.content h1 {
-  font-weight: var(--font-weight-bold);
-  letter-spacing: var(--letter-spacing-heading);
-}
-
-.content h2 {
-  font-weight: var(--font-weight);
 }
 
 /**

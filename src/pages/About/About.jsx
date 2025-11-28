@@ -1,93 +1,138 @@
 // src/pages/About/About.jsx
 import React from "react";
 import styles from "./About.module.css";
-import { FaAward, FaLightbulb, FaUsers, FaTrophy } from "react-icons/fa";
+import { FaAward, FaLightbulb, FaUsers, FaMobileAlt } from "react-icons/fa";
+import { FaHandshake } from "react-icons/fa6";
+import { LiaThumbtackSolid } from "react-icons/lia";
+
+import Map from "../Map/Map.jsx";
+
+import svgQMark from "../../assets/svg/question-mark.svg";
 
 const About = () => {
   return (
     <section id="about" className={styles.about}>
-      <div className={styles.inner}>
-        <header className={styles.header}>
-          <h2 className={styles.sectionTitle}>
-            Construim Viitorul, Cărămidă cu Cărămidă.
-          </h2>
-          <p className={styles.description}>
+      {/* <div className={styles.inner}> */}
+      <header className={styles.header}>
+        <h2 className={styles.headerTitle}>
+          <span className={styles.highlightAboutHeader}>Construim</span>{" "}
+          Viitorul, Cărămidă cu Cărămidă!
+        </h2>
+        <div className={styles.headerDescription}>
+          <p className={styles.descriptionText}>
             Din anul 2017, reîntorși cu experiență acumulată în Germania, frații
             Corneliu și Ionuț Bisboaca au fondat{" "}
             <strong className={styles.highlight}>Technology Parts</strong>,
-            marcând începutul unei activități inovatoare și dedicate calității.
+            pornind o activitate bazată pe profesionalism, seriozitate și
+            atenție constantă la detalii. De la început, obiectivul a fost acela
+            de a aduce în piață o abordare modernă și bine organizată.
           </p>
-        </header>
-        <p className={styles.description}>
-          La <strong className={styles.highlight}>Technology Parts</strong>,
-          transformăm viziunile în realitate solidă, îmbinând precizia
-          standardelor germane cu adaptabilitatea la nevoile locale. Fiecare
-          proiect este o dovadă a angajamentului nostru față de excelență,
-          inovație și satisfacția deplină a clientului. Ne mândrim cu un
-          portofoliu diversificat, care include structuri din beton, lemn și
-          metal, alături de finisaje interioare impecabile.
-        </p>
+          <p className={styles.descriptionText}>
+            În prezent,{" "}
+            <strong className={styles.highlight}>Technology Parts</strong>{" "}
+            transformă ideile în proiecte solide, prin precizie germană și
+            adaptare la cerințele locale. Fiecare lucrare este o dovadă a
+            angajamentului nostru pentru calitate și inovație, de la structuri
+            din beton, lemn și metal, până la finisaje interioare de nivel
+            premium.
+          </p>
+        </div>
+      </header>
+
+      <section className={styles.textContent}>
         <p className={styles.description}>
           Cu un spirit proactiv și o dedicare permanentă, ne concentrăm pe a
           depăși așteptările, nu doar pe a le îndeplini. Încrederea clienților
-          noștri, confirmată de recomandările și extinderea continuă a
-          portofoliului, ne motivează să avansăm constant, explorând noi
-          orizonturi și consolidându-ne poziția pe piața construcțiilor.
+          noștri, confirmată de recomandările lor și de extinderea constantă a
+          portofoliului, ne motivează să avansăm în fiecare an. Continuăm să ne
+          perfecționăm procesele, să adoptăm soluții moderne și să explorăm noi
+          orizonturi, consolidându-ne poziția pe piața construcțiilor și
+          dovedind că seriozitatea și calitatea sunt valori pe care ne putem
+          construi viitorul.
         </p>
-        <div className={styles.keyBenefitsGrid}>
-          {/* Cardul 1: Lucrări de Înaltă Calitate */}
-          <div className={styles.benefitCard}>
-            <div className={styles.benefitIcon}>
-              <FaAward />
-            </div>
+      </section>
+
+      <div className={styles.keyBenefitsGrid}>
+        {/* Cardul 1: Lucrări de Înaltă Calitate */}
+        <div className={styles.benefitCard}>
+          <div className={styles.benefitIcon}>
+            <FaAward />
+          </div>
+          <div className={styles.benefitContent}>
             <h4 className={styles.benefitTitle}>Lucrări de Înaltă Calitate</h4>
             <p className={styles.benefitDescription}>
               Standarde germane aplicate în fiecare etapă.
             </p>
           </div>
+        </div>
 
-          {/* Cardul 2: Soluții Inovatoare */}
-          <div className={styles.benefitCard}>
-            <div className={styles.benefitIcon}>
-              <FaLightbulb />
-            </div>
+        {/* Cardul 2: Soluții Inovatoare */}
+        <div className={styles.benefitCard}>
+          <div className={styles.benefitIcon}>
+            <FaLightbulb />
+          </div>
+          <div className={styles.benefitContent}>
             <h4 className={styles.benefitTitle}>Soluții Inovatoare</h4>
             <p className={styles.benefitDescription}>
               Integrarea celor mai bune tehnici și materiale.
             </p>
           </div>
+        </div>
 
-          {/* Cardul 3: Echipă Dedicată */}
-          <div className={styles.benefitCard}>
-            <div className={styles.benefitIcon}>
-              <FaUsers />
-            </div>
+        {/* Cardul 3: Echipă Dedicată */}
+        <div className={styles.benefitCard}>
+          <div className={styles.benefitIcon}>
+            <FaUsers />
+          </div>
+          <div className={styles.benefitContent}>
             <h4 className={styles.benefitTitle}>Echipă Dedicată</h4>
             <p className={styles.benefitDescription}>
               Suport tehnic și execuție profesionistă.
             </p>
           </div>
-
-          {/* Cardul 4: Satisfacție Garantată */}
-          <div className={styles.benefitCard}>
-            <div className={styles.benefitIcon}>
-              <FaTrophy />
-            </div>
-            <h4 className={styles.benefitTitle}>Satisfacție Garantată</h4>
-            <p className={styles.benefitDescription}>
-              Fiecare proiect este cartea noastră de vizită.
-            </p>
-          </div>
-        </div>{" "}
-        {/* End keyBenefitsGrid */}
-        <p className={styles.finalSlogan}>
-          Cu Technology Parts, construiești mai mult decât o structură –
-          construiești un parteneriat durabil.
-        </p>
+        </div>
       </div>
-      <button type="button" className={styles.button}>
-        Cere o oferta
-      </button>
+
+      <section className={styles.ctaContainer}>
+        <div className={styles.ctaLeftSide}>
+          <div className={styles.ctaHeader}>
+            <FaHandshake className={styles.ctaIcon} />
+            <h4 className={styles.ctaTitle}>
+              Gata să-ți transformi viziunea <br /> în{" "}
+              <span className={styles.ctaTitleSpan}>
+                realitate
+                <img src={svgQMark} alt="Question Mark" width={80} />
+              </span>
+            </h4>
+            <p className={styles.ctaSlogan}>
+              Cu <strong className={styles.highlight}>Technology Parts</strong>,
+              construiești mai mult decât o structură, construiești un
+              parteneriat durabil.
+            </p>
+            <div className={styles.ctaContact}>
+              <button type="button" className={styles.primaryBtn}>
+                Cere oferta
+              </button>
+            </div>
+          </div>
+
+          <div className={styles.ctaBenefits}>
+            <div className={styles.ctaIconBox}>
+              <LiaThumbtackSolid className={styles.ctaIcon} />
+              Consultanță gratuită
+            </div>
+            <div className={styles.ctaIconBox}>
+              <LiaThumbtackSolid className={styles.ctaIcon} />
+              Proiect personalizat
+            </div>
+            <div className={styles.ctaIconBox}>
+              <LiaThumbtackSolid className={styles.ctaIcon} />
+              Răspuns în 24h
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* </div> */}
     </section>
   );
 };

@@ -1,58 +1,61 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 :root {
-  /* Culori principale */
-  --color-bg: #1b1f22;
-  --color-bg-alt: #000000;
-  --color-bg-overlay: rgba(19, 21, 25, 0.5);
-  --color-fg: #ffffff;
+  /* --- CULORI  --- */
+  /* Text */
+  --color-text: #ffffff; /*text principal*/
+  --color-text-muted: #b5b8bd; /*text secundar descrieri, info*/
+  --color-text-soft: #7a7e84; /* text low-contrast, labeluri, hinturi */
 
-  --color-fg-light: rgba(255, 255, 255, 0.5);
-  --color-logo: #f3904d;
+  /* Background */
+  --color-bg: #121416;
+  --color-bg-alt: #1a1d1f;
+  --color-bg-elevated: #202326;
+  --color-bg-elevated: #393c3f;
 
-  /* Border si fundaluri */
-  --color-border: #ffffff;
-  --color-border-bg: rgba(255, 255, 255, 0.274);
-  --color-border-bg-alt: rgba(255, 255, 255, 0.175);
-  --color-border-hover: rgba(255, 255, 255, 0.075);
-  --color-border-active: rgba(255, 255, 255, 0.175);
+  /* Accent (Brand) */
+  --color-accent: #f3904d;
+  --color-accent-dark: #c87438;
 
-  /* Dimensiuni */
+  /* Secondary (Tech) */
+  --color-secondary: #4dd0e1;
+  --color-secondary-dark: #3aa8b5;
+
+  /* Borders */
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-border-hover: rgba(255, 255, 255, 0.2);
+  --color-border-heavy: rgba(255, 255, 255, 0.32);
+  --color-border-button: #fff;
+
+  /* --- DIMENSIUNI  --- */
   --border-width: 1px;
   --border-radius: 4px;
+  --border-radius-lg: 8px;
   --element-height: 2.75rem;
   --element-margin: 2rem;
-
-  /* Logo si header */
   --logo-size: 5.5rem;
   --logo-size-small: 4.75rem;
   --header-padding: 3rem 2rem;
   --header-padding-small: 2.5rem 1rem;
 
-  /* Font */
-  /* --font-family: "Source Sans Pro", sans-serif;
-  --font-family-fixed: "Courier New", monospace; */
-
-  /* H1-H6, Sloganuri */
+  /* --- FONTURI  --- */
   --font-family-primary: "Orbitron", sans-serif;
-  /* body, p, ul, ol */
   --font-family-secondary: "Exo 2", sans-serif;
-  /* Semnatura vizuala */
   --font-family-signature: "Rajdhani", sans-serif;
 
-  /* font size */
-  --font-size-base: 1.125rem; /* 18px */
-  --font-size-h6: 1.25rem; /* 20px */
-  --font-size-h5: 1.5rem; /* 24px */
-  --font-size-h4: 2rem; /* 32px */
-  --font-size-h3: 2.5rem; /* 40px */
-  --font-size-h2: 3.5rem; /* 56px - Titlu Secțiune */
-  --font-size-h1: 5.5rem; /* 88px - Titlu Hero */
+  /* --- FONT SIZES 1rem = 16px --- */
+  --font-size-small: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-h5: 1.25rem;
+  --font-size-h4: 1.5rem;
+  --font-size-h3: 2rem;
+  --font-size-h2: 2.5rem;
+  --font-size-h1: 3.5rem;
 
-  /* font weight */
+  /* --- LINE HEIGHTS  --- */
+  --line-height-tight: 1.3; /* pentru headings */
+  --line-height-base: 1.6; /* pentru body text */
+  --line-height-loose: 1.8; /* pentru text lung */
+
+  /* --- FONT WEIGHTS  --- */
   --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
@@ -61,25 +64,27 @@
   --font-weight-extra: 800;
   --font-weight-black: 900;
 
-  /* spacing */
+  /* --- SPACING  --- */
 
-  /* --letter-spacing: 0.2rem;
-  --letter-spacing-heading: 0.5rem; */
+  --letter-spacing-tight: 0.02em;
+  --letter-spacing-normal: 0.05em;
+  --letter-spacing-wide: 0.1em;
+  --letter-spacing-wider: 0.15em;
 
-  --space-xxs: 0.5rem; /* 8px */
-  --space-xs: 1rem; /* 16px */
-  --space-sm: 2rem; /* 32px */
-  --space-md: 4rem; /* 64px */
-  --space-lg: 8rem; /* 128px */
-  --space-xl: 12rem; /* 192px */
+  --space-xxs: 0.5rem;
+  --space-xs: 1rem;
+  --space-sm: 2rem;
+  --space-md: 4rem;
+  --space-lg: 6rem;
+  --space-xl: 8rem;
 
-  /* Tranzitii / animatii */
-  --transition-base: 0.2s;
+  /* --- TRANSITIONS  --- */
+  --transition-base: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-bg: 2.5s;
   --transition-intro: 0.75s;
   --transition-article: 0.325s;
 
-  /* Responsive / breakpoints */
+  /* --- BREAKPOINTS  --- */
   --break-xlarge-min: 1281px;
   --break-xlarge-max: 1680px;
   --break-large-min: 981px;
@@ -92,117 +97,36 @@
   --break-xsmall-max: 480px;
   --break-xxsmall-max: 360px;
 
-  /* ==================== SHADOW SYSTEM (doar cu culorile tale existente) ==================== */
+  /* --- SHADOWS --- */
 
-  /* 1. GLOW PORTOCALIU – bazat strict pe --color-logo */
-  --shadow-glow-sm: 0 0 12px rgba(243, 144, 77, 0.25); /* #f3904d la 25% */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.35);
+  --shadow-card-rest: 0 8px 25px rgba(0, 0, 0, 0.4);
+  --shadow-card-secondary: 0 16px 48px rgba(58, 168, 181, 0.4);
+  --shadow-card-secondary-dark: 0 8px 24px rgba(58, 168, 181, 0.25);
+
+  --shadow-sm-light: 0 16px 48px rgba(255, 250, 250, 0.4);
+
+  /* Glow pentru accent */
+  /* --glow-primary: 0 0 20px rgba(243, 144, 77, 0.5);
+  --shadow-glow-sm: 0 0 12px rgba(243, 144, 77, 0.25);
   --shadow-glow-md: 0 0 24px rgba(243, 144, 77, 0.4);
   --shadow-glow-lg: 0 0 40px rgba(243, 144, 77, 0.55);
   --shadow-glow-xlg: 0 0 60px rgba(243, 144, 77, 0.7);
   --shadow-glow-hero: 0 0 80px rgba(243, 144, 77, 0.65);
 
-  /* 2. TEXT-SHADOW PORTOCALIU */
   --text-shadow-logo: 0 0 20px rgba(243, 144, 77, 0.7);
   --text-shadow-glow: 0 0 30px rgba(243, 144, 77, 0.8),
     0 0 60px rgba(243, 144, 77, 0.5);
   --text-shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.6);
 
-  /* 3. SHADOW CLASIC pentru carduri și elemente ridicate */
   --shadow-card-rest: 0 8px 25px rgba(0, 0, 0, 0.4);
   --shadow-card-hover: 0 20px 50px rgba(0, 0, 0, 0.6);
   --shadow-card-active: 0 4px 12px rgba(0, 0, 0, 0.5);
 
-  /* 4. INNER GLOW / BORDER GLOW (folosind doar --color-logo) */
   --shadow-inner-glow: inset 0 0 40px rgba(243, 144, 77, 0.15);
   --shadow-border-glow: 0 0 20px rgba(243, 144, 77, 0.35);
 
-  /* 5. SCROLL INDICATOR – îmbunătățit cu glow portocaliu subtil */
-  --scroll-indicator-glow: 0 -10px 30px rgba(243, 144, 77, 0.2);
-}
-html {
-  scroll-behavior: smooth;
-}
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
-h1 {
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-h1);
-  font-weight: var(--font-weight-black);
-  letter-spacing: var(--space-xl);
-}
-
-p {
-  font-family: var(--font-family-secondary);
-}
-
-/* H1 Hero + Logo text */
-h1,
-.hero-title,
-.logo-text {
-  text-shadow: var(--text-shadow-glow);
-}
-
-/* H2–H4 și sloganuri */
-/* h2,
-h3,
-h4,
-.slogan {
-  text-shadow: var(--text-shadow-logo);
-} */
-ul,
-ol {
-  list-style: none;
-}
-
-button {
-  font-family: var(--font-family-signature);
-  font-weight: 700;
-  cursor: pointer;
-
-  letter-spacing: 0.15rem;
-
-  transition: all 0.35s ease;
-}
-
-/* === Scrollbar styling (optional) === */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--secondary);
-  border-radius: 8px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--primary);
-}
-
-/* === Scroll fade indicator === */
-.scroll-fade-indicator {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 150px;
-  background: linear-gradient(
-    to bottom,
-    transparent 0%,
-    rgba(255, 255, 255, 0.1) 45%,
-    rgba(255, 255, 255, 0.3) 85%,
-    rgba(255, 255, 255, 0.5) 120%
-  );
-  backdrop-filter: blur(2px);
-  pointer-events: none;
-  z-index: 998;
-  transition: opacity 0.5s ease;
-}
-
-.scroll-fade-indicator.hidden {
-  opacity: 0;
-  pointer-events: none;
+  --scroll-indicator-glow: 0 -10px 30px rgba(243, 144, 77, 0.2); */
 }

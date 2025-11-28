@@ -1,4 +1,4 @@
-.about {
+/* .about {
   padding: var(--space-md) var(--space-xs);
   color: var(--color-fg);
   text-align: center;
@@ -31,25 +31,24 @@
   line-height: 1.6;
   max-width: 800px;
   margin: 0 auto var(--space-sm) auto;
-  color: var(--color-fg); /* Text mai deschis pentru paragrafe */
+  color: var(--color-fg); 
 }
 
 .highlight {
-  /* Pentru textul "Technology Parts SRL" etc. */
-  color: var(--color-logo); /* Culoarea portocalie pentru evidențieri */
+  
+  color: var(--color-logo); 
   font-weight: var(--font-weight-semi);
 }
 
-/* === Gridul cu Puncte Cheie (Beneficii) - Înlocuiește .features === */
+
 .keyBenefitsGrid {
   display: grid;
-  /* 2 coloane pe desktop, 1 pe mobil. auto-fit încearcă să umple spațiul */
+ 
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-sm); /* Spațiere între carduri */
+  gap: var(--space-sm); 
   margin-top: var(--space-md);
   margin-bottom: var(--space-md);
-  /* Nu mai este nevoie de max-width aici dacă .inner are deja o lățime max */
-  /* margin-left: auto; margin-right: auto; */
+  
 }
 
 .benefitCard {
@@ -103,44 +102,360 @@
 }
 
 .button {
-  /* Păstrează stilul existent al butonului */
-  /* Asigură-te că aceste stiluri sunt definite în _root_.css sau unde este .button */
+  
   font-family: var(--font-family-signature);
   font-weight: 700;
   cursor: pointer;
   letter-spacing: 0.15rem;
   transition: all 0.35s ease;
-  /* Adaugă stiluri specifice pentru butonul din About */
+ 
   background-color: var(--color-logo);
-  color: var(--color-bg); /* Text închis pe fundal portocaliu */
+  color: var(--color-bg); 
   padding: 1rem 2rem;
   border: none;
   border-radius: var(--border-radius);
   text-transform: uppercase;
   box-shadow: var(--shadow-glow-md);
-  margin-top: var(--space-sm); /* Spațiu deasupra butonului */
+  margin-top: var(--space-sm); 
 }
 
 .button:hover {
   background-color: darken(
     var(--color-logo),
     10%
-  ); /* Sau o culoare portocalie puțin mai închisă */
+  ); 
   box-shadow: var(--shadow-glow-lg);
 }
 
-/* === Responsive (se pot adapta la breakpoints-urile tale specifice) === */
+
 @media (max-width: 768px) {
   .sectionTitle {
-    font-size: var(--font-size-h3); /* Mărime mai mică pe mobil */
+    font-size: var(--font-size-h3); 
   }
   .paragraph {
-    font-size: 1rem; /* Mărime text paragrafe puțin mai mică pe mobil */
+    font-size: 1rem; 
   }
   .keyBenefitsGrid {
-    grid-template-columns: 1fr; /* O singură coloană pe ecrane mici */
+    grid-template-columns: 1fr; 
   }
   .finalSlogan {
-    font-size: var(--font-size-h6); /* Mărime mai mică pe mobil */
+    font-size: var(--font-size-h6); 
   }
+} */
+
+.about {
+  padding: 0 var(--space-xs);
+}
+/*--- header section --- */
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+
+  width: 100%;
+}
+
+.headerTitle {
+  /* border: 2px solid green; */
+  text-align: center;
+  font-size: var(--font-size-h1);
+  font-size: clamp(1.9rem, 4.5vw, 5rem);
+}
+
+.highlightAboutHeader {
+  font-family: var(--font-family-signature);
+  /* font-size: 5.5rem; */
+  font-size: clamp(2.5rem, 5.5vw, 6.5rem);
+  font-weight: var(--font-weight-semi);
+
+  color: var(--color-secondary-dark);
+  text-transform: uppercase;
+  text-shadow: var(--shadow-card-secondary-dark);
+
+  padding-right: clamp(0.75rem, 1.25vw, 1.5rem);
+  border-right: clamp(3px, 0.5vw, 5px) solid var(--color-secondary-dark);
+
+  overflow: hidden;
+  white-space: nowrap;
+
+  animation: typing 2s steps(9, end), blink 1.7s step-end infinite;
+  transition: var(--transition-base);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    border-color: var(--color-text);
+    color: var(--color-text);
+  }
+
+  50% {
+    border-color: var(--color-secondary-dark);
+    color: var(--color-secondary-dark);
+  }
+}
+
+.headerDescription {
+  /* border: 2px solid red; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: left;
+}
+.descriptionText {
+  /* controleaza latimea textului, e perfect pt lizibilitate */
+  max-width: 30ch;
+  font-size: var(--font-size-h5);
+
+  background: var(--color-border-hover);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-sm);
+  text-align: center;
+
+  transition: var(--transition-base);
+}
+.descriptionText:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: var(--shadow-sm-light);
+  border-color: var(--color-border-button);
+  cursor: pointer;
+}
+.highlight {
+  color: var(--color-accent);
+  font-weight: var(--font-weight-semi);
+}
+
+/* --- textContent section --- */
+
+.textContent {
+  /* border: 2px solid blue; */
+  margin-top: var(--element-height);
+  margin-left: auto;
+  margin-right: auto;
+
+  /* controleaza latimea textului, e perfect pt lizibilitate */
+  max-width: 100ch;
+  padding: 0 1.5rem;
+
+  background: var(--color-border-hover);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-sm);
+  text-align: center;
+  transition: var(--transition-base);
+  box-shadow: var(--shadow-card-hover);
+}
+.textContent:hover {
+  transform: translateY(5px) scale(1.05);
+  box-shadow: var(--shadow-sm-light);
+  border-color: var(--color-border-button);
+  cursor: pointer;
+}
+
+.description {
+  text-align: left;
+  line-height: 1.6;
+  font-size: var(--font-size-h5);
+}
+
+/* --- keyBenefitsGrid --- */
+.keyBenefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+.benefitCard {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  background: var(--color-border-hover);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  /* box-shadow: var(--shadow-card-hover); */
+
+  transition: var(--transition-base);
+}
+.benefitCard:hover {
+  transform: translateY(5px);
+  box-shadow: var(--shadow-card-secondary);
+  border-color: var(--color-text);
+  cursor: pointer;
+
+  perspective: 500px;
+}
+
+.benefitIcon {
+  font-size: var(--font-size-h2);
+  color: var(--color-secondary);
+  color: var(--color-secondary-dark);
+  margin-bottom: var(--space-xxs);
+  margin-top: var(--space-xxs);
+  text-shadow: var(--text-shadow-logo);
+
+  transition: var(--transition-base);
+  transform: translateZ(0);
+}
+
+.benefitCard:hover .benefitIcon {
+  color: var(--color-secondary);
+  /* transform: scale(1.3); */
+  transform: scale(1.3) translateZ(20px);
+}
+
+.benefitContent {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.benefitTitle {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h4);
+  color: var(--color-logo);
+  margin-bottom: var(--space-xxs);
+  text-shadow: var(--text-shadow-subtle);
+  border-bottom: 2px dotted var(--color-text);
+}
+
+.benefitDescription {
+  font-family: var(--font-family-signature);
+  font-size: var(--font-size-h5);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+}
+/* --- CTA Section --- */
+.ctaLeftSide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+
+  margin: 2rem;
+}
+.ctaHeader {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem;
+}
+.ctaIcon {
+  width: 500px;
+  font-size: var(--font-size-h2);
+  margin-bottom: var(--space-xs);
+
+  color: var(--color-text);
+}
+.ctaTitle {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-xs);
+  line-height: var(--line-height-loose);
+}
+.ctaTitleSpan {
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  text-shadow: var(--shadow-card-secondary-dark);
+}
+.ctaSlogan {
+  font-family: var(--font-family-signature);
+  margin-bottom: var(--space-xs);
+  font-size: var(--font-size-h3);
+  margin-bottom: 1.5rem;
+
+  color: var(--color-secondary);
+  text-shadow: var(--shadow-card-secondary-dark);
+}
+/* --- CTA Buttons --- */
+/* .ctaContact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+} */
+.primaryBtn {
+  font-size: var(--font-size-small);
+  transition: var(--transition-base);
+
+  padding: 0 2.5rem;
+
+  border-radius: var(--border-radius);
+  border: none;
+  border: solid var(--border-width) var(--color-text);
+
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--color-text);
+}
+.primaryBtn:hover {
+  background: var(--color-secondary-dark);
+  border-color: var(--color-secondary-dark);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-secondary);
+}
+
+/* --- CTA Benefits ---*/
+
+.ctaBenefits {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  cursor: pointer;
+}
+
+.ctaIconBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+
+  font-family: var(--font-family-signature);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--color-secondary);
+  text-shadow: var(--shadow-card-secondary-dark);
+  padding: 1rem 1rem;
+
+  background: var(--color-border-hover);
+  border-radius: var(--border-radius-lg);
+  border: var(--border-width) solid var(--color-secondary);
+
+  box-shadow: var(--shadow-card-secondary-dark);
+  transition: var(--transition-base);
+}
+.ctaIconBox:hover {
+  color: var(--color-text);
+  border: var(--border-width) solid var(--color-text);
+}
+.ctaIconBox:hover .ctaIcon {
+  color: var(--color-secondary);
 }

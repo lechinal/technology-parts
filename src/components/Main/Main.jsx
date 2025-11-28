@@ -14,20 +14,20 @@ const Main = () => {
           <h1 className={styles.mainTitle}>
             TEHNOLOGIE. CONSTRUCȚII. PERFORMANȚĂ.
           </h1>
-          <p className={styles.subtitle}>
+          <h2 className={styles.subtitle}>
             De la fundație la finisaje, construim cu pasiune și expertiză
             germană.
-          </p>
+          </h2>
 
           <div className={styles.ctaButtons}>
             <button
-              className={styles.secondaryBtn}
+              className={styles.primaryBtn}
               onClick={() => navigate("/projects")}
             >
-              Vezi Portofoliul
+              Vezi Proiecte
             </button>
             <button
-              className={styles.primaryBtn}
+              className={styles.secondaryBtn}
               onClick={() => navigate("/contact")}
             >
               Solicita Ofertă
