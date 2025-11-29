@@ -5,9 +5,9 @@ import { FaAward, FaLightbulb, FaUsers, FaMobileAlt } from "react-icons/fa";
 import { FaHandshake } from "react-icons/fa6";
 import { LiaThumbtackSolid } from "react-icons/lia";
 
-import Map from "../Map/Map.jsx";
-
 import svgQMark from "../../assets/svg/question-mark.svg";
+import svgExclamation from "../../assets/svg/exclamation-alert.svg";
+import GradientText from "../../components/GradientText/GradientText.jsx";
 
 const About = () => {
   return (
@@ -15,8 +15,11 @@ const About = () => {
       {/* <div className={styles.inner}> */}
       <header className={styles.header}>
         <h2 className={styles.headerTitle}>
-          <span className={styles.highlightAboutHeader}>Construim</span>{" "}
-          Viitorul, Cărămidă cu Cărămidă!
+          <GradientText className={styles.highlightAboutHeader}>
+            Construim
+          </GradientText>
+          Viitorul, Cărămidă cu Cărămidă{" "}
+          <img src={svgExclamation} alt="Exlamation Alert" width={80} />
         </h2>
         <div className={styles.headerDescription}>
           <p className={styles.descriptionText}>
@@ -96,7 +99,7 @@ const About = () => {
       <section className={styles.ctaContainer}>
         <div className={styles.ctaLeftSide}>
           <div className={styles.ctaHeader}>
-            <FaHandshake className={styles.ctaIcon} />
+            <FaHandshake className={styles.ctaHeaderIcon} />
             <h4 className={styles.ctaTitle}>
               Gata să-ți transformi viziunea <br /> în{" "}
               <span className={styles.ctaTitleSpan}>
@@ -111,7 +114,7 @@ const About = () => {
             </p>
             <div className={styles.ctaContact}>
               <button type="button" className={styles.primaryBtn}>
-                Cere oferta
+                Solicita oferta
               </button>
             </div>
           </div>

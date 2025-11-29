@@ -2,55 +2,144 @@
   padding: 4rem 2rem;
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
   /* background-color: var(--color-bg); */
 }
 
-.inner {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-}
-
 .header {
-  text-align: center;
   margin-bottom: 4rem;
 }
 
 .sectionTitle {
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-h2);
+  font-size: clamp(1.9rem, 2.5vw, 3rem);
   font-weight: var(--font-weight-bold);
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  color: var(--color-fg);
-  margin-bottom: var(--space-sm);
-  line-height: 1.2;
+
+  /* text-align: center; */
+  text-shadow: var(--shadow-card-rest);
+  text-align: left;
   text-transform: uppercase;
-}
 
-.description {
-  font-family: var(--font-family-secondary);
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-semi);
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto var(--space-sm) auto;
-  color: var(--color-fg);
-}
-.highlight {
-  color: var(--color-logo);
-  font-weight: var(--font-weight-semi);
-}
-
-.servicesGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-sm);
+  /* color: var(--color-text); */
+  letter-spacing: var(--letter-spacing-wide);
   margin-bottom: var(--space-md);
 }
 
+.descriptionContainer {
+  /* border: 2px dotted red; */
+  width: 700px;
+  margin: auto;
+}
+
+.description {
+  text-align: left;
+  line-height: var(--line-height-base);
+  font-size: var(--font-size-h5);
+}
+.highlight {
+  color: var(--color-accent);
+  font-weight: var(--font-weight-semi);
+}
+
+/* cta section*/
+.ctaSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: var(--space-md);
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-xs);
+
+  padding-bottom: var(--space-xs);
+
+  position: relative;
+}
+
+.ctaSectionTitle {
+  font-family: var(--font-family-signature);
+  font-size: clamp(1.9rem, 2.5vw, 3rem);
+  color: var(--color-accent);
+
+  width: fit-content;
+}
+
+.ctaTitleSpan {
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  text-shadow: var(--shadow-card-secondary-dark);
+  border-bottom: 3px dotted var(--color-accent);
+}
+.ctaBtn {
+  font-size: var(--font-size-small);
+  transition: var(--transition-base);
+
+  padding: 0 2.5rem;
+
+  border-radius: var(--border-radius);
+  border: none;
+  border: solid var(--border-width) var(--color-text);
+
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--color-text);
+
+  align-self: flex-start;
+  position: relative;
+}
+
+.ctaBtn:hover {
+  background: var(--color-secondary-dark);
+  border-color: var(--color-secondary-dark);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-secondary);
+}
+
+.ctaBtn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 200px;
+  height: 2px;
+  background: var(--color-text);
+  transform: translateY(-50%);
+  margin-left: var(--space-sm); /* Spațiu între buton și linie */
+}
+.ctaBtn:hover::after {
+  background: var(--color-secondary-dark);
+}
+
+/* service cards grid */
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  gap: var(--space-sm);
+  align-items: center;
+
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--space-md);
+}
+
+.pixelCardWrapper {
+  height: 300px;
+  width: 100%;
+}
 .serviceCard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
   background: var(--color-border-bg);
   border: var(--border-width) solid var(--color-border-bg-alt);
   border-radius: var(--border-radius);
@@ -61,11 +150,8 @@
   box-shadow: var(--shadow-card-rest);
 }
 
-.serviceCard:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-card-hover);
-  border-color: var(--color-logo);
-  cursor: pointer;
+.serviceCard:hover .serviceIcon {
+  color: var(--color-secondary);
 }
 
 .serviceIcon {
@@ -74,11 +160,12 @@
 }
 
 .serviceTitle {
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-h6);
-  font-weight: var(--font-weight-semi);
-  color: var(--color-logo);
-  margin-bottom: var(--space-xxs);
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-accent);
+  margin-bottom: var(--space-sm);
   text-transform: uppercase;
   text-shadow: var(--text-shadow-subtle);
 }
@@ -86,61 +173,70 @@
 .serviceDescription {
   font-family: var(--font-family-secondary);
   font-size: var(--font-size-base);
-  line-height: 1.6;
-  color: var(--color-fg);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-normal);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+
+  text-shadow: var(--shadow-sm-light);
 }
+/* last cta section on Services */
 
 .cta {
   text-align: center;
-  padding: var(--space-lg) var(--space-sm);
   background: transparent;
   border-radius: var(--border-radius);
 }
 .ctaTitle {
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-h3);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-logo);
+  font-family: var(--font-family-signature);
+  font-size: clamp(1.9rem, 2.5vw, 3rem);
+  color: var(--color-accent);
   margin-bottom: var(--space-sm);
-  text-shadow: var(--text-shadow-glow);
-  line-height: 1.2;
+}
+.ctaTitleSpanCta {
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  text-shadow: var(--shadow-card-secondary-dark);
+
+  border-bottom: 2px dotted var(--color-accent);
 }
 .ctaText {
   font-family: var(--font-family-secondary);
-  font-size: var(--font-size-h6);
-  color: var(--color-fg);
-  margin-bottom: var(--space-sm);
-  line-height: 1.6;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-semi);
+  letter-spacing: var(--letter-spacing-normal);
+  line-height: var(--line-height-loose);
+  color: var(--color-text);
+  text-shadow: var(--shadow-sm-light);
+  margin-bottom: 2rem;
 }
 
 .button {
-  display: inline-block;
-  height: var(--element-height);
-  line-height: var(--element-height);
-  padding: 0 2.25rem;
-  background-color: var(--color-logo);
+  font-size: var(--font-size-small);
+  transition: var(--transition-base);
+
+  padding: 0 2.5rem;
+
   border-radius: var(--border-radius);
-  border: solid var(--border-width) var(--color-logo);
-  color: var(--color-bg);
-  cursor: pointer;
-  font-size: 0.9rem;
-  font-weight: var(--font-weight-bold);
-  letter-spacing: 0.15rem;
-  text-align: center;
-  text-decoration: none;
+  border: none;
+  border: solid var(--border-width) var(--color-text);
+
   text-transform: uppercase;
-  transition: all var(--transition-base) ease;
-  box-shadow: var(--shadow-glow-md);
+  background: transparent;
+  color: var(--color-text);
+
+  align-self: flex-start;
+  position: relative;
 }
 
 .button:hover {
-  background-color: transparent;
-  color: var(--color-logo);
-  border-color: var(--color-logo);
-  box-shadow: var(--shadow-glow-lg);
+  background: var(--color-secondary-dark);
+  border-color: var(--color-secondary-dark);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-secondary);
 }
 
 /* Responsive Design */
@@ -165,13 +261,13 @@
     padding: var(--space-xs);
   }
   .cta {
-    padding: var(--space-lg) var(--space-md); /* Ajustare padding CTA */
+    padding: var(--space-lg) var(--space-md);
   }
   .ctaTitle {
-    font-size: var(--font-size-h4); /* Ajustare font-size titlu CTA */
+    font-size: var(--font-size-h4);
   }
   .ctaText {
-    font-size: var(--font-size-base); /* Ajustare font-size text CTA */
+    font-size: var(--font-size-base);
   }
 }
 
@@ -197,13 +293,13 @@
     font-size: var(--font-size-base);
   }
   .cta {
-    padding: var(--space-md) var(--space-xs); /* Ajustare padding CTA */
+    padding: var(--space-md) var(--space-xs);
   }
   .ctaTitle {
-    font-size: var(--font-size-h5); /* Ajustare font-size titlu CTA */
+    font-size: var(--font-size-h5);
   }
   .ctaText {
-    font-size: var(--font-size-base); /* Ajustare font-size text CTA */
+    font-size: var(--font-size-base);
   }
 }
 
@@ -239,13 +335,13 @@
     font-size: 0.95rem;
   }
   .cta {
-    padding: var(--space-sm) var(--space-xxs); /* Ajustare padding CTA */
+    padding: var(--space-sm) var(--space-xxs);
   }
   .ctaTitle {
-    font-size: var(--font-size-h6); /* Ajustare font-size titlu CTA */
+    font-size: var(--font-size-h6);
   }
   .ctaText {
-    font-size: var(--font-size-base); /* Păstrăm ca în breakpoint-ul original */
+    font-size: var(--font-size-base);
   }
 }
 
@@ -280,7 +376,7 @@
     font-size: 0.9rem;
   }
   .cta {
-    padding: var(--space-xs) var(--space-xxs); /* Ajustare padding CTA */
+    padding: var(--space-xs) var(--space-xxs);
   }
   .ctaTitle {
     font-size: var(--font-size-base);
@@ -328,14 +424,13 @@
     font-size: 0.85rem;
   }
   .cta {
-    padding: var(--space-xs) var(--space-xxs); /* Ajustare padding CTA */
+    padding: var(--space-xs) var(--space-xxs);
   }
   .ctaTitle {
-    font-size: var(--font-size-h6); /* Rămâne h6, este cel mai mic titlu */
-    line-height: 1.2;
+    font-size: var(--font-size-h6);
   }
   .ctaText {
-    font-size: 0.9rem; /* Ajustat puțin mai mic */
+    font-size: 0.9rem;
     margin-bottom: var(--space-xs);
   }
   .button {
