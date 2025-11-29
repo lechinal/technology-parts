@@ -88,12 +88,18 @@ const Services = () => {
           <span className={styles.ctaTitleSpanCta}>Personalizată</span>
           <img src={svgExclamation} alt="Exclamation Alert" width={80} />
         </h3>
-        <p className={styles.ctaText}>
-          Ești pregătit să pui bazele viitorului tău proiect? Contactează echipa
-          noastră pentru a discuta detaliile, pentru o estimare de cost gratuită
-          și pentru a vedea cum expertiza noastră poate aduce valoare viziunii
-          tale.
-        </p>
+        <div className={styles.ctaTextContainer}>
+          <p className={styles.ctaText}>
+            Ești pregătit să pui bazele viitorului tău proiect? Contactează
+            echipa noastră pentru a discuta detaliile, pentru o estimare de cost
+            gratuită și pentru a vedea cum expertiza noastră poate aduce valoare
+            viziunii tale.
+          </p>
+          <p className={styles.ctaText}>
+            Alătură-te celor peste 200 de clienți care și-au transformat ideile
+            în realitate prin parteneriatul cu experții noștri specializați.
+          </p>
+        </div>
         <button
           type="button"
           className={styles.button}

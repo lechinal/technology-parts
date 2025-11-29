@@ -35,6 +35,7 @@
   --logo-size-small: 4.75rem;
   --header-padding: 3rem 2rem;
   --header-padding-small: 2.5rem 1rem;
+  --card-padding: 1.5rem 0.5rem;
 
   /* --- FONTURI  --- */
   --font-family-primary: "Orbitron", sans-serif;
@@ -51,6 +52,7 @@
   --font-size-h1: 3.5rem;
 
   /* --- LINE HEIGHTS  --- */
+  --line-height-small: 0.8;
   --line-height-tight: 1.3; /* pentru headings */
   --line-height-base: 1.6; /* pentru body text */
   --line-height-loose: 1.8; /* pentru text lung */

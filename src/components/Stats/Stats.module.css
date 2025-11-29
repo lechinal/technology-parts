@@ -1,192 +1,175 @@
 .statsSection {
-  padding: var(--space-xs);
-
-  color: var(--color-fg);
-  text-align: center;
+  padding: 80px 20px;
 }
 
-/* ===================== STATS ===================== */
 .statsGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-sm);
-  margin-bottom: var(--space-lg);
-  animation: fadeInUp 1.8s ease-out;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 60px;
 }
 
 .statCard {
-  text-align: center;
-  background: var(--color-border-bg);
-  border: var(--border-width) solid var(--color-border-bg-alt);
-  border-radius: var(--border-radius);
-  padding: var(--space-md) var(--space-sm); /* Padding generos */
-  box-shadow: var(--shadow-card-rest);
-  transition: all var(--transition-base) ease;
-}
-
-.statCard:hover {
   background: var(--color-border-hover);
-  border-color: var(--color-logo);
-  transform: translateY(-5px);
+  border: var(--border-width) solid var(--color-text);
+  border-radius: var(--border-radius-lg);
 
-  box-shadow: var(--shadow-glow-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: var(--card-padding);
+
   cursor: pointer;
 }
 
 .statNumber {
-  font-family: var(
-    --font-family-primary
-  ); /* Fontul pentru titluri/numeri mari */
-  font-size: var(--font-size-h2); /* Numere foarte mari */
-  font-weight: var(--font-weight-black);
-  color: var(--color-logo); /* Culoarea portocalie pentru numere */
-  margin-bottom: var(--space-xxs);
-  text-shadow: var(--text-shadow-glow); /* Efect de glow puternic */
-  line-height: 1; /* Elimină spațiul suplimentar la line-height */
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-secondary);
 }
 
 .statLabel {
-  font-family: var(--font-family-secondary);
-  font-size: var(--font-size-h6); /* Etichete mai mici sub număr */
+  font-family: var(--font-family-signature);
+  font-size: var(--font-size-h3);
   font-weight: var(--font-weight-semi);
-  color: var(--color-fg);
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
+
+  color: var(--color-accent);
+  border-bottom: 2px dotted var(--color-secondary);
 }
 
-/* ===================== QUOTE ===================== */
 .quote {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 0;
+  position: relative;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  opacity: 0.9;
+  background: var(--color-border);
+  border: var(--border-width) solid var(--color-text);
+  font-family: var(--font-family-signature);
   text-align: center;
-  padding: 3rem;
-  background: var(--color-border-bg);
-  border-radius: var(--border-radius);
-  animation: fadeInUp 2s ease-out;
 
-  border: var(--border-width) solid var(--color-logo);
-  border-radius: var(--border-radius);
-  border-color: var(--color-logo);
-  padding: var(--space-md) var(--space-sm);
-  max-width: 900px; /* Limitează lățimea citatului */
-  margin: 0 auto; /* Centrează citatul */
-  box-shadow: var(--shadow-glow-sm); /* Un glow subtil în jurul citatului */
+  transition: var(--transition-base);
+  cursor: pointer;
+}
+
+.quote::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #5eb9c4;
+  background: var(--color-border);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 40%);
+  z-index: 1;
+}
+
+.quote::after {
+  content: '"';
+  position: absolute;
+
+  top: 20px;
+  left: 20px;
+  font-size: 180px;
+  font-weight: 700;
+  color: var(--color-secondary);
+  line-height: var(--line-height-small);
+  z-index: 2;
+}
+/* HOVER PENTRU GHILIMELA DE SUS */
+.quote:hover::after {
+  color: var(--color-accent);
 }
 
 .quoteText {
   font-family: var(--font-family-signature);
-  font-size: var(--font-size-base); /* Mărimea de bază */
-  font-style: italic; /* Text cursiv pentru citat */
+  font-size: var(--font-size-h5);
   font-weight: var(--font-weight-semi);
-  color: var(--color-fg);
-  line-height: 1.7;
-  position: relative;
-  margin: 0;
-  padding: 0 var(--space-xs); /* Padding pentru a face loc ghilimelelor */
+  letter-spacing: var(--letter-spacing-normal);
+  line-height: var(--line-height-loose);
+  color: var(--color-text);
+  text-shadow: var(--shadow-card-rest);
+
+  margin-bottom: 2rem;
+  padding: 20px;
+
+  transition: var(--transition-base);
 }
-.quoteText::before,
-.quoteText::after {
-  font-family: var(--font-family-signature);
-  color: var(--color-logo);
-  font-size: var(--font-size-h1);
-  position: absolute;
-  line-height: 1;
+
+/* HOVER PENTRU TEXT */
+.quote:hover .quoteText {
+  color: var(--color-secondary);
+  text-shadow: var(--shadow-card-secondary-dark);
 }
 
 .quoteText::before {
-  content: "“";
-  top: -4rem;
-  left: 0;
+  content: '"';
+  position: absolute;
+  bottom: -70px;
+  right: 20px;
+  font-size: 180px;
+  font-weight: 700;
+  color: var(--color-secondary);
+  line-height: var(--line-height-small);
+
+  transition: var(--transition-base);
 }
 
-.quoteText::after {
-  content: "”";
-  bottom: -6rem;
-  right: 0;
+/* HOVER PENTRU GHILIMELA DE JOS */
+.quote:hover .quoteText::before {
+  color: var(--color-accent);
+}
+
+.quoteText p:first-child {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
 }
 
 .highlight {
-  color: var(--color-logo);
-  font-weight: var(--font-weight-semi);
+  font-weight: 600;
 }
 
-/* ===================== ANIMATION ===================== */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media screen and (min-width: 737px) and (max-width: 1280px) {
-  .statsGrid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-    margin-bottom: 3rem;
-  }
-
-  .statNumber {
-    font-size: clamp(2rem, 3.5vw, 3rem);
-  }
-}
-
-/* ---------- Tablet Portrait: 481px - 736px ---------- */
-@media screen and (min-width: 481px) and (max-width: 736px) {
-  .statsGrid {
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-
-  .statCard {
-    padding: 1.5rem 1rem;
-  }
-
+@media (max-width: 768px) {
   .quote {
-    padding: 2rem;
-  }
-}
-
-/* ---------- Mobile: ≤480px ---------- */
-@media screen and (max-width: 480px) {
-  .statsGrid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    margin-bottom: 2rem;
+    min-height: 350px;
   }
 
-  .statNumber {
-    font-size: 2.5rem;
+  .quote::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 30%);
   }
 
-  .statLabel {
-    font-size: 0.9rem;
+  .quote::after {
+    font-size: 120px;
+    top: 40px;
+    left: 40px;
   }
 
-  .quote {
-    padding: 1.5rem 1rem;
+  .quoteText {
+    padding: 40px;
   }
 
-  .quote p {
-    font-size: 0.95rem;
-  }
-}
-
-/* ---------- Mobile Small: ≤360px ---------- */
-@media screen and (max-width: 360px) {
-  .statNumber {
-    font-size: 2rem;
+  .quoteText::before {
+    font-size: 100px;
+    bottom: 20px;
+    right: 40px;
   }
 
-  .quote p {
-    font-size: 0.9rem;
+  .quoteText p:first-child {
+    font-size: 24px;
   }
-}
 
-/* ---------- Extra Small: ≤320px ---------- */
-@media screen and (max-width: 320px) {
-  .statNumber {
-    font-size: 1.6rem;
+  .quoteText p {
+    font-size: 16px;
   }
 }

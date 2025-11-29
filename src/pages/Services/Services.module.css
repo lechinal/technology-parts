@@ -34,9 +34,19 @@
 }
 
 .description {
-  text-align: left;
-  line-height: var(--line-height-base);
-  font-size: var(--font-size-h5);
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semi);
+  letter-spacing: var(--letter-spacing-wide);
+  line-height: var(--line-height-loose);
+  color: var(--color-text);
+  text-shadow: var(--shadow-lg);
+  margin-bottom: 4rem;
+  padding: 2rem;
+
+  text-align: center;
+
+  /* border: 2px solid red; */
 }
 .highlight {
   color: var(--color-accent);
@@ -191,7 +201,7 @@
   font-family: var(--font-family-signature);
   font-size: clamp(1.9rem, 2.5vw, 3rem);
   color: var(--color-accent);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
 }
 .ctaTitleSpanCta {
   font-family: var(--font-family-secondary);
@@ -203,15 +213,38 @@
 
   border-bottom: 2px dotted var(--color-accent);
 }
+.ctaTextContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  margin-bottom: 4rem;
+}
 .ctaText {
   font-family: var(--font-family-secondary);
-  font-size: var(--font-size-h5);
+  font-size: var(--font-size-h4);
   font-weight: var(--font-weight-semi);
-  letter-spacing: var(--letter-spacing-normal);
+  letter-spacing: var(--letter-spacing-wide);
   line-height: var(--line-height-loose);
   color: var(--color-text);
-  text-shadow: var(--shadow-sm-light);
+  text-shadow: var(--shadow-lg);
   margin-bottom: 2rem;
+
+  /* border: 1px solid red; */
+
+  text-align: center;
+  transition: var(--transition-base);
+}
+
+@media screen and (max-width: 768px) {
+  .ctaTextContainer {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}
+
+.ctaText:hover {
+  color: var(--color-accent);
+  cursor: pointer;
 }
 
 .button {
