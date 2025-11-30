@@ -9,21 +9,22 @@
   gap: 8px;
   align-items: center;
   background: transparent;
-  border: 1px solid var(--color-border-bg-alt);
+  border: 1px solid var(--color-text);
   padding: 8px 10px;
-  color: var(--color-fg);
-  border-radius: calc(var(--border-radius) * 2);
+  color: var(--color-text);
+  border-radius: var(--border-radius-lg);
   cursor: pointer;
-  transition: transform var(--transition-base) ease,
-    background var(--transition-base) ease;
+  transition: var(--transition-base);
 }
 
 .topBtn:hover {
   transform: translateY(-3px);
-  background: var(--color-bg-overlay);
+  background: var(--color-accent-dark);
+  border: 1px solid var(--color-accent-dark);
 }
 
 .topLabel {
   font-size: 0.85rem;
   color: var(--color-fg-light);
+  font-weight: var(--font-weight-bold);
 }

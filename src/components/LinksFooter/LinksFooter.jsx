@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./LinksFooter.module.css";
+import { NavLink } from "react-router-dom";
 
 const LinksFooter = () => {
   return (
@@ -7,16 +8,16 @@ const LinksFooter = () => {
       <h4 className={styles.sectionTitle}>Linkuri rapide</h4>
       <ul>
         <li>
-          <a href="/about">Despre noi</a>
+          <NavLink href="/about">Despre noi</NavLink>
         </li>
         <li>
-          <a href="/services">Servicii</a>
+          <NavLink href="/services">Servicii</NavLink>
         </li>
         <li>
-          <a href="/projects">Proiecte</a>
+          <NavLink href="/projects">Proiecte</NavLink>
         </li>
         <li>
-          <a href="/contact">Contact</a>
+          <NavLink href="/contact">Contact</NavLink>
         </li>
       </ul>
     </nav>

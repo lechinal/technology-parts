@@ -1,17 +1,21 @@
-/* bottom row */
 .rowBottom {
-  border-top: 2px solid var(--color-border-bg-alt);
+  border-top: 2px solid var(--color-text-soft);
   padding-top: 22px;
   margin-top: 20px;
+
   display: flex;
   justify-content: space-between;
-  gap: 12px;
   align-items: center;
 }
 
 .copy {
-  color: var(--color-fg-light);
-  font-size: 0.9rem;
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+  transition: var(--tarnsition-base);
+}
+.copy:hover {
+  color: var(--color-accent-dark);
+  cursor: pointer;
 }
 
 @media (max-width: 640px) {
