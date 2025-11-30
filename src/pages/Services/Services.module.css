@@ -202,6 +202,7 @@
   font-size: clamp(1.9rem, 2.5vw, 3rem);
   color: var(--color-accent);
   margin-bottom: var(--space-md);
+  text-align: left;
 }
 .ctaTitleSpanCta {
   font-family: var(--font-family-secondary);
@@ -272,202 +273,442 @@
   box-shadow: var(--shadow-card-secondary);
 }
 
-/* Responsive Design */
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
 
-/* Desktop Large (1281px - 1680px) */
-@media screen and (min-width: 1281px) and (max-width: 1680px) {
+/* XLARGE: 1281px - 1680px */
+@media (min-width: 1281px) and (max-width: 1680px) {
   .servicesGrid {
     grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+
+  .descriptionContainer {
+    width: 650px;
   }
 }
 
-/* Desktop Medium (981px - 1280px) */
-@media screen and (min-width: var(--break-large-min)) and (max-width: var(--break-large-max)) {
+/* LARGE: 981px - 1280px */
+@media (min-width: 981px) and (max-width: 1280px) {
+  .services {
+    padding: 3rem 1.5rem;
+  }
+
+  .header {
+    margin-bottom: 3rem;
+  }
+
+  .descriptionContainer {
+    width: 600px;
+  }
+
+  .description {
+    font-size: var(--font-size-h5);
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
   .servicesGrid {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-xs);
   }
-  .sectionTitle {
-    font-size: var(--font-size-h3);
+
+  .pixelCardWrapper {
+    height: 280px;
   }
+
   .serviceCard {
     padding: var(--space-xs);
   }
-  .cta {
-    padding: var(--space-lg) var(--space-md);
+
+  .ctaBtn::after {
+    width: 150px;
   }
-  .ctaTitle {
-    font-size: var(--font-size-h4);
+
+  .ctaTextContainer {
+    gap: var(--space-md);
+    margin-bottom: 3rem;
   }
+
   .ctaText {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-h5);
   }
 }
 
-/* Tableta Landscape (737px - 980px) */
-@media screen and (min-width: var(--break-medium-min)) and (max-width: var(--break-medium-max)) {
+/* MEDIUM: 737px - 980px */
+@media (min-width: 737px) and (max-width: 980px) {
   .services {
-    padding: var(--space-md) var(--space-xs);
+    padding: 2.5rem 1rem;
   }
+
   .header {
-    margin-bottom: var(--space-md);
+    margin-bottom: 2.5rem;
   }
+
   .sectionTitle {
-    font-size: var(--font-size-h4);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
   }
+
+  .descriptionContainer {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .description {
+    font-size: var(--font-size-base);
+    padding: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .ctaSection {
+    gap: var(--space-sm);
+  }
+
+  .ctaSectionTitle {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+  }
+
+  .ctaTitleSpan {
+    font-size: var(--font-size-h2);
+  }
+
+  .ctaBtn::after {
+    width: 100px;
+  }
+
   .servicesGrid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-xs);
   }
-  .serviceCard {
-    padding: var(--space-xs);
+
+  .pixelCardWrapper {
+    height: 260px;
   }
+
+  .serviceIcon {
+    font-size: var(--font-size-h4);
+  }
+
   .serviceTitle {
     font-size: var(--font-size-base);
   }
-  .cta {
-    padding: var(--space-md) var(--space-xs);
+
+  .serviceDescription {
+    font-size: var(--font-size-small);
   }
+
   .ctaTitle {
-    font-size: var(--font-size-h5);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
   }
+
+  .ctaTitleSpanCta {
+    font-size: var(--font-size-h2);
+  }
+
+  .ctaTextContainer {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+    margin-bottom: 2.5rem;
+  }
+
   .ctaText {
     font-size: var(--font-size-base);
+    margin-bottom: 1.5rem;
   }
 }
 
-/* Tableta Portrait (481px - 736px) */
-@media screen and (min-width: var(--break-small-min)) and (max-width: var(--break-small-max)) {
+/* SMALL: 481px - 736px */
+@media (min-width: 481px) and (max-width: 736px) {
   .services {
-    padding: var(--space-sm) var(--space-xxs);
+    padding: 2rem 0.75rem;
   }
+
   .header {
-    margin-bottom: var(--space-sm);
+    margin-bottom: 2rem;
   }
+
   .sectionTitle {
-    font-size: var(--font-size-h5);
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
   }
+
+  .descriptionContainer {
+    width: 100%;
+  }
+
   .description {
-    font-size: 1rem;
+    font-size: var(--font-size-small);
+    padding: 1rem;
+    margin-bottom: 2rem;
   }
+
+  .ctaSection {
+    gap: var(--space-xs);
+  }
+
+  .ctaSectionTitle {
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
+  }
+
+  .ctaTitleSpan {
+    font-size: var(--font-size-h3);
+  }
+
+  .ctaBtn {
+    padding: 0 2rem;
+    font-size: 0.75rem;
+  }
+
+  .ctaBtn::after {
+    display: none;
+  }
+
   .servicesGrid {
     grid-template-columns: 1fr;
-    gap: var(--space-xs);
-    margin-bottom: var(--space-md);
-  }
-  .serviceCard {
-    padding: var(--space-xs);
-  }
-  .serviceIcon {
-    font-size: var(--font-size-h4);
-  }
-  .serviceTitle {
-    font-size: var(--font-size-base);
-  }
-  .serviceDescription {
-    font-size: 0.95rem;
-  }
-  .cta {
-    padding: var(--space-sm) var(--space-xxs);
-  }
-  .ctaTitle {
-    font-size: var(--font-size-h6);
-  }
-  .ctaText {
-    font-size: var(--font-size-base);
-  }
-}
-
-/* Mobile (361px - 480px) */
-@media screen and (min-width: var(--break-xsmall-min)) and (max-width: var(--break-xsmall-max)) {
-  .services {
-    padding: var(--space-sm) var(--space-xxs);
-  }
-  .header {
-    margin-bottom: var(--space-xs);
-  }
-  .sectionTitle {
-    font-size: var(--font-size-h6);
-  }
-  .description {
-    font-size: 0.95rem;
-  }
-  .servicesGrid {
     gap: var(--space-xxs);
     margin-bottom: var(--space-sm);
   }
-  .serviceCard {
-    padding: var(--space-xs);
-  }
-  .serviceIcon {
-    font-size: var(--font-size-h4);
-  }
-  .serviceTitle {
-    font-size: var(--font-size-base);
-  }
-  .serviceDescription {
-    font-size: 0.9rem;
-  }
-  .cta {
-    padding: var(--space-xs) var(--space-xxs);
-  }
-  .ctaTitle {
-    font-size: var(--font-size-base);
-    line-height: 1.2;
+
+  .pixelCardWrapper {
+    height: 240px;
   }
 
-  .ctaText {
-    font-size: 0.95rem;
-    margin-bottom: var(--space-xs);
-  }
-  .button {
-    padding: 0 1.5rem;
-    font-size: 0.8rem;
-  }
-}
-
-/* Mobile Small (max 360px) */
-@media screen and (max-width: var(--break-xxsmall-max)) {
-  .services {
-    padding: var(--space-xs) var(--space-xxs);
-  }
-  .header {
-    margin-bottom: var(--space-xs);
-  }
-  .sectionTitle {
-    font-size: var(--font-size-h6);
-  }
-  .description {
-    font-size: 0.9rem;
-  }
-  .servicesGrid {
-    gap: var(--space-xxs);
-    margin-bottom: var(--space-xs);
-  }
   .serviceCard {
     padding: var(--space-xxs);
   }
+
   .serviceIcon {
-    font-size: var(--font-size-h5);
+    font-size: var(--font-size-h4);
   }
+
   .serviceTitle {
     font-size: var(--font-size-base);
+    margin-bottom: var(--space-xxs);
   }
+
   .serviceDescription {
     font-size: 0.85rem;
   }
-  .cta {
-    padding: var(--space-xs) var(--space-xxs);
-  }
+
   .ctaTitle {
-    font-size: var(--font-size-h6);
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
   }
+
+  .ctaTitleSpanCta {
+    font-size: var(--font-size-h3);
+  }
+
+  .ctaTextContainer {
+    grid-template-columns: 1fr;
+    gap: var(--space-xs);
+    margin-bottom: 2rem;
+  }
+
   .ctaText {
-    font-size: 0.9rem;
+    font-size: var(--font-size-small);
+    margin-bottom: 1rem;
+  }
+
+  .button {
+    padding: 0 1.75rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* XSMALL: 361px - 480px */
+@media (min-width: 361px) and (max-width: 480px) {
+  .services {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .header {
+    margin-bottom: 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: clamp(1.1rem, 2vw, 1.75rem);
+  }
+
+  .descriptionContainer {
+    width: 100%;
+  }
+
+  .description {
+    font-size: 0.8rem;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .ctaSection {
+    gap: var(--space-xxs);
+  }
+
+  .ctaSectionTitle {
+    font-size: clamp(1.1rem, 2vw, 1.75rem);
+  }
+
+  .ctaTitleSpan {
+    font-size: var(--font-size-h4);
+  }
+
+  .ctaBtn {
+    padding: 0 1.5rem;
+    font-size: 0.7rem;
+  }
+
+  .ctaBtn::after {
+    display: none;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
     margin-bottom: var(--space-xs);
   }
+
+  .pixelCardWrapper {
+    height: 220px;
+  }
+
+  .serviceCard {
+    padding: 0.5rem;
+  }
+
+  .serviceIcon {
+    font-size: var(--font-size-h5);
+    margin-bottom: 0.25rem;
+  }
+
+  .serviceTitle {
+    font-size: var(--font-size-small);
+    margin-bottom: 0.5rem;
+  }
+
+  .serviceDescription {
+    font-size: 0.8rem;
+  }
+
+  .ctaTitle {
+    font-size: clamp(1.1rem, 2vw, 1.75rem);
+    margin-bottom: var(--space-sm);
+  }
+
+  .ctaTitleSpanCta {
+    font-size: var(--font-size-h4);
+  }
+
+  .ctaTextContainer {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .ctaText {
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+
   .button {
     padding: 0 1.25rem;
+    font-size: 0.7rem;
+  }
+}
+
+/* XXSMALL: max 360px */
+@media (max-width: 360px) {
+  .services {
+    padding: 1rem 0.25rem;
+  }
+
+  .header {
+    margin-bottom: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1rem;
+  }
+
+  .descriptionContainer {
+    width: 100%;
+  }
+
+  .description {
     font-size: 0.75rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .ctaSection {
+    gap: 0.5rem;
+  }
+
+  .ctaSectionTitle {
+    font-size: 1rem;
+  }
+
+  .ctaTitleSpan {
+    font-size: var(--font-size-h5);
+  }
+
+  .ctaBtn {
+    padding: 0 1rem;
+    font-size: 0.65rem;
+  }
+
+  .ctaBtn::after {
+    display: none;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .pixelCardWrapper {
+    height: 200px;
+  }
+
+  .serviceCard {
+    padding: 0.4rem;
+  }
+
+  .serviceIcon {
+    font-size: var(--font-size-h5);
+    margin-bottom: 0.2rem;
+  }
+
+  .serviceTitle {
+    font-size: var(--font-size-small);
+    margin-bottom: 0.4rem;
+  }
+
+  .serviceDescription {
+    font-size: 0.7rem;
+  }
+
+  .ctaTitle {
+    font-size: 1rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  .ctaTitleSpanCta {
+    font-size: var(--font-size-h5);
+  }
+
+  .ctaTextContainer {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .ctaText {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .button {
+    padding: 0 0.75rem;
+    font-size: 0.65rem;
   }
 }

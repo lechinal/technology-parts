@@ -309,3 +309,381 @@
 .ctaIconBox:hover .ctaIcon {
   color: var(--color-secondary);
 }
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* LARGE: 981px - 1280px */
+@media (min-width: 981px) and (max-width: 1280px) {
+  .header {
+    gap: 2rem;
+  }
+
+  .headerDescription {
+    gap: 1.5rem;
+  }
+
+  .descriptionText {
+    font-size: var(--font-size-base);
+  }
+
+  .ctaHeaderIcon,
+  .ctaIcon {
+    width: 400px;
+  }
+}
+
+/* MEDIUM: 737px - 980px */
+@media (min-width: 737px) and (max-width: 980px) {
+  .header {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .headerTitle {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .highlightAboutHeader {
+    font-size: clamp(2rem, 5vw, 4rem);
+  }
+
+  .headerDescription {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .descriptionText {
+    max-width: 100%;
+  }
+
+  .keyBenefitsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .ctaLeftSide {
+    flex-direction: column;
+    margin: 1.5rem;
+  }
+
+  .ctaHeaderIcon,
+  .ctaIcon {
+    width: 300px;
+  }
+
+  .ctaTitle {
+    font-size: var(--font-size-h2);
+  }
+
+  .ctaTitleSpan {
+    font-size: var(--font-size-h2);
+  }
+}
+
+/* SMALL: 481px - 736px */
+@media (min-width: 481px) and (max-width: 736px) {
+  .about {
+    padding: 0 var(--space-xxs);
+  }
+
+  .header {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .headerTitle {
+    font-size: clamp(1.3rem, 3.5vw, 2.5rem);
+  }
+
+  .highlightAboutHeader {
+    font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+  }
+
+  .headerDescription {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .descriptionText {
+    max-width: 100%;
+    padding: var(--space-xs);
+  }
+
+  .textContent {
+    padding: var(--space-xs);
+  }
+
+  .description {
+    font-size: var(--font-size-base);
+  }
+
+  .keyBenefitsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-md);
+  }
+
+  .benefitCard {
+    padding: 1rem;
+  }
+
+  .ctaLeftSide {
+    flex-direction: column;
+    margin: 1rem;
+    gap: 15px;
+  }
+
+  .ctaHeader {
+    padding: 1rem;
+  }
+
+  .ctaHeaderIcon,
+  .ctaIcon {
+    width: 200px;
+    font-size: var(--font-size-h3);
+  }
+
+  .ctaTitle {
+    font-size: var(--font-size-h3);
+  }
+
+  .ctaTitleSpan {
+    font-size: var(--font-size-h3);
+  }
+
+  .ctaSlogan {
+    font-size: var(--font-size-h4);
+  }
+
+  .primaryBtn {
+    padding: 0 2rem;
+  }
+
+  .ctaBenefits {
+    gap: 0.75rem;
+  }
+
+  .ctaIconBox {
+    padding: 0.75rem;
+    font-size: var(--font-size-h5);
+  }
+}
+
+/* XSMALL: 361px - 480px */
+@media (min-width: 361px) and (max-width: 480px) {
+  .about {
+    padding: 0 var(--space-xxs);
+  }
+
+  .header {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .headerTitle {
+    font-size: clamp(1.1rem, 3vw, 2rem);
+  }
+
+  .highlightAboutHeader {
+    font-size: clamp(1.5rem, 4vw, 2.8rem);
+  }
+
+  .headerDescription {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .descriptionText {
+    max-width: 100%;
+    padding: var(--space-xxs);
+    font-size: var(--font-size-small);
+  }
+
+  .textContent {
+    padding: var(--space-xxs);
+    margin-top: var(--space-md);
+  }
+
+  .description {
+    font-size: var(--font-size-small);
+  }
+
+  .keyBenefitsGrid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-sm);
+  }
+
+  .benefitCard {
+    padding: 0.75rem;
+  }
+
+  .benefitIcon {
+    font-size: var(--font-size-h3);
+  }
+
+  .benefitTitle {
+    font-size: var(--font-size-h5);
+  }
+
+  .benefitDescription {
+    font-size: var(--font-size-small);
+  }
+
+  .ctaLeftSide {
+    flex-direction: column;
+    margin: 0.5rem;
+    gap: 10px;
+  }
+
+  .ctaHeader {
+    padding: 0.75rem;
+  }
+
+  .ctaHeaderIcon,
+  .ctaIcon {
+    width: 150px;
+    font-size: var(--font-size-h4);
+  }
+
+  .ctaTitle {
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-base);
+  }
+
+  .ctaTitleSpan {
+    font-size: var(--font-size-h4);
+  }
+
+  .ctaSlogan {
+    font-size: var(--font-size-h5);
+    margin-bottom: 1rem;
+  }
+
+  .primaryBtn {
+    padding: 0 1.5rem;
+    font-size: var(--font-size-xs);
+  }
+
+  .ctaBenefits {
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+
+  .ctaIconBox {
+    padding: 0.5rem;
+    font-size: var(--font-size-base);
+  }
+}
+
+/* XXSMALL: max 360px */
+@media (max-width: 360px) {
+  .about {
+    padding: 0 0.5rem;
+  }
+
+  .header {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .headerTitle {
+    font-size: 1rem;
+  }
+
+  .highlightAboutHeader {
+    font-size: 1.3rem;
+  }
+
+  .headerDescription {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .descriptionText {
+    max-width: 100%;
+    padding: 0.5rem;
+    font-size: var(--font-size-xs);
+  }
+
+  .textContent {
+    padding: 0.5rem;
+    margin-top: var(--space-sm);
+  }
+
+  .description {
+    font-size: var(--font-size-xs);
+  }
+
+  .keyBenefitsGrid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-top: var(--space-xs);
+    margin-bottom: var(--space-xs);
+  }
+
+  .benefitCard {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .benefitIcon {
+    font-size: var(--font-size-h4);
+  }
+
+  .benefitTitle {
+    font-size: var(--font-size-base);
+  }
+
+  .benefitDescription {
+    font-size: var(--font-size-xs);
+  }
+
+  .ctaLeftSide {
+    flex-direction: column;
+    margin: 0.25rem;
+    gap: 8px;
+  }
+
+  .ctaHeader {
+    padding: 0.5rem;
+  }
+
+  .ctaHeaderIcon,
+  .ctaIcon {
+    width: 100px;
+    font-size: var(--font-size-h5);
+  }
+
+  .ctaTitle {
+    font-size: var(--font-size-h5);
+    line-height: var(--line-height-tight);
+  }
+
+  .ctaTitleSpan {
+    font-size: var(--font-size-h5);
+  }
+
+  .ctaSlogan {
+    font-size: var(--font-size-base);
+    margin-bottom: 0.75rem;
+  }
+
+  .primaryBtn {
+    padding: 0 1rem;
+    font-size: var(--font-size-xxs);
+  }
+
+  .ctaBenefits {
+    gap: 0.4rem;
+    margin: 0.75rem 0;
+  }
+
+  .ctaIconBox {
+    padding: 0.4rem;
+    font-size: var(--font-size-small);
+  }
+}

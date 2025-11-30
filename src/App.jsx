@@ -62,6 +62,7 @@ function App() {
       <Suspense fallback={<Loader />}>
         <div className="app-wrapper">
           {/* <div className="page-center"> */}
+
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
