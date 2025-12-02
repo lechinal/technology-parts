@@ -54,7 +54,7 @@ const Services = () => {
         {/* cta section */}
         <div className={styles.ctaSection}>
           <h3 className={styles.ctaSectionTitle}>
-            Calitatea noastră vorbește prin{" "}
+            Calitatea vorbește prin{" "}
             <span className={styles.ctaTitleSpan}>rezultate</span>
             <img
               src={svgExclamation}
@@ -62,9 +62,11 @@ const Services = () => {
               className={styles.ctaIcon}
             />
           </h3>
-          <button type="button" className={styles.ctaBtn}>
-            Vezi proiectele noastre
-          </button>
+          <div className={styles.leftBtnContainer}>
+            <button type="button" className={styles.ctaLeftBtn}>
+              Vezi proiectele noastre
+            </button>
+          </div>
         </div>
       </header>
 
@@ -90,17 +92,20 @@ const Services = () => {
           </PixelCard>
         ))}
       </div>
-      <div className={styles.rightBtnContainer}>
-        <button type="button" className={styles.rightBtn}>
+      {/* <div className={styles.rightBtnContainer}>
+        <button type="button" className={styles.ctaRightBtn}>
           Vezi proiectele noastre
         </button>
-      </div>
+      </div> */}
       {/* cta section */}
       <div className={styles.cta}>
         <h3 className={styles.ctaTitle}>
-          Primește O Estimare{" "}
-          <span className={styles.ctaTitleSpanCta}>Personalizată</span>
-          <img src={svgExclamation} alt="Exclamation Alert" width={80} />
+          Ofertă <span className={styles.ctaTitleSpanCta}>Personalizată</span>
+          <img
+            src={svgExclamation}
+            alt="Exclamation Alert"
+            className={styles.ctaSpanIcon}
+          />
         </h3>
         <div className={styles.ctaTextContainer}>
           <p className={styles.ctaText}>

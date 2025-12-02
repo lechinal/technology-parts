@@ -101,45 +101,43 @@ const About = () => {
       </div>
 
       <section className={styles.ctaContainer}>
-        <div className={styles.ctaLeftSide}>
-          <div className={styles.ctaHeader}>
-            <FaHandshake className={styles.ctaHeaderIcon} />
-            <h4 className={styles.ctaTitle}>
-              Gata să-ți transformi viziunea <br /> în{" "}
-              <GradientText className={styles.ctaTitleSpan}>
-                Realitate
-              </GradientText>
-              <img
-                src={svgQMark}
-                alt="Question Mark"
-                className={styles.headerSVG}
-              />
-            </h4>
-            <p className={styles.ctaSlogan}>
-              Cu <strong className={styles.highlight}>Technology Parts</strong>,
-              construiești mai mult decât o structură, construiești un
-              parteneriat durabil.
-            </p>
-            <div className={styles.ctaContact}>
-              <button type="button" className={styles.primaryBtn}>
-                Solicita oferta
-              </button>
-            </div>
+        <div className={styles.ctaHeader}>
+          {/* <FaHandshake className={styles.ctaHeaderIcon} /> */}
+          <h4 className={styles.ctaTitle}>
+            Gata să-ți transformi viziunea în{" "}
+            <GradientText className={styles.ctaTitleSpan}>
+              Realitate
+            </GradientText>
+            <img
+              src={svgQMark}
+              alt="Question Mark"
+              className={styles.headerSVG}
+            />
+          </h4>
+          <p className={styles.ctaSlogan}>
+            Cu <strong className={styles.highlight}>Technology Parts</strong>,
+            construiești mai mult decât o structură, construiești un parteneriat
+            durabil.
+          </p>
+          <div className={styles.ctaContact}>
+            <button type="button" className={styles.primaryBtn}>
+              Solicita oferta
+            </button>
           </div>
+        </div>
 
-          <div className={styles.ctaBenefits}>
-            <div className={styles.ctaIconBox}>
-              <LiaThumbtackSolid className={styles.ctaIcon} />
-              Consultanță gratuită
-            </div>
-            <div className={styles.ctaIconBox}>
-              <LiaThumbtackSolid className={styles.ctaIcon} />
-              Proiect personalizat
-            </div>
-            <div className={styles.ctaIconBox}>
-              <LiaThumbtackSolid className={styles.ctaIcon} />
-              Răspuns în 24h
-            </div>
+        <div className={styles.ctaBenefits}>
+          <div className={styles.ctaIconBox}>
+            <LiaThumbtackSolid className={styles.ctaIcon} />
+            Consultanță gratuită
+          </div>
+          <div className={styles.ctaIconBox}>
+            <LiaThumbtackSolid className={styles.ctaIcon} />
+            Proiect personalizat
+          </div>
+          <div className={styles.ctaIconBox}>
+            <LiaThumbtackSolid className={styles.ctaIcon} />
+            Răspuns în 24h
           </div>
         </div>
       </section>

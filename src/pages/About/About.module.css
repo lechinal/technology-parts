@@ -1,6 +1,6 @@
 .about {
   padding: 0 var(--space-xs);
-  max-width: 1440px;
+  /* max-width: 2000px; */
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -45,7 +45,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  align-items: left;
 }
 .descriptionText {
   /* max-width:30 ch controleaza latimea textului, e perfect pt lizibilitate */
@@ -175,29 +174,23 @@
   font-weight: var(--font-weight-medium);
   color: var(--color-text);
 }
-/* --- CTA Section --- */
-.ctaLeftSide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  text-align: center;
 
-  margin: 2rem auto; /* Centrează */
-  max-width: 1200px; /* Limitează lățimea maximă */
-  padding: 0 var(--space-xs); /* Padding pentru ecrane mici */
-}
-.ctaHeader {
-  /* border: 2px solid red; */
+/* --- CTA Section --- */
+.ctaContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-
-  padding: 2rem;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  border-radius: var(--border-radius-lg);
+  text-align: center;
 }
+/* .ctaHeader {
+  border: 2px solid blue;
+} */
 .ctaHeaderIcon {
-  width: 600px;
+  width: 500px;
   font-size: var(--font-size-h2);
   margin-bottom: var(--space-xs);
 
@@ -258,21 +251,17 @@
 }
 
 /* --- CTA Benefits ---*/
-.ctaContainer {
-  width: 100%;
-  padding: 0;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+
 .ctaBenefits {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: row;
   gap: 1rem;
-  margin: 1.5rem 0;
-  cursor: pointer;
 }
 
 .ctaIconBox {
+  max-width: 400px;
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -330,26 +319,20 @@
   .headerDescription {
     gap: 1.5rem;
   }
-
+  .ctaBenefits {
+    flex-direction: column;
+  }
   .ctaHeaderIcon,
   .ctaIcon {
     width: 500px;
   }
-  .ctaLeftSide {
-    padding: 0 var(--space-xs);
-    margin: 1rem;
-  }
+
   .ctaIconBox {
     font-size: var(--font-size-h5);
     padding: 0.75rem;
     max-width: 350px;
   }
 }
-/* @media (min-width: 1076) {
-  .benefitTitle {
-    font-size: clamp(1rem, 1.5vw, 1.85rem);
-  }
-} */
 
 /* MEDIUM: 737px - 980px */
 @media (min-width: 737px) and (max-width: 980px) {
@@ -383,12 +366,9 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
   }
-
-  .ctaLeftSide {
+  .ctaBenefits {
     flex-direction: column;
-    margin: 1.5rem;
   }
-
   .ctaHeaderIcon,
   .ctaIcon {
     width: 300px;
@@ -400,8 +380,6 @@
 
   .ctaTitleSpan {
     font-size: var(--font-size-h2);
-  }
-  .ctaIconBox {
   }
 }
 
@@ -453,12 +431,6 @@
     padding: 1rem;
   }
 
-  .ctaLeftSide {
-    flex-direction: column;
-    margin: 1rem;
-    gap: 15px;
-  }
-
   .ctaHeader {
     padding: 1rem;
   }
@@ -486,6 +458,8 @@
   }
 
   .ctaBenefits {
+    flex-direction: column;
+
     gap: 0.75rem;
   }
 
@@ -513,16 +487,6 @@
   .headerSVG {
     width: 50px;
   }
-  /* .headerSVG {
-    width: 50px;
-  }
-
-  .highlightAboutHeader {
-    font-size: var(--font-size-h1);
-  }
-  .headerDescription {
-    gap: 0.75rem;
-  } */
 
   .descriptionText {
     max-width: 100%;
@@ -545,7 +509,9 @@
     margin-top: var(--space-sm);
     margin-bottom: var(--space-sm);
   }
-
+  .ctaBenefits {
+    flex-direction: column;
+  }
   .benefitCard {
     padding: 0.75rem;
   }
@@ -560,12 +526,6 @@
 
   .benefitDescription {
     font-size: var(--font-size-small);
-  }
-
-  .ctaLeftSide {
-    flex-direction: column;
-    margin: 0.5rem;
-    gap: 10px;
   }
 
   .ctaHeader {
@@ -598,7 +558,6 @@
   }
 
   .ctaBenefits {
-    gap: 0.5rem;
     margin: 1rem 0;
   }
 
@@ -669,12 +628,6 @@
 
   .benefitDescription {
     font-size: var(--font-size-xs);
-  }
-
-  .ctaLeftSide {
-    flex-direction: column;
-    margin: 0.25rem;
-    gap: 8px;
   }
 
   .ctaHeader {

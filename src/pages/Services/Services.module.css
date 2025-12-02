@@ -88,7 +88,7 @@
 .ctaIcon {
   width: 80px;
 }
-.ctaBtn {
+.ctaLeftBtn {
   font-size: var(--font-size-small);
   transition: var(--transition-base);
 
@@ -106,14 +106,14 @@
   position: relative;
 }
 
-.ctaBtn:hover {
+.ctaLeftBtn:hover {
   background: var(--color-secondary-dark);
   border-color: var(--color-secondary-dark);
   transform: translateY(-3px);
   box-shadow: var(--shadow-card-secondary);
 }
 
-.ctaBtn::after {
+/* .ctaLeftBtn::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -124,9 +124,9 @@
   transform: translateY(-50%);
   margin-left: var(--space-sm);
 }
-.ctaBtn:hover::after {
+.ctaLeftBtn:hover::after {
   background: var(--color-secondary-dark);
-}
+} */
 
 /* service cards grid */
 .servicesGrid {
@@ -177,7 +177,7 @@
   padding-right: 2rem;
 }
 
-.rightBtn {
+.ctaRightBtn {
   font-size: var(--font-size-small);
   transition: var(--transition-base);
   padding: 0 2.5rem;
@@ -191,14 +191,14 @@
   white-space: nowrap;
 }
 
-.rightBtn:hover {
+.ctaRightBtn:hover {
   background: var(--color-secondary-dark);
   border-color: var(--color-secondary-dark);
   transform: translateY(-3px);
   box-shadow: var(--shadow-card-secondary);
 }
 
-.rightBtn::before {
+/* .ctaRightBtn::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -210,9 +210,9 @@
   margin-right: var(--space-sm);
 }
 
-.rightBtn:hover::before {
+.ctaRightBtn:hover::before {
   background: var(--color-secondary-dark);
-}
+} */
 
 .serviceCard:hover .serviceIcon {
   color: var(--color-secondary);
@@ -275,6 +275,7 @@
   margin-bottom: var(--space-md);
   text-align: left;
 }
+
 .ctaTitleSpanCta {
   font-family: var(--font-family-secondary);
   font-size: var(--font-size-h1);
@@ -284,6 +285,9 @@
   text-shadow: var(--shadow-card-secondary-dark);
 
   border-bottom: 2px dotted var(--color-accent);
+}
+.ctaSpanIcon {
+  width: 80px;
 }
 .ctaTextContainer {
   display: grid;
@@ -386,7 +390,10 @@
     padding: var(--space-xs);
   }
 
-  .ctaBtn::after {
+  .ctaLeftBtn::after {
+    width: 150px;
+  }
+  .ctaRightBtn::before {
     width: 150px;
   }
 
@@ -440,7 +447,10 @@
     width: 50px;
   }
 
-  .ctaBtn::after {
+  .ctaLeftBtn::after {
+    width: 100px;
+  }
+  .ctaRightBtn::before {
     width: 100px;
   }
 
@@ -472,7 +482,9 @@
   .ctaTitleSpanCta {
     font-size: var(--font-size-h2);
   }
-
+  .ctaSpanIcon {
+    width: 50px;
+  }
   .ctaTextContainer {
     grid-template-columns: 1fr;
     gap: var(--space-sm);
@@ -483,12 +495,7 @@
     font-size: var(--font-size-base);
     margin-bottom: 1.5rem;
   }
-  .rightBtn::before,
-  .ctaBtn::after {
-    width: 100px;
-  }
 }
-
 /* SMALL: 481px - 736px */
 @media (min-width: 481px) and (max-width: 736px) {
   .services {
@@ -523,8 +530,11 @@
 
   .ctaTitleSpan {
     font-size: var(--font-size-h3);
+    letter-spacing: var(--letter-spacing-tight);
   }
-
+  .ctaIcon {
+    width: 50px;
+  }
   .servicesGrid {
     grid-template-columns: 1fr;
     gap: var(--space-xxs);
@@ -557,9 +567,11 @@
   }
 
   .ctaTitleSpanCta {
-    font-size: var(--font-size-h3);
+    font-size: var(--font-size-h5);
   }
-
+  .ctaSpanIcon {
+    width: 50px;
+  }
   .ctaTextContainer {
     grid-template-columns: 1fr;
     gap: var(--space-xs);
@@ -575,8 +587,18 @@
     padding: 0 1.75rem;
     font-size: 0.75rem;
   }
+  .ctaLeftBtn::after {
+    width: 75px;
+  }
+  .ctaRightBtn::before {
+    width: 75px;
+  }
 }
-
+/* @media (min-width: 361px) and (max-width: 600px) {
+  .ctaSpanIcon {
+    width: 35px;
+  }
+} */
 /* XSMALL: 361px - 480px */
 @media (min-width: 361px) and (max-width: 480px) {
   .services {
@@ -606,7 +628,9 @@
   }
 
   .ctaSectionTitle {
-    font-size: clamp(1.1rem, 2vw, 1.75rem);
+    /* font-size: clamp(1.1rem, 2vw, 1.75rem); */
+    font-size: var(--font-size-h4);
+    margin-bottom: 1rem;
   }
 
   .ctaTitleSpan {
@@ -615,7 +639,11 @@
   .ctaIcon {
     width: 50px;
   }
-
+  .leftBtnContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .servicesGrid {
     grid-template-columns: 1fr;
     gap: 0.5rem;
@@ -645,14 +673,17 @@
   }
 
   .ctaTitle {
-    font-size: clamp(1.1rem, 2vw, 1.75rem);
+    /* font-size: clamp(1.1rem, 2vw, 1.75rem); */
+    font-size: var(--font-size-h4);
     margin-bottom: var(--space-sm);
   }
 
   .ctaTitleSpanCta {
     font-size: var(--font-size-h4);
   }
-
+  .ctaSpanIcon {
+    width: 50px;
+  }
   .ctaTextContainer {
     grid-template-columns: 1fr;
     gap: 0.75rem;
