@@ -309,9 +309,8 @@
 .ctaIconBox:hover .ctaIcon {
   color: var(--color-secondary);
 }
-/* ============================================
-   RESPONSIVE BREAKPOINTS
-   ============================================ */
+
+/* RESPONSIVE  */
 
 /* LARGE: 981px - 1280px */
 @media (min-width: 981px) and (max-width: 1280px) {
