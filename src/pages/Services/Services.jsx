@@ -56,7 +56,11 @@ const Services = () => {
           <h3 className={styles.ctaSectionTitle}>
             Calitatea noastră vorbește prin{" "}
             <span className={styles.ctaTitleSpan}>rezultate</span>
-            <img src={svgExclamation} alt="Exclamation Alert" width={80} />
+            <img
+              src={svgExclamation}
+              alt="Exclamation Alert"
+              className={styles.ctaIcon}
+            />
           </h3>
           <button type="button" className={styles.ctaBtn}>
             Vezi proiectele noastre
@@ -73,14 +77,24 @@ const Services = () => {
             className={styles.pixelCardWrapper}
           >
             <div className={styles.serviceCard}>
-              <div className={styles.serviceIcon}>{iconMap[service.icon]}</div>
-              <h3 className={styles.serviceTitle}>{service.title}</h3>
-              <p className={styles.serviceDescription}>{service.description}</p>
+              <div className={styles.serviceContent}>
+                <div className={styles.serviceIcon}>
+                  {iconMap[service.icon]}
+                </div>
+                <h3 className={styles.serviceTitle}>{service.title}</h3>
+                <p className={styles.serviceDescription}>
+                  {service.description}
+                </p>
+              </div>
             </div>
           </PixelCard>
         ))}
       </div>
-
+      <div className={styles.rightBtnContainer}>
+        <button type="button" className={styles.rightBtn}>
+          Vezi proiectele noastre
+        </button>
+      </div>
       {/* cta section */}
       <div className={styles.cta}>
         <h3 className={styles.ctaTitle}>

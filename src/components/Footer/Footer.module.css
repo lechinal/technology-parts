@@ -7,6 +7,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+  align-items: stretch;
 }
 .brand {
   /* border-right: 2px solid red; */
@@ -15,9 +16,10 @@
   justify-content: center;
   align-items: center;
 }
-.about {
+
+.aboutText {
   font-family: var(--font-family-signature);
-  font-size: var(--font-size-h6);
+  font-size: var(--font-size-base);
   font-weight: var(--font-weight-semi);
   letter-spacing: var(--letter-spacing-wide);
   line-height: var(--line-height-loose);
@@ -29,6 +31,7 @@
 .ctaRow {
   display: flex;
   gap: 2rem;
+  margin-top: auto;
 }
 .ctaButton {
   font-family: var(--font-family-signature);
@@ -69,11 +72,6 @@
     gap: 1.25rem;
   }
 
-  .about {
-    font-size: var(--font-size-h5);
-    margin-bottom: 1.5rem;
-  }
-
   .ctaRow {
     gap: 1.5rem;
   }
@@ -100,11 +98,11 @@
     text-align: center;
   }
 
-  .about {
+  /* .aboutText {
     font-size: var(--font-size-base);
     margin-bottom: 1.25rem;
     max-width: 600px;
-  }
+  } */
 
   .ctaRow {
     gap: 1.25rem;
@@ -132,11 +130,11 @@
     text-align: center;
   }
 
-  .about {
+  /* .aboutText {
     font-size: var(--font-size-small);
     margin-bottom: 1rem;
     max-width: 100%;
-  }
+  } */
 
   .ctaRow {
     flex-direction: column;
@@ -168,10 +166,10 @@
     text-align: center;
   }
 
-  .about {
+  /* .aboutText {
     font-size: 0.85rem;
     margin-bottom: 1rem;
-  }
+  } */
 
   .ctaRow {
     flex-direction: column;
@@ -203,10 +201,10 @@
     text-align: center;
   }
 
-  .about {
+  /* .aboutText {
     font-size: 0.75rem;
     margin-bottom: 0.75rem;
-  }
+  } */
 
   .ctaRow {
     flex-direction: column;

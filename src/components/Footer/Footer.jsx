@@ -28,7 +28,7 @@ const Footer = () => {
             spinDuration={20}
             className="custom-class"
           />
-          <p className={styles.about}>
+          <p className={styles.aboutText}>
             Din 2017 oferim soluții complete de construcții: fundații, structuri
             și finisaje. Proiectare, consultanță și execuție la standard
             european.

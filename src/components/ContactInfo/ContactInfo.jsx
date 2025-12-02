@@ -41,7 +41,12 @@ const ContactInfo = () => {
           </a>
         </li>
       </ul>
+
       <div className={styles.ctaRow}>
+        <p className={styles.ctaRowText}>
+          Răspundem rapid la solicitări. Scrie-ne sau sună-ne pentru o
+          consultanță gratuită.
+        </p>
         <Link
           className={styles.ctaButton}
           href="/contact"
@@ -49,13 +54,6 @@ const ContactInfo = () => {
         >
           Contacteaza-ne
         </Link>
-        {/* <Link
-          className={styles.ctaButton}
-          href="/projects"
-          aria-label="Vezi proiecte"
-        >
-          Vezi harta
-        </Link> */}
       </div>
     </address>
   );

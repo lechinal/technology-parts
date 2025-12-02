@@ -66,7 +66,7 @@ const About = () => {
             <FaAward />
           </div>
           <div className={styles.benefitContent}>
-            <h4 className={styles.benefitTitle}>Lucrări de Înaltă Calitate</h4>
+            <h4 className={styles.benefitTitle}>Excelență Construită</h4>
             <p className={styles.benefitDescription}>
               Standarde germane aplicate în fiecare etapă.
             </p>
@@ -106,10 +106,14 @@ const About = () => {
             <FaHandshake className={styles.ctaHeaderIcon} />
             <h4 className={styles.ctaTitle}>
               Gata să-ți transformi viziunea <br /> în{" "}
-              <span className={styles.ctaTitleSpan}>
-                realitate
-                <img src={svgQMark} alt="Question Mark" width={80} />
-              </span>
+              <GradientText className={styles.ctaTitleSpan}>
+                Realitate
+              </GradientText>
+              <img
+                src={svgQMark}
+                alt="Question Mark"
+                className={styles.headerSVG}
+              />
             </h4>
             <p className={styles.ctaSlogan}>
               Cu <strong className={styles.highlight}>Technology Parts</strong>,

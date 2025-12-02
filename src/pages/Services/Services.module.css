@@ -85,6 +85,9 @@
   text-shadow: var(--shadow-card-secondary-dark);
   border-bottom: 3px dotted var(--color-accent);
 }
+.ctaIcon {
+  width: 80px;
+}
 .ctaBtn {
   font-size: var(--font-size-small);
   transition: var(--transition-base);
@@ -119,7 +122,7 @@
   height: 2px;
   background: var(--color-text);
   transform: translateY(-50%);
-  margin-left: var(--space-sm); /* Spațiu între buton și linie */
+  margin-left: var(--space-sm);
 }
 .ctaBtn:hover::after {
   background: var(--color-secondary-dark);
@@ -131,7 +134,7 @@
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   gap: var(--space-sm);
-  align-items: center;
+  align-items: stretch;
 
   max-width: 1200px;
   margin-left: auto;
@@ -158,6 +161,57 @@
   transition: transform var(--transition-base),
     box-shadow var(--transition-base), border-color var(--transition-base);
   box-shadow: var(--shadow-card-rest);
+
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-between;
+  text-align: center;
+}
+
+.rightBtnContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 3rem;
+  padding-right: 2rem;
+}
+
+.rightBtn {
+  font-size: var(--font-size-small);
+  transition: var(--transition-base);
+  padding: 0 2.5rem;
+  height: 48px;
+  border-radius: var(--border-radius);
+  border: solid var(--border-width) var(--color-text);
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--color-text);
+  position: relative;
+  white-space: nowrap;
+}
+
+.rightBtn:hover {
+  background: var(--color-secondary-dark);
+  border-color: var(--color-secondary-dark);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-secondary);
+}
+
+.rightBtn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  width: 200px;
+  height: 2px;
+  background: var(--color-text);
+  transform: translateY(-50%);
+  margin-right: var(--space-sm);
+}
+
+.rightBtn:hover::before {
+  background: var(--color-secondary-dark);
 }
 
 .serviceCard:hover .serviceIcon {
@@ -191,7 +245,24 @@
   text-shadow: var(--shadow-sm-light);
 }
 /* last cta section on Services */
-
+.serviceCardBtn {
+  font-size: var(--font-size-small);
+  transition: var(--transition-base);
+  padding: 0 2.5rem;
+  border-radius: var(--border-radius);
+  border: none;
+  border: solid var(--border-width) var(--color-text);
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--color-text);
+  transition: var(--transition-base);
+}
+.serviceCardBtn:hover {
+  background: var(--color-secondary-dark);
+  border-color: var(--color-secondary-dark);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-secondary);
+}
 .cta {
   text-align: center;
   background: transparent;
@@ -234,13 +305,6 @@
 
   text-align: center;
   transition: var(--transition-base);
-}
-
-@media screen and (max-width: 768px) {
-  .ctaTextContainer {
-    grid-template-columns: 1fr;
-    gap: var(--space-md);
-  }
 }
 
 .ctaText:hover {
@@ -372,6 +436,9 @@
   .ctaTitleSpan {
     font-size: var(--font-size-h2);
   }
+  .ctaIcon {
+    width: 50px;
+  }
 
   .ctaBtn::after {
     width: 100px;
@@ -416,6 +483,10 @@
     font-size: var(--font-size-base);
     margin-bottom: 1.5rem;
   }
+  .rightBtn::before,
+  .ctaBtn::after {
+    width: 100px;
+  }
 }
 
 /* SMALL: 481px - 736px */
@@ -443,7 +514,7 @@
   }
 
   .ctaSection {
-    gap: var(--space-xs);
+    gap: var(--space-sm);
   }
 
   .ctaSectionTitle {
@@ -452,15 +523,6 @@
 
   .ctaTitleSpan {
     font-size: var(--font-size-h3);
-  }
-
-  .ctaBtn {
-    padding: 0 2rem;
-    font-size: 0.75rem;
-  }
-
-  .ctaBtn::after {
-    display: none;
   }
 
   .servicesGrid {
@@ -550,14 +612,8 @@
   .ctaTitleSpan {
     font-size: var(--font-size-h4);
   }
-
-  .ctaBtn {
-    padding: 0 1.5rem;
-    font-size: 0.7rem;
-  }
-
-  .ctaBtn::after {
-    display: none;
+  .ctaIcon {
+    width: 50px;
   }
 
   .servicesGrid {
@@ -648,15 +704,6 @@
 
   .ctaTitleSpan {
     font-size: var(--font-size-h5);
-  }
-
-  .ctaBtn {
-    padding: 0 1rem;
-    font-size: 0.65rem;
-  }
-
-  .ctaBtn::after {
-    display: none;
   }
 
   .servicesGrid {
