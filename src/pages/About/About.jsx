@@ -19,7 +19,11 @@ const About = () => {
             Construim
           </GradientText>
           Viitorul, Cărămidă cu Cărămidă{" "}
-          <img src={svgExclamation} alt="Exlamation Alert" width={80} />
+          <img
+            src={svgExclamation}
+            alt="Exlamation Alert"
+            className={styles.headerSVG}
+          />
         </h2>
         <div className={styles.headerDescription}>
           <p className={styles.descriptionText}>

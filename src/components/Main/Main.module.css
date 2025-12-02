@@ -66,7 +66,7 @@
 .primaryBtn,
 .secondaryBtn {
   cursor: pointer;
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-base);
   transition: var(--transition-base);
 
   padding: 0 2.5rem;
@@ -144,31 +144,41 @@
   }
 
   .subtitle {
-    font-size: clamp(1.3rem, 1.5vw, 1.8rem);
+    font-size: clamp(1.5rem, 2.5vw, 2.8rem);
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    font-size: var(--font-size-base);
+    padding: 0 1.5rem;
   }
 }
 
 /* ---------- Tablet Portrait: 481px - 736px ---------- */
 @media screen and (min-width: 481px) and (max-width: 736px) {
-  .main {
+  /* .main {
     padding: 2.5rem 1rem;
-  }
+  } */
 
   .mainTitle {
     font-size: clamp(2.25rem, 2.5vw, 2.6rem);
   }
 
   .subtitle {
-    font-size: clamp(1rem, 1.3vw, 1.5rem);
-    /* margin-bottom: 1rem; */
+    font-size: clamp(1.25rem, 2vw, 2.5rem);
+  }
+  .primaryBtn,
+  .secondaryBtn {
+    font-size: var(--font-size-base);
+    padding: 0 1.25rem;
   }
 }
 
 /* ---------- Mobile: ≤480px ---------- */
 @media screen and (max-width: 480px) {
-  .main {
+  /* .main {
     padding: 1.5rem 1rem;
-  }
+  } */
 
   .hero {
     margin-bottom: 2rem;
@@ -192,21 +202,20 @@
 
   .primaryBtn,
   .secondaryBtn {
-    width: 100%;
-    padding: 0 1.5rem;
-    font-size: 0.8rem;
+    font-size: var(--font-size-base);
+    padding: 0 1.15rem;
   }
 }
 
 /* ---------- Mobile Small: ≤360px ---------- */
 @media screen and (max-width: 360px) {
   .mainTitle {
-    font-size: 1.75rem;
+    font-size: clamp(1.75rem, 2vw, 2.2rem);
     letter-spacing: 0.1rem;
   }
 
   .subtitle {
-    font-size: 0.95rem;
+    font-size: clamp(0.975rem, 1.3vw, 1.5rem);
   }
 
   .primaryBtn,
@@ -219,6 +228,10 @@
 /* ---------- Extra Small: ≤320px ---------- */
 @media screen and (max-width: 320px) {
   .mainTitle {
-    font-size: 1.5rem;
+    font-size: clamp(0.975rem, 1.75vw, 2rem);
+  }
+
+  .subtitle {
+    font-size: clamp(0.85rem, 0.975vw, 1.3rem);
   }
 }
