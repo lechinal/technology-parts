@@ -55,7 +55,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-body::before {
+html::before {
   content: "";
   position: fixed;
   inset: 0;
@@ -71,20 +71,28 @@ body::before {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  pointer-events: none;
 }
-@media (max-width: 768px) {
+@media (prefers-reduced-motion: reduce) {
+  html::before {
+    position: absolute; /* dezactivează efectul de parallax */
+  }
+}
+/* @media (max-width: 768px) {
   body::before {
     position: absolute;
     background-attachment: scroll;
     background-size: cover;
   }
-}
+} */
 /* Respectă prefers-reduced-motion */
-@media (prefers-reduced-motion: reduce) {
+/* @media (prefers-reduced-motion: reduce) {
   body::before {
-    position: absolute; /* elimină efectul de parallax */
+    position: fixed;
+    background-attachment: scroll;
   }
-}
+} */
 
 /* ==================== TYPOGRAPHY ==================== */
 h1 {
