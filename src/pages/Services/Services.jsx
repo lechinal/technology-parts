@@ -95,11 +95,7 @@ const Services = () => {
           </PixelCard>
         ))}
       </div>
-      {/* <div className={styles.rightBtnContainer}>
-        <button type="button" className={styles.ctaRightBtn}>
-          Vezi proiectele noastre
-        </button>
-      </div> */}
+
       {/* cta section */}
       <div className={styles.cta}>
         <h3 className={styles.ctaTitle}>

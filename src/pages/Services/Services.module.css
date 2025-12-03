@@ -333,13 +333,6 @@
     padding: var(--space-xs);
   }
 
-  .ctaLeftBtn::after {
-    width: 150px;
-  }
-  .ctaRightBtn::before {
-    width: 150px;
-  }
-
   .ctaTextContainer {
     gap: var(--space-md);
     margin-bottom: 3rem;
@@ -390,13 +383,6 @@
     width: 50px;
   }
 
-  .ctaLeftBtn::after {
-    width: 100px;
-  }
-  .ctaRightBtn::before {
-    width: 100px;
-  }
-
   .servicesGrid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-xs);
@@ -407,11 +393,11 @@
   }
 
   .serviceIcon {
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h3);
   }
 
   .serviceTitle {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-h5);
   }
 
   .serviceDescription {
@@ -493,11 +479,10 @@
   }
 
   .serviceIcon {
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h3);
   }
 
   .serviceTitle {
-    font-size: var(--font-size-base);
     margin-bottom: var(--space-xxs);
   }
 

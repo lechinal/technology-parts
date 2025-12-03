@@ -23,7 +23,7 @@
 
 /* ==================== HTML & BODY ==================== */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
@@ -59,6 +59,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
+  z-index: -1;
 
   /* inset:0 e echivalent cu:
   top: 0;
@@ -70,9 +71,15 @@ body::before {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  z-index: -1;
 }
-
+@media (max-width: 768px) {
+  body::before {
+    position: absolute;
+    background-attachment: scroll;
+    height: 100%;
+    width: 100%;
+  }
+}
 /* Respectă prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   body::before {
