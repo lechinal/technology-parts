@@ -38,7 +38,8 @@ body {
   color: var(--color-text);
 
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
+  height: 100lvh;
 
   /* Background Global */
   background-image: url("../src/assets/bg-images/tech-parts-bg-img-1.jpg");
@@ -47,53 +48,24 @@ body {
   background-position: center;
   background-attachment: fixed;
 
-  /* imaginea e mutata in pseudo-elemetul body::before pentru a putea 
-  aplica efectul de parallax  */
-
   /* Font smoothing */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
-html::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-
-  /* inset:0 e echivalent cu:
+/* inset:0 e echivalent cu:
   top: 0;
   left: 0;
   right: 0;
   bottom: 0; */
 
-  /* background-image: url("../src/assets/bg-images/tech-parts-bg-img-1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; */
-
-  pointer-events: none;
-}
+/* dezactivează efectul de parallax */
 @media (prefers-reduced-motion: reduce) {
   html::before {
-    position: absolute; /* dezactivează efectul de parallax */
+    position: absolute;
   }
 }
-/* @media (max-width: 768px) {
-  body::before {
-    position: absolute;
-    background-attachment: scroll;
-    background-size: cover;
-  }
-} */
-/* Respectă prefers-reduced-motion */
-/* @media (prefers-reduced-motion: reduce) {
-  body::before {
-    position: fixed;
-    background-attachment: scroll;
-  }
-} */
 
 /* ==================== TYPOGRAPHY ==================== */
 h1 {
@@ -162,7 +134,7 @@ button {
 
 /* ==================== LAYOUT ==================== */
 .app-wrapper {
-  min-height: 100vh;
+  min-height: 100lvh;
   display: flex;
   flex-direction: column;
 }
@@ -195,10 +167,14 @@ button {
     rgba(255, 255, 255, 0.3) 85%,
     rgba(255, 255, 255, 0.5) 120%
   );
-  backdrop-filter: blur(2px);
+  /* backdrop-filter: blur(2px); */
   pointer-events: none;
   z-index: 998;
   transition: opacity 0.5s ease;
+
+  will-change: transform;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 .scroll-fade-indicator.hidden {
