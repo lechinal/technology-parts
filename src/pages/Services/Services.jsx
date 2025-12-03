@@ -53,15 +53,18 @@ const Services = () => {
 
         {/* cta section */}
         <div className={styles.ctaSection}>
-          <h3 className={styles.ctaSectionTitle}>
+          <h2 className={styles.ctaSectionTitle}>
             Calitatea vorbește prin{" "}
-            <span className={styles.ctaTitleSpan}>rezultate</span>
+            <GradientText className={styles.ctaTitleSpan}>
+              rezultate
+            </GradientText>
+            {/* <span className={styles.ctaTitleSpan}>rezultate</span> */}
             <img
               src={svgExclamation}
               alt="Exclamation Alert"
               className={styles.ctaIcon}
             />
-          </h3>
+          </h2>
           <div className={styles.leftBtnContainer}>
             <button type="button" className={styles.ctaLeftBtn}>
               Vezi proiectele noastre
@@ -100,7 +103,10 @@ const Services = () => {
       {/* cta section */}
       <div className={styles.cta}>
         <h3 className={styles.ctaTitle}>
-          Ofertă <span className={styles.ctaTitleSpanCta}>Personalizată</span>
+          Ofertă{" "}
+          <GradientText className={styles.ctaTitleSpanCta}>
+            Personalizată
+          </GradientText>
           <img
             src={svgExclamation}
             alt="Exclamation Alert"

@@ -17,14 +17,14 @@
   font-size: clamp(1.9rem, 2.5vw, 3rem);
   font-weight: var(--font-weight-bold);
 
-  /* text-align: center; */
   text-shadow: var(--shadow-card-rest);
   text-align: left;
   text-transform: uppercase;
 
-  /* color: var(--color-text); */
   letter-spacing: var(--letter-spacing-wide);
   margin-bottom: var(--space-md);
+
+  text-align: center;
 }
 
 .descriptionContainer {
@@ -70,10 +70,17 @@
 
 .ctaSectionTitle {
   font-family: var(--font-family-signature);
-  font-size: clamp(1.9rem, 2.5vw, 3rem);
+  /* font-size: clamp(1.9rem, 2.5vw, 3rem); */
   color: var(--color-accent);
 
   width: fit-content;
+
+  text-align: center;
+  font-size: clamp(1.9rem, 4.5vw, 5rem);
+
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
 }
 
 .ctaTitleSpan {
@@ -83,10 +90,14 @@
   text-transform: uppercase;
   color: var(--color-secondary);
   text-shadow: var(--shadow-card-secondary-dark);
-  border-bottom: 3px dotted var(--color-accent);
 }
 .ctaIcon {
   width: 80px;
+}
+
+.leftBtnContainer {
+  display: flex;
+  justify-content: center;
 }
 .ctaLeftBtn {
   font-size: var(--font-size-small);
@@ -102,7 +113,7 @@
   background: transparent;
   color: var(--color-text);
 
-  align-self: flex-start;
+  /* align-self: flex-start; */
   position: relative;
 }
 
@@ -112,21 +123,6 @@
   transform: translateY(-3px);
   box-shadow: var(--shadow-card-secondary);
 }
-
-/* .ctaLeftBtn::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  width: 200px;
-  height: 2px;
-  background: var(--color-text);
-  transform: translateY(-50%);
-  margin-left: var(--space-sm);
-}
-.ctaLeftBtn:hover::after {
-  background: var(--color-secondary-dark);
-} */
 
 /* service cards grid */
 .servicesGrid {
@@ -142,6 +138,13 @@
   margin-bottom: var(--space-md);
 }
 
+.serviceContent {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1rem;
+  height: 100%;
+}
 .pixelCardWrapper {
   height: 300px;
   width: 100%;
@@ -168,51 +171,6 @@
   justify-content: space-between;
   text-align: center;
 }
-
-.rightBtnContainer {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-top: 3rem;
-  padding-right: 2rem;
-}
-
-.ctaRightBtn {
-  font-size: var(--font-size-small);
-  transition: var(--transition-base);
-  padding: 0 2.5rem;
-  height: 48px;
-  border-radius: var(--border-radius);
-  border: solid var(--border-width) var(--color-text);
-  text-transform: uppercase;
-  background: transparent;
-  color: var(--color-text);
-  position: relative;
-  white-space: nowrap;
-}
-
-.ctaRightBtn:hover {
-  background: var(--color-secondary-dark);
-  border-color: var(--color-secondary-dark);
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-card-secondary);
-}
-
-/* .ctaRightBtn::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 100%;
-  width: 200px;
-  height: 2px;
-  background: var(--color-text);
-  transform: translateY(-50%);
-  margin-right: var(--space-sm);
-}
-
-.ctaRightBtn:hover::before {
-  background: var(--color-secondary-dark);
-} */
 
 .serviceCard:hover .serviceIcon {
   color: var(--color-secondary);
@@ -245,35 +203,21 @@
   text-shadow: var(--shadow-sm-light);
 }
 /* last cta section on Services */
-.serviceCardBtn {
-  font-size: var(--font-size-small);
-  transition: var(--transition-base);
-  padding: 0 2.5rem;
-  border-radius: var(--border-radius);
-  border: none;
-  border: solid var(--border-width) var(--color-text);
-  text-transform: uppercase;
-  background: transparent;
-  color: var(--color-text);
-  transition: var(--transition-base);
-}
-.serviceCardBtn:hover {
-  background: var(--color-secondary-dark);
-  border-color: var(--color-secondary-dark);
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-card-secondary);
-}
 .cta {
   text-align: center;
   background: transparent;
   border-radius: var(--border-radius);
 }
 .ctaTitle {
+  margin-bottom: var(--space-md);
   font-family: var(--font-family-signature);
   font-size: clamp(1.9rem, 2.5vw, 3rem);
   color: var(--color-accent);
-  margin-bottom: var(--space-md);
-  text-align: left;
+  width: fit-content;
+  text-align: center;
+  font-size: clamp(1.9rem, 4.5vw, 5rem);
+  margin-top: 0.5rem;
+  width: 100%;
 }
 
 .ctaTitleSpanCta {
@@ -283,11 +227,10 @@
   text-transform: uppercase;
   color: var(--color-secondary);
   text-shadow: var(--shadow-card-secondary-dark);
-
-  border-bottom: 2px dotted var(--color-accent);
 }
 .ctaSpanIcon {
   width: 80px;
+  margin-top: 1rem;
 }
 .ctaTextContainer {
   display: grid;
