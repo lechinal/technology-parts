@@ -38,15 +38,16 @@ body {
   color: var(--color-text);
 
   width: 100%;
+  height: 100vh;
 
   /* Background Global */
-  /* background-image: url("../src/assets/bg-images/tech-parts-bg-img-1.jpg");
+  background-image: url("../src/assets/bg-images/tech-parts-bg-img-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed; 
-  
-  imaginea e mutata in pseudo-elemetul body::before pentru a putea 
+  background-attachment: fixed;
+
+  /* imaginea e mutata in pseudo-elemetul body::before pentru a putea 
   aplica efectul de parallax  */
 
   /* Font smoothing */
@@ -67,10 +68,10 @@ html::before {
   right: 0;
   bottom: 0; */
 
-  background-image: url("../src/assets/bg-images/tech-parts-bg-img-1.jpg");
+  /* background-image: url("../src/assets/bg-images/tech-parts-bg-img-1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center; */
 
   pointer-events: none;
 }
@@ -172,12 +173,12 @@ button {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-accent); /* ⚠️ Am schimbat de la --secondary */
+  background: var(--color-accent);
   border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-border-button); /* ⚠️ Am schimbat de la --primary */
+  background: var(--color-border-button);
 }
 
 /* ==================== SCROLL FADE INDICATOR ==================== */

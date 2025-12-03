@@ -587,17 +587,17 @@
   }
 
   .serviceIcon {
-    font-size: var(--font-size-h5);
-    margin-bottom: 0.25rem;
+    font-size: var(--font-size-h3);
+    /* margin-bottom: 0.25rem; */
   }
 
   .serviceTitle {
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-h5);
     margin-bottom: 0.5rem;
   }
 
   .serviceDescription {
-    font-size: 0.8rem;
+    font-size: var(--font-size-base);
   }
 
   .ctaTitle {
@@ -609,6 +609,7 @@
   .ctaTitleSpanCta {
     font-size: var(--font-size-h4);
   }
+
   .ctaSpanIcon {
     width: 50px;
   }
@@ -679,7 +680,7 @@
     padding: 0.4rem;
   }
 
-  .serviceIcon {
+  /* .serviceIcon {
     font-size: var(--font-size-h5);
     margin-bottom: 0.2rem;
   }
@@ -687,19 +688,19 @@
   .serviceTitle {
     font-size: var(--font-size-small);
     margin-bottom: 0.4rem;
-  }
+  } */
 
   .serviceDescription {
-    font-size: 0.7rem;
+    font-size: var(--font-size-base);
   }
 
   .ctaTitle {
-    font-size: 1rem;
+    font-size: var(--font-size-h4);
     margin-bottom: var(--space-xs);
   }
 
   .ctaTitleSpanCta {
-    font-size: var(--font-size-h5);
+    font-size: var(--font-size-h4);
   }
 
   .ctaTextContainer {
