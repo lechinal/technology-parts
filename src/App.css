@@ -160,11 +160,11 @@ button {
 }
 
 /* ==================== LAYOUT ==================== */
-/* .app-wrapper {
+.app-wrapper {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-} */
+}
 
 /* ==================== SCROLLBAR ==================== */
 ::-webkit-scrollbar {
