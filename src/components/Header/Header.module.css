@@ -8,4 +8,7 @@
   transition: transform var(--transition-article) ease-in-out,
     filter var(--transition-article) ease-in-out,
     opacity var(--transition-article) ease-in-out;
+
+  position: relative;
+  z-index: 10;
 }
