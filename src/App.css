@@ -76,8 +76,7 @@ body::before {
   body::before {
     position: absolute;
     background-attachment: scroll;
-    height: 100%;
-    width: 100%;
+    background-size: cover;
   }
 }
 /* Respectă prefers-reduced-motion */
