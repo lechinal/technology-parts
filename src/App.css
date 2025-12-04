@@ -62,7 +62,7 @@ body {
 
 /* dezactivează efectul de parallax */
 @media (prefers-reduced-motion: reduce) {
-  html::before {
+  body::before {
     position: absolute;
   }
 }
