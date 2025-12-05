@@ -58,7 +58,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -1; /* Sends it behind all content */
+  z-index: -1;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -69,8 +69,6 @@ body {
 @media (min-width: 1025px) {
   .background-element {
     background-image: url("../src/assets/bg-images/tech-parts-bg-img-desktop.jpg");
-    /* Poți adăuga aici și background-attachment: fixed; dacă vrei,
-       dar de obicei nu este necesar, deoarece elementul este deja fixed */
   }
 }
 @media (min-width: 1441px) {
