@@ -8,16 +8,24 @@
   color: var(--text-color);
 
   /* border-right: 2px solid red; */
+  margin-bottom: 2rem;
 }
-
+.titleContainer {
+  text-align: center;
+  margin-bottom: 1rem;
+}
 .sectionTitle {
   text-align: center;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 
   font-family: var(--font-family-secondary);
   font-size: var(--font-size-h4);
   font-weight: var(--font-weight-semi);
   line-height: var(--line-height-tight);
+
+  display: inline-block;
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
 }
 .contactList {
   display: grid;
@@ -67,20 +75,24 @@
 }
 .ctaButton {
   font-family: var(--font-family-signature);
-  /* font-weight: var(--font-weight-regular); */
-  color: var(--color-accent);
-  border: 2px solid var(--color-accent);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-border-button);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-wider);
+  border: 2px solid var(--color-border-button);
   border-radius: var(--border-radius);
   padding: 0.5rem 1rem;
   background: transparent;
   transition: var(--transition-base);
 
   width: fit-content;
+  height: var(--element-height);
 }
 .ctaButton:hover {
   background: transparent;
-  color: var(--color-text);
-  border-color: var(--color-text);
+  /* color: var(--color-text); */
+  border-color: var(--color-accent-dark);
   transform: translateY(-2px);
   box-shadow: 0 8px 15px rgba(243, 144, 77, 0.3);
 }

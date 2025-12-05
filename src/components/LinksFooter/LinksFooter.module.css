@@ -1,15 +1,24 @@
 /* Links */
 .links {
   /* border-right: 2px solid red; */
+  margin-bottom: 2rem;
+}
+.titleContainer {
+  text-align: center;
+  margin-bottom: 1rem;
 }
 .sectionTitle {
   text-align: center;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 
   font-family: var(--font-family-secondary);
   font-size: var(--font-size-h4);
   font-weight: var(--font-weight-semi);
   line-height: var(--line-height-tight);
+
+  display: inline-block;
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
 }
 
 .links ul {
@@ -34,4 +43,12 @@
 .links a:hover {
   color: var(--color-accent);
   transform: translateX(4px);
+}
+@media (max-width: 360px) {
+  .links {
+    margin-bottom: 2rem;
+  }
+  .links ul {
+    gap: 0.75rem;
+  }
 }

@@ -9,7 +9,9 @@ import { FaLocationDot } from "react-icons/fa6";
 const ContactInfo = () => {
   return (
     <address className={styles.contact}>
-      <h4 className={styles.sectionTitle}>Contact</h4>
+      <div className={styles.titleContainer}>
+        <h4 className={styles.sectionTitle}>Date de contact</h4>
+      </div>
       <ul className={styles.contactList}>
         <li className={styles.contactListLink}>
           <a href="tel:+40740123456">

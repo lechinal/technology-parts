@@ -5,7 +5,9 @@ import { NavLink } from "react-router-dom";
 const LinksFooter = () => {
   return (
     <nav className={styles.links} aria-label="Linkuri utile">
-      <h4 className={styles.sectionTitle}>Linkuri rapide</h4>
+      <div className={styles.titleContainer}>
+        <h4 className={styles.sectionTitle}>Linkuri rapide</h4>
+      </div>
       <ul>
         <li>
           <NavLink href="/about">Despre noi</NavLink>

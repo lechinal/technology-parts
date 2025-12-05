@@ -3,6 +3,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 *,
@@ -105,7 +109,7 @@ h1 {
 h2 {
   font-family: var(--font-family-primary);
   font-size: var(--font-size-h2);
-  font-weight: var(--font-weight-semi);
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   letter-spacing: var(--letter-spacing-normal);
 
@@ -149,6 +153,7 @@ button {
   cursor: pointer;
   font-family: var(--font-family-signature);
   font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
   line-height: var(--line-height-base);
   letter-spacing: var(--letter-spacing-wider);
   height: var(--element-height);
@@ -158,7 +163,7 @@ button {
 /* ==================== LAYOUT ==================== */
 
 .app-wrapper {
-  position: relative; /* Establishes a stacking context */
+  position: relative;
   z-index: 1;
   min-height: 100vh;
   display: flex;
@@ -193,7 +198,7 @@ button {
     rgba(255, 255, 255, 0.3) 85%,
     rgba(255, 255, 255, 0.5) 120%
   );
-  /* backdrop-filter: blur(2px); */
+  backdrop-filter: blur(2px);
   pointer-events: none;
   z-index: 998;
   transition: opacity 0.5s ease;

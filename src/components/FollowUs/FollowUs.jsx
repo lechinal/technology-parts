@@ -7,7 +7,9 @@ import { FaInstagram } from "react-icons/fa";
 const FollowUs = () => {
   return (
     <section className={styles.section}>
-      <h4 className={styles.sectionTitle}>Urmărește-ne</h4>
+      <div className={styles.titleContainer}>
+        <h4 className={styles.sectionTitle}>Urmărește-ne</h4>
+      </div>
       <ul className={styles.socialList}>
         <li>
           <a href="https://facebook.com" aria-label="Facebook">
