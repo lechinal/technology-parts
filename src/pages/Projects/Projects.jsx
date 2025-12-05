@@ -27,7 +27,8 @@ const Projects = () => {
             O privire detaliată asupra lucrărilor realizate de Technology Parts.
           </p>
         </header>
-
+        <NavigationButtons />
+        {/* <CloseButton /> */}
         {/* Butoanele de filtrare */}
         <div className={styles.categoryFilters}>
           {projectCategories.map((category) => (

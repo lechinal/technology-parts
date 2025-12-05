@@ -2,19 +2,23 @@
 import React from "react";
 import styles from "./Contact.module.css";
 import NavigationButtons from "../../components/NavigationButtons/NavigationButtons";
+import { useNavigate } from "react-router-dom";
 
-const Contact = ({ previewMode = false, closeModal }) => {
+const Contact = () => {
+  const navigate = useNavigate();
+  const handleGoHome = () => {
+    navigate("/");
+  };
+
   return (
-    <section
-      className={`${styles.contact} ${
-        previewMode ? styles.modalView : styles.pageView
-      }`}
-    >
-      <NavigationButtons closeModal={closeModal} />
+    <section className={styles.contact}>
+      <NavigationButtons />
       <div className={styles.inner}>
         <header className={styles.header}>
-          <h2>Contact</h2>
-          <p>Trimite-ne un mesaj sau contactează-ne direct.</p>
+          <h2 className={styles.headerTitle}>Contact</h2>
+          <p className={styles.headerText}>
+            Trimite-ne un mesaj sau contactează-ne direct.
+          </p>
         </header>
 
         <form className={styles.form}>
@@ -44,21 +48,20 @@ const Contact = ({ previewMode = false, closeModal }) => {
 
           <ul className={styles.actions}>
             <li>
-              <button type="submit" className={styles.submit}>
+              <button type="submit" className={styles.actionSubmit}>
                 Trimite
               </button>
             </li>
-            {previewMode && (
-              <li>
-                <button
-                  type="button"
-                  className={styles.submit}
-                  onClick={closeModal}
-                >
-                  Închide
-                </button>
-              </li>
-            )}
+
+            <li>
+              <button
+                type="button"
+                className={styles.actionGoHome}
+                onClick={handleGoHome}
+              >
+                Închide
+              </button>
+            </li>
           </ul>
         </form>
       </div>

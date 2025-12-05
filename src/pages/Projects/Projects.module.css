@@ -1,6 +1,7 @@
 .allProjects {
   padding: 4rem 2rem;
-  background-color: var(--color-bg);
+  /* background-color: var(--color-bg); */
+  background: transparent;
   color: var(--color-fg);
   text-align: center;
 
@@ -31,6 +32,7 @@
   justify-content: center;
   gap: 10px;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .categoryFilters button {
