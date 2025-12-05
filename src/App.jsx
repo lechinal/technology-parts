@@ -60,9 +60,8 @@ function App() {
     <BrowserRouter basename={isGithubPages ? "/technology-parts/" : "/"}>
       <ScrollToTop />
       <Suspense fallback={<Loader />}>
+        <div className="background-element"></div>
         <div className="app-wrapper">
-          {/* <div className="page-center"> */}
-
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
@@ -70,7 +69,6 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-          {/* </div> */}
 
           {/* EFECTUL DE FADE(scroll-fade-indicator) LA BAZA ECRANULUI */}
           <div
