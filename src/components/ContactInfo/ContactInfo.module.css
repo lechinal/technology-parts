@@ -86,13 +86,16 @@
   background: transparent;
   transition: var(--transition-base);
 
-  width: fit-content;
-  height: var(--element-height);
+  width: auto;
+  min-width: 120px;
+  text-align: center;
+  margin-top: 25px;
 }
 .ctaButton:hover {
   background: transparent;
   /* color: var(--color-text); */
   border-color: var(--color-accent-dark);
+  color: var(--color-accent);
   transform: translateY(-2px);
   box-shadow: 0 8px 15px rgba(243, 144, 77, 0.3);
 }

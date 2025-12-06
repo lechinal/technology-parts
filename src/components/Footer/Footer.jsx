@@ -9,19 +9,11 @@ import ContactInfo from "../ContactInfo/ContactInfo";
 import FollowUs from "../FollowUs/FollowUs";
 import RowBottomFooter from "../RowBottomFooter/RowBottomFooter";
 
-// import InfoBadge from "../InfoBadge/InfoBadge";
-// import LogoFooter from "../LogoFooter/LogoFooter";
-// import Map from "../../pages/Map/Map";
-// import WorkingHours from "../WorkingHours/WorkingHours";
-// import LegalInfo from "../LegalInfo/LegalInfo";
-
 const Footer = () => {
   return (
     <footer className={styles.footer} role="contentinfo">
-      {/* <div className={styles.inner}> */}
       <div className={styles.grid}>
         <div className={styles.brand}>
-          {/* <LogoFooter /> */}
           <CircularText
             text="TECHNOLOGY*PARTS*SOLUTII*SOLIDE*"
             onHover="speedUp"
@@ -39,14 +31,14 @@ const Footer = () => {
               href="/contact"
               aria-label="Cere o ofertă"
             >
-              Cere o ofertă
+              Ofertă
             </Link>
             <Link
               className={styles.ctaButton}
               href="/projects"
               aria-label="Vezi proiecte"
             >
-              Vezi proiecte
+              Proiecte
             </Link>
           </div>
         </div>
@@ -56,13 +48,8 @@ const Footer = () => {
         <ContactInfo />
 
         <FollowUs />
-
-        {/* <div className={styles.legalInfoSection}>
-          <LegalInfo className={styles.legalInfo} />
-        </div> */}
       </div>
       <RowBottomFooter className={styles.bottomRow} />
-      {/* </div> */}
     </footer>
   );
 };

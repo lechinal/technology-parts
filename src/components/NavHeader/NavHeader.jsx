@@ -29,7 +29,7 @@ const NavHeader = () => {
         {isOpen ? <IoMdClose /> : <GiHamburgerMenu />}
       </button>
 
-      {/* Lista — devine hidden pe mobil/tableta */}
+      {/* Lista — devine hidden pe mobil/tabletă */}
       <ul className={`${styles.navList} ${isOpen ? styles.open : ""}`}>
         <li>
           <button
@@ -61,7 +61,7 @@ const NavHeader = () => {
               setIsOpen(false);
             }}
           >
-            Proiecte
+            Projects
           </button>
         </li>
         <li>

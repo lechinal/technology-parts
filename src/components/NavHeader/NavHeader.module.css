@@ -101,25 +101,25 @@
     border: var(--border-width) solid var(--color-border-heavy);
     border-radius: var(--border-radius);
     background: transparent;
-    /* box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12); */
+    backdrop-filter: blur(12px);
+    overflow: hidden;
 
     /* ascundem fara overflow:hidden (folosim clip-path) */
     clip-path: inset(0 0 100% 0);
     opacity: 0;
     pointer-events: none;
 
-    /* animatii */
-    transition: clip-path 0.35s cubic-bezier(0.2, 0.9, 0.2, 1),
-      opacity 0.28s ease, transform 0.28s ease;
-    transform-origin: top right;
-    transform: translateY(-6px);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.2, 1),
+      opacity 0.28s ease, visibility 0s linear 0.35s;
   }
 
   /* cand meniul e deschis (aplica class .open pe ul) */
   .nav ul.open {
     clip-path: inset(0 0 0 0);
     opacity: 1;
-    transform: perspective(600px);
+    transform: scaleY(1);
     pointer-events: auto;
 
     width: 120px;
@@ -131,9 +131,8 @@
     /* background: rgba(20, 20, 20, 0.45); */
     background: transparent;
 
-    transition: clip-path 0.45s cubic-bezier(0.2, 0.9, 0.2, 1),
-      opacity 0.35s ease, transform 0.35s ease;
-    /* transition: var(--transition-base); */
+    transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.2, 1),
+      opacity 0.28s ease, visibility 0s linear 0.35s;
   }
   .nav ul.open li {
     border: none;

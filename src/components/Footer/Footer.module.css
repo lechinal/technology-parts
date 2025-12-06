@@ -47,12 +47,13 @@
   background: transparent;
   transition: var(--transition-base);
 
-  width: fit-content;
-  height: var(--element-height);
+  width: auto;
+  min-width: 120px;
+  text-align: center;
 }
 .ctaButton:hover {
   background: transparent;
-  /* color: var(--color-text); */
+  color: var(--color-accent);
   border-color: var(--color-accent-dark);
   transform: translateY(-2px);
   box-shadow: 0 8px 15px rgba(243, 144, 77, 0.3);
@@ -70,7 +71,6 @@
   .ctaButton {
     padding: 0.5rem 1rem;
     font-size: var(--font-size-small);
-    border: 2px solid red;
   }
 }
 
