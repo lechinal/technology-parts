@@ -194,32 +194,3 @@ button {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-border-button);
 }
-
-/* ==================== SCROLL FADE INDICATOR ==================== */
-.scroll-fade-indicator {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 150px;
-  background: linear-gradient(
-    to bottom,
-    transparent 0%,
-    rgba(255, 255, 255, 0.1) 45%,
-    rgba(255, 255, 255, 0.3) 85%,
-    rgba(255, 255, 255, 0.5) 120%
-  );
-  backdrop-filter: blur(2px);
-  pointer-events: none;
-  z-index: 998;
-  transition: opacity 0.5s ease;
-
-  will-change: transform;
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-}
-
-.scroll-fade-indicator.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
