@@ -33,9 +33,10 @@
 
 .socialListIcon {
   font-size: var(--font-size-h3);
-  color: var(--color-text);
+  color: var(--color-accent);
   transition: var(--transition-base);
 }
 .socialListIcon:hover {
-  color: var(--color-accent);
+  color: var(--color-secondary);
+  transform: scale(1.2);
 }

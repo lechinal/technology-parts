@@ -43,7 +43,7 @@
   letter-spacing: var(--letter-spacing-wider);
   border: 2px solid var(--color-border-button);
   border-radius: var(--border-radius);
-  padding: 1rem 1rem;
+  padding: 0.5rem 1rem;
   background: transparent;
   transition: var(--transition-base);
 

@@ -7,7 +7,12 @@ const LogoHeader = () => {
   return (
     <>
       <div className={styles.logo}>
-        <img src={logoWT} alt="logo without text" className={styles.icon} />
+        <img
+          src={logoWT}
+          alt="logo without text"
+          width={65}
+          className={styles.icon}
+        />
       </div>
       <div className={styles.content}>
         <div className={styles.inner}>

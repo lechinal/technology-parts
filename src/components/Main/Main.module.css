@@ -141,6 +141,7 @@
 @media screen and (min-width: 737px) and (max-width: 1280px) {
   .mainTitle {
     font-size: clamp(2.5rem, 3.5vw, 3.8rem);
+    padding-top: 2rem;
   }
 
   .subtitle {
@@ -162,6 +163,7 @@
 
   .mainTitle {
     font-size: clamp(2.25rem, 2.5vw, 2.6rem);
+    padding-top: 2rem;
   }
 
   .subtitle {
@@ -187,6 +189,7 @@
   .mainTitle {
     font-size: clamp(2rem, 2.3vw, 2.5rem);
     letter-spacing: 0.15rem;
+    padding-top: 2rem;
   }
 
   .subtitle {

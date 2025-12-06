@@ -1,16 +1,22 @@
 .nav {
   margin-top: 3rem;
   margin-right: 10px;
+  position: relative;
+  overflow: visible;
 }
 
+/* ======= MENU (desktop) ======= */
 .nav ul {
   display: flex;
   border: var(--border-width) solid var(--color-border-button);
   border-radius: var(--border-radius);
-  overflow: hidden;
   list-style: none;
   padding: 0;
   margin: 0;
+
+  overflow: visible;
+
+  transition: clip-path 0.35s ease, opacity 0.35s ease, padding 0.35s ease;
 }
 
 .nav li {
@@ -21,21 +27,18 @@
   border-left: 0;
 }
 
+/* butoanele link */
 .linkButton {
   display: block;
   min-width: 7.5rem;
   height: var(--element-height);
-
   line-height: var(--element-height);
   font-size: var(--font-size-small);
-
   color: var(--color-border-button);
-
   padding: 0 1.25rem;
   cursor: pointer;
   text-transform: uppercase;
   border: none;
-
   background: transparent;
   transition: background var(--transition-base);
 }
@@ -46,10 +49,140 @@
   opacity: 0.9;
 }
 
-/**
-* ! Media Queries
-*/
-/* Responsive Design */
+/* --- HAMBURGER Menu(ascuns pe desktop) --- */
+.hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 2.2rem;
+  cursor: pointer;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+/* --- RESPONSIVE */
+
+@media (max-width: 992px) {
+  .nav {
+    position: absolute;
+    top: 20px;
+    right: 26px;
+    margin: 0;
+    z-index: 9999;
+    overflow: visible;
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+    background: transparent;
+    border: none;
+    font-size: 2.2rem;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--color-border-button);
+    padding: 0.25rem;
+    margin: 0;
+  }
+
+  .nav ul {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 18px;
+    width: min(260px, 90vw);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    /* aspect */
+    border: var(--border-width) solid var(--color-border-heavy);
+    border-radius: var(--border-radius);
+    background: transparent;
+    /* box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12); */
+
+    /* ascundem fara overflow:hidden (folosim clip-path) */
+    clip-path: inset(0 0 100% 0);
+    opacity: 0;
+    pointer-events: none;
+
+    /* animatii */
+    transition: clip-path 0.35s cubic-bezier(0.2, 0.9, 0.2, 1),
+      opacity 0.28s ease, transform 0.28s ease;
+    transform-origin: top right;
+    transform: translateY(-6px);
+  }
+
+  /* cand meniul e deschis (aplica class .open pe ul) */
+  .nav ul.open {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+    transform: perspective(600px);
+    pointer-events: auto;
+
+    width: 120px;
+    padding: 0.5rem 0;
+    border-radius: 8px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    /* background: rgba(20, 20, 20, 0.45); */
+    background: transparent;
+
+    transition: clip-path 0.45s cubic-bezier(0.2, 0.9, 0.2, 1),
+      opacity 0.35s ease, transform 0.35s ease;
+    /* transition: var(--transition-base); */
+  }
+  .nav ul.open li {
+    border: none;
+    width: 100%;
+  }
+
+  .nav li {
+    /* alimina bordura verticala desktop */
+    border-left: 0 !important;
+    /* border-top: var(--border-width) solid var(--color-border-button); */
+    margin: 0;
+  }
+
+  .nav li:first-child {
+    border-top: none;
+  }
+
+  .linkButton {
+    display: block;
+    width: 100%;
+    height: var(--element-height);
+    line-height: var(--element-height);
+    font-size: var(--font-size-small);
+    color: var(--color-border-button);
+    padding: 0 1rem;
+    text-align: right;
+    text-transform: uppercase;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: background var(--transition-base);
+  }
+  .nav ul.open .linkButton {
+    width: 100%;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .linkButton:hover,
+  .nav li button:hover {
+    background-color: var(--color-border-hover);
+    opacity: 0.95;
+  }
+
+  .nav ul {
+    gap: 0;
+  }
+}
 
 @media (max-width: 1200px) {
   .nav ul {
@@ -57,43 +190,20 @@
   }
 }
 
-/*  Tablete landscape (max 992px) */
-@media (max-width: 992px) {
-  .nav ul {
-    flex-wrap: wrap;
-  }
-}
-
-/*  Tablete portrait (max 768px) */
 @media (max-width: 768px) {
   .nav ul {
-    flex-direction: column;
     gap: 0.5rem;
   }
-  .nav li {
-    border-left: 0;
-    border-top: var(--border-width) solid var(--color-border-button);
-  }
 }
 
-/* Telefoane mari (max 576px) */
 @media (max-width: 576px) {
   .nav ul {
-    flex-direction: column;
     gap: 0.3rem;
-  }
-  .nav li {
-    border-top: var(--border-width) solid var(--color-border-button);
-  }
-  .nav li:first-child {
-    border-top: 0;
   }
 }
 
-/* Telefoane mici (max 400px) */
 @media (max-width: 400px) {
   .nav ul {
-    flex-direction: column;
     gap: 0.2rem;
   }
 }
