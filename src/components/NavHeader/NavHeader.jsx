@@ -61,7 +61,7 @@ const NavHeader = () => {
               setIsOpen(false);
             }}
           >
-            Projects
+            Proiecte
           </button>
         </li>
         <li>

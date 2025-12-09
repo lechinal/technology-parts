@@ -8,6 +8,7 @@ import "./App.css";
 // import Loader from "./components/Loader/Loader.jsx";
 // import Modal from "./components/Modal/Modal";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
+import BackToTopButton from "./components/BackToTopButton/BackToTopButton.jsx";
 
 //! Lazy imports
 const Home = lazy(() => import("./pages/Home/Home"));
@@ -24,6 +25,7 @@ function App() {
   return (
     <BrowserRouter basename={isGithubPages ? "/technology-parts/" : "/"}>
       <ScrollToTop />
+      <BackToTopButton />
       <Suspense fallback={null}>
         <div className="background-element"></div>
         <div className="app-wrapper">

@@ -1,0 +1,169 @@
+.backToTop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 1000;
+
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+
+  color: var(--color-secondary-dark);
+  /* color: #f9f3e0; */
+
+  border: 2px solid var(--color-border);
+  background-color: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: var(--transition-base);
+
+  opacity: 0;
+  transform: translateY(30px);
+  visibility: hidden;
+
+  box-shadow: none;
+}
+
+.backToTop:hover {
+  color: #f9f3e0;
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+  transform: translateY(-4px);
+}
+
+.backToTop.visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.backToTop svg {
+  transition: transform var(--transition-base);
+}
+.backToTop:hover svg {
+  transform: scale(1.1) translateY(-2px);
+  transition: transform var(--transition-base);
+}
+
+/* Pe mobil puțin mai sus ca sa nu acopere footer-ul */
+
+/* LAPTOPURI (1024px - 1199px) */
+@media (max-width: 1199px) {
+  .backToTop {
+    bottom: 35px;
+    right: 35px;
+  }
+}
+
+/* TABLETA MARE (992px - 1023px) */
+@media (max-width: 1023px) {
+  .backToTop {
+    bottom: 30px;
+    right: 30px;
+    width: 54px;
+    height: 54px;
+  }
+}
+
+/* TABLETA (768px - 991px) */
+@media (max-width: 991px) {
+  .backToTop {
+    bottom: 25px;
+    right: 25px;
+    width: 52px;
+    height: 52px;
+  }
+}
+
+/* TABLETA MICA (576px - 767px) */
+@media (max-width: 767px) {
+  .backToTop {
+    bottom: 100px;
+    right: 22px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .backToTop:hover {
+    transform: translateY(-3px);
+  }
+}
+
+/* TELEFOANE MARI (480px - 575px) */
+@media (max-width: 575px) {
+  .backToTop {
+    bottom: 90px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    border-width: 1.5px;
+  }
+}
+
+/* TELEFOANE MEDII (400px - 479px) */
+@media (max-width: 479px) {
+  .backToTop {
+    bottom: 85px;
+    right: 18px;
+    width: 46px;
+    height: 46px;
+  }
+}
+
+/* TELEFOANE MICI (sub 400px) */
+@media (max-width: 399px) {
+  .backToTop {
+    bottom: 80px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* =============== EXTRAS PENTRU DISPOZITIVE SPECIFICE =============== */
+
+/* Pentru dispozitive cu touch (optional) */
+@media (hover: none) {
+  .backToTop:hover {
+    transform: translateY(0);
+    background-color: transparent;
+    color: var(--color-secondary-dark);
+    box-shadow: none;
+  }
+
+  .backToTop:active {
+    background-color: var(--color-accent-gold);
+    color: #f9f3e0;
+    transform: scale(0.95);
+  }
+}
+
+/* Pentru iPhone cu notch (safe area) */
+@supports (padding: max(0px)) {
+  @media (max-width: 767px) {
+    .backToTop {
+      bottom: max(100px, env(safe-area-inset-bottom, 100px));
+      right: max(22px, env(safe-area-inset-right, 22px));
+    }
+  }
+
+  @media (max-width: 399px) {
+    .backToTop {
+      bottom: max(80px, env(safe-area-inset-bottom, 80px));
+      right: max(16px, env(safe-area-inset-right, 16px));
+    }
+  }
+}
+
+/* Pentru orientare landscape pe mobil */
+@media (max-width: 767px) and (orientation: landscape) {
+  .backToTop {
+    bottom: 25px;
+    right: 20px;
+    width: 46px;
+    height: 46px;
+  }
+}

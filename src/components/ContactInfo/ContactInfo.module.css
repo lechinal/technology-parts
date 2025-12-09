@@ -49,7 +49,6 @@
   text-align: left;
 }
 
-.contactListLink:hover .contactListIcon,
 .contactListLink:hover a {
   color: var(--color-accent);
 }
@@ -62,6 +61,10 @@
 }
 .contactListIcon {
   font-size: var(--font-size-h3);
+  color: var(--color-accent);
+}
+.contactListLink:hover .contactListIcon {
+  color: var(--color-text);
 }
 
 .ctaRow {

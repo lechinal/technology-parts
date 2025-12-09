@@ -143,6 +143,7 @@
 @media (max-width: 768px) {
   .quote {
     min-height: 350px;
+    padding: 40px 20px;
   }
 
   .quote::before {
@@ -151,8 +152,8 @@
 
   .quote::after {
     font-size: 120px;
-    top: 40px;
-    left: 40px;
+    top: 20px;
+    left: 20px;
   }
 
   .quoteText {
@@ -160,9 +161,9 @@
   }
 
   .quoteText::before {
-    font-size: 100px;
-    bottom: 20px;
-    right: 40px;
+    font-size: 120px;
+    bottom: -37px;
+    right: 20px;
   }
 
   .quoteText p:first-child {
@@ -172,4 +173,7 @@
   .quoteText p {
     font-size: 16px;
   }
+}
+
+@media (max-width: 480px) {
 }

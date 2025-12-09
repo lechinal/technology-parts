@@ -72,12 +72,12 @@ const Stats = () => {
 
       <div className={styles.quote}>
         <p className={styles.quoteText}>
-          "Recomandările constante și un portofoliu de lucrări în continuă
+          Recomandările constante și un portofoliu de lucrări în continuă
           creștere au asigurat continuitatea activității noastre, motivându-ne
           să avansăm cu încredere către următoarea etapă în evoluția companiei{" "}
           <strong className={styles.highlight}>Technology Parts</strong>.
           Fiecare proiect finalizat este o carte de vizită care reflectă
-          dedicarea noastră pentru excelență și inovație."
+          dedicarea noastră pentru excelență și inovație.
         </p>
       </div>
     </section>

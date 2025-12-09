@@ -43,6 +43,7 @@
   --font-family-signature: "Rajdhani", sans-serif;
 
   /* --- FONT SIZES 1rem = 16px --- */
+  --font-size-vSmall: 0.85rem;
   --font-size-small: 0.875rem;
   --font-size-base: 1rem;
   --font-size-h5: 1.25rem;

@@ -15,21 +15,21 @@ const ContactInfo = () => {
       <ul className={styles.contactList}>
         <li className={styles.contactListLink}>
           <a href="tel:+40740123456">
-            <FaPhoneSquareAlt className={styles.contactListIcon} /> +40 740 123
-            456
+            <FaPhoneSquareAlt className={styles.contactListIcon} /> +40 747 662
+            877
           </a>
         </li>
         <li className={styles.contactListLink}>
           <a href="tel:+40740654321">
             {" "}
-            <FaPhoneSquareAlt className={styles.contactListIcon} /> +40 740 654
-            321
+            <FaPhoneSquareAlt className={styles.contactListIcon} /> +40 749 290
+            226
           </a>
         </li>
         <li className={styles.contactListLink}>
           <a href="mailto:office@technologyparts.ro">
             <MdEmail className={styles.contactListIcon} />
-            office@technologyparts.ro
+            technologyparts3@gmail.com
           </a>
         </li>
         <li className={styles.contactListLink}>
@@ -38,8 +38,8 @@ const ContactInfo = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaLocationDot className={styles.contactListIcon} /> Str.
-            Constructorilor 25, Alba Iulia
+            <FaLocationDot className={styles.contactListIcon} /> Str. Garda 2,
+            cartier Micesti, Alba Iulia
           </a>
         </li>
       </ul>
