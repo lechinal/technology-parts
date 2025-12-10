@@ -38,8 +38,8 @@ const ContactInfo = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaLocationDot className={styles.contactListIcon} /> Str. Garda 2,
-            cartier Micesti, Alba Iulia
+            <FaLocationDot className={styles.contactListIcon} /> Str. Garda 41,
+            Alba Iulia
           </a>
         </li>
       </ul>

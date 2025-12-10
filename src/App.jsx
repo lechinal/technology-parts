@@ -9,6 +9,8 @@ import "./App.css";
 // import Modal from "./components/Modal/Modal";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
 import BackToTopButton from "./components/BackToTopButton/BackToTopButton.jsx";
+import Header from "./components/Header/Header.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 //! Lazy imports
 const Home = lazy(() => import("./pages/Home/Home"));
@@ -29,6 +31,7 @@ function App() {
       <Suspense fallback={null}>
         <div className="background-element"></div>
         <div className="app-wrapper">
+          <Header />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
@@ -36,6 +39,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <Footer />
         </div>
       </Suspense>
     </BrowserRouter>

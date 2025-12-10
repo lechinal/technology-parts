@@ -1,111 +1,88 @@
 .mapOverlay {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  background: var(--color-bg-overlay);
-
-  border: 2px solid red;
+  width: 100%;
+  /* padding: 4rem 2rem; */
+  border: 2px solid yellowgreen;
 }
 
 .mapContainer {
-  /* background: var(--color-bg-alt); */
-  padding: 24px;
+  max-width: 1400px; /* Mărit de la 1200px */
+  margin: 0 auto;
   width: 100%;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-}
-
-.closeBtn {
-  align-self: flex-end;
-  background: none;
-  border: none;
-  color: var(--color-fg);
-  font-size: 1.5rem;
-  cursor: pointer;
+  /* padding: 2rem 1rem; */
 }
 
 .mapTitle {
-  font-weight: var(--font-weight-bold);
-  color: var(--color-logo);
-  margin-bottom: 16px;
-  font-size: 1.2rem;
   text-align: center;
+  /* margin-bottom: 2rem; */
+  font-family: var(--font-family-primary);
+  color: var(--color-text);
 }
 
-.mapPlaceholder {
-  text-align: center;
-  padding: 16px;
+.mapWrapper {
+  width: 100%;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  /* gap: 2rem; */
+}
+
+/* HARTA MAI LATĂ */
+.leafletMap {
+  height: 500px;
+  width: 100%;
+  border-radius: 8px;
+  z-index: 1;
+  position: relative;
+}
+
+.mapInfo {
+  padding: 2rem;
+  border-radius: var(--border-radius-lg);
+  flex: 0 0 400px; /* Lățime fixă pentru info */
+
   display: flex;
   flex-direction: column;
-  gap: 50px;
-}
-
-.mapIcon {
-  font-size: 3rem;
-  margin-bottom: 16px;
+  align-items: center;
 }
 
 .mapText {
-  font-family: var(--font-family-secondary);
-  color: var(--color-fg);
-  font-size: var(--font-size-h6);
-  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
 }
 
-.mapButton {
-  background: var(--color-logo);
-  color: var(--color-fg);
-  text-decoration: none;
-  padding: 8px 16px;
-  border-radius: var(--border-radius);
-  font-size: 0.875rem;
-  font-weight: var(--font-weight-bold);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  transition: all var(--transition-base) ease;
+.mapDetails p {
+  /* margin: 0.75rem 0; */
+  color: var(--color-text);
+  font-size: 1rem;
 }
 
-.mapButton:hover {
-  background: transparent;
-  color: var(--color-logo);
-  border: solid var(--border-width) var(--color-border);
-}
-
-/* Responsive pentru mobil */
-@media (max-width: 600px) {
-  .mapContainer {
-    padding: 16px;
+/* Desktop - harta ocupă mai mult spațiu */
+@media (min-width: 992px) {
+  .mapWrapper {
+    flex-direction: row;
+    align-items: stretch;
   }
 
-  .mapIcon {
-    font-size: 2.5rem;
+  .leafletMap {
+    flex: 3; /* 3 părți din 4 (75%) */
+    height: 600px !important; /* Mai înaltă pe desktop */
+    min-width: 0; /* Important pentru flex */
   }
 
-  .mapText {
-    font-size: 0.8rem;
-  }
-
-  .mapButton {
-    font-size: 0.8rem;
-    padding: 6px 12px;
+  .mapInfo {
+    flex: 1; /* 1 parte din 4 (25%) */
+    min-width: 300px;
   }
 }
-@media (max-width: 768px) {
-  .mapContainer {
-    padding: 1.5rem;
+
+/* Ecrane mari - harta și mai lată */
+@media (min-width: 1200px) {
+  .leafletMap {
+    flex: 4; /* 80% */
   }
 
-  .mapText {
-    font-size: 0.9rem;
-  }
-
-  .mapTitle {
-    font-size: 1.1rem;
+  .mapInfo {
+    flex: 1; /* 20% */
   }
 }
