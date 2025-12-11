@@ -1,8 +1,9 @@
 .leftContainer {
-  /* border: 2px solid blue; */
+  border-right: 2px solid var(--color-border);
   flex: 1;
   /*1.5rem 0.5rem in functie de stilizarea form va trebui sa refac paddingul*/
   padding: var(--card-padding);
+  height: 100%;
 }
 .leftContainerHeaderTitle {
   color: var(--color-accent);
