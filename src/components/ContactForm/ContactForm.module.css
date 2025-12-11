@@ -1,0 +1,124 @@
+.form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.field {
+  position: relative;
+  width: 100%;
+  padding-top: 1.5rem;
+}
+
+.field label {
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  font-size: 1rem;
+  color: var(--color-text-muted);
+
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 0.75rem 0;
+  font-size: 1rem;
+  color: var(--color-text);
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+/* Bottom line effect */
+.bottomLine {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-accent-dark);
+  transition: all 0.3s ease;
+}
+
+.field input:focus + label + .bottomLine,
+.field textarea:focus + label + .bottomLine,
+.field.hasValue .bottomLine {
+  background: var(--color-secondary-dark);
+  height: 3px;
+}
+
+/* Floating label effect */
+.field input:focus + label,
+.field textarea:focus + label,
+.field.hasValue label {
+  top: 0;
+  font-size: 0.85rem;
+  color: var(--color-secondary-dark);
+}
+
+/* Textarea specific */
+.field textarea {
+  min-height: 100px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-end;
+}
+
+.actionSubmit {
+  font-size: var(--font-size-base);
+  text-transform: uppercase;
+  background: var(--color-accent-dark);
+  color: var(--color-text);
+  border: solid var(--border-width) var(--color-accent-dark) #c87438;
+  border-radius: var(--border-radius);
+
+  padding: 0 2rem;
+
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+
+.actionSubmit:hover {
+  background: var(--color-accent-dark);
+
+  background: transparent;
+  color: var(--color-text);
+  border: solid var(--border-width) var(--color-text);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(243, 144, 77, 0.3);
+}
+
+.actionGoHome {
+  padding: 0.65rem 2rem;
+  background: transparent;
+  color: var(--color-text, #333);
+  border: 2px solid var(--color-border-button, #ccc);
+  border-radius: var(--border-radius, 4px);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.actionGoHome:hover {
+  border-color: var(--color-accent, #007bff);
+  color: var(--color-accent, #007bff);
+}

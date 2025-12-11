@@ -5,7 +5,18 @@
   box-sizing: border-box;
 }
 .headerContainer {
-  border: 2px solid green;
+  display: flex;
+  align-items: flex-start;
+}
+.headerTitle {
+  font-family: var(--font-family-primary);
+  font-size: clamp(1.9rem, 4.5vw, 5rem);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-normal);
+}
+.uppercaseText {
+  text-transform: uppercase;
 }
 .contentContainer {
   display: flex;
@@ -15,5 +26,5 @@
   text-align: center;
   gap: 2rem;
 
-  border: 3px solid red;
+  /* border: 3px solid red; */
 }

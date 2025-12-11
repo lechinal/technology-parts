@@ -145,6 +145,9 @@ p {
   /* line-height: var(--line-height-base); */
   margin: 0 0 1.25em 0;
 }
+strong {
+  font-family: var(--font-family-signature);
+}
 
 /* ==================== LISTS & LINKS ==================== */
 ul,

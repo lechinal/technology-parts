@@ -112,6 +112,10 @@
   --shadow-sm-light: 0 16px 48px rgba(255, 250, 250, 0.4);
 
   /* Gradient */
+  --gradient-blue: #ffffff, #a8e6f0, #4dd0e1, #3aa8b5, #ffffff;
+  --gradient-orange: #ffffff, #f9b07d, #f3904d, #e77d3c, #c87438, #f9b07d,
+    #ffffff;
+
   --gradient-1-1: #ffffff; /* Alb pur */
   --gradient-2: #a8e6f0; /* Albastru foarte deschis  */
   --gradient-3: #4dd0e1; /* Albastru deschis */

@@ -4,12 +4,15 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import styles from "./Map.module.css";
 
-// Fix pentru iconițe Leaflet
+// iconite Leaflet
 import icon from "leaflet/dist/images/marker-icon.png";
 import iconShadow from "leaflet/dist/images/marker-shadow.png";
 import iconRetina from "leaflet/dist/images/marker-icon-2x.png";
+import { FaPhoneSquareAlt } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
+import MapInfo from "../../components/MapInfo/MapInfo";
 
-// Configură iconița corect
+// Configura iconita corect
 const DefaultIcon = L.icon({
   iconUrl: icon,
   iconRetinaUrl: iconRetina,
@@ -36,7 +39,6 @@ const Map = () => {
             zoom={15}
             scrollWheelZoom={false}
             className={styles.leafletMap}
-            style={{ height: "400px", width: "100%" }}
           >
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -52,20 +54,7 @@ const Map = () => {
               </Popup>
             </Marker>
           </MapContainer>
-
-          <div className={styles.mapInfo}>
-            <p className={styles.mapText}>
-              Vizitați-ne la sediul nostru din Alba Iulia pentru consultații.
-            </p>
-            <div className={styles.mapDetails}>
-              <p>
-                <strong>Telefon:</strong> +40 740 125 456
-              </p>
-              <p>
-                <strong>Adresă:</strong> Str. Garda 22, Alba Iulia
-              </p>
-            </div>
-          </div>
+          <MapInfo />
         </div>
       </div>
     </div>

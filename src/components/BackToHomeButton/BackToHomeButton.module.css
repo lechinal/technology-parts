@@ -1,0 +1,157 @@
+.backToHome {
+  position: fixed;
+  left: 40px;
+  bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  background: transparent;
+  color: var(--color-secondary-dark);
+
+  border: 2px solid var(--color-border);
+  background-color: transparent;
+
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  z-index: 9999;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateX(-20px);
+  pointer-events: none;
+}
+
+.backToHome.visible {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.backToHome:hover {
+  transform: translateX(0) translateY(-4px);
+  padding-right: 1.5rem;
+
+  color: #f9f3e0;
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+  transform: translateY(-4px);
+}
+
+.buttonText {
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  max-width: 0;
+  overflow: hidden;
+  transition: max-width 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.backToHome:hover .buttonText {
+  max-width: 100px;
+  opacity: 1;
+}
+
+/* =============== MEDIA QUERIES    =============== */
+
+/* LAPTOPURI (1024px - 1199px) */
+@media (max-width: 1199px) {
+  .backToHome {
+    bottom: 35px;
+    left: 35px;
+  }
+}
+
+/* TABLETA MARE (992px - 1023px) */
+@media (max-width: 1023px) {
+  .backToHome {
+    bottom: 30px;
+    left: 30px;
+  }
+}
+
+/* TABLETA (768px - 991px) */
+@media (max-width: 991px) {
+  .backToHome {
+    bottom: 25px;
+    left: 25px;
+  }
+}
+
+/* TABLETA MICA (576px - 767px) */
+@media (max-width: 767px) {
+  .backToHome {
+    bottom: 100px;
+    left: 22px;
+  }
+
+  .backToHome:hover {
+    transform: translateX(0) translateY(-3px);
+  }
+}
+
+/* TELEFOANE MARI (480px - 575px) */
+@media (max-width: 575px) {
+  .backToHome {
+    bottom: 90px;
+    left: 20px;
+  }
+}
+
+/* TELEFOANE MEDII (400px - 479px) */
+@media (max-width: 479px) {
+  .backToHome {
+    bottom: 85px;
+    left: 18px;
+  }
+}
+
+/* TELEFOANE MICI (sub 400px) */
+@media (max-width: 399px) {
+  .backToHome {
+    bottom: 80px;
+    left: 16px;
+  }
+}
+
+/* Pentru orientare landscape pe mobil */
+@media (max-width: 767px) and (orientation: landscape) {
+  .backToHome {
+    bottom: 25px;
+    left: 20px;
+  }
+}
+
+/* Pentru iPhone cu notch (safe area) - ADAUGAT */
+@supports (padding: max(0px)) {
+  @media (max-width: 767px) {
+    .backToHome {
+      bottom: max(100px, env(safe-area-inset-bottom, 100px));
+      left: max(
+        22px,
+        env(safe-area-inset-left, 22px)
+      ); /* Schimbat de la right la left */
+    }
+  }
+
+  @media (max-width: 399px) {
+    .backToHome {
+      bottom: max(80px, env(safe-area-inset-bottom, 80px));
+      left: max(
+        16px,
+        env(safe-area-inset-left, 16px)
+      ); /* Schimbat de la right la left */
+    }
+  }
+}
+
+/* Responsive pentru text pe mobile - păstrează de la tine */
+@media (max-width: 768px) {
+  .buttonText {
+    display: none;
+  }
+
+  .backToHome:hover .buttonText {
+    display: none;
+  }
+}

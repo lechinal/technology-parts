@@ -4,9 +4,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./utils/variables.css";
 import "./App.css";
 
-// import Work from "./pages/Work/Work";
-// import Loader from "./components/Loader/Loader.jsx";
-// import Modal from "./components/Modal/Modal";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
 import BackToTopButton from "./components/BackToTopButton/BackToTopButton.jsx";
 import Header from "./components/Header/Header.jsx";
@@ -28,6 +25,7 @@ function App() {
     <BrowserRouter basename={isGithubPages ? "/technology-parts/" : "/"}>
       <ScrollToTop />
       <BackToTopButton />
+
       <Suspense fallback={null}>
         <div className="background-element"></div>
         <div className="app-wrapper">
