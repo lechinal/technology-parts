@@ -1,9 +1,7 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import styles from "./ContactForm.module.css";
 
 function ContactForm() {
-  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -22,10 +20,6 @@ function ContactForm() {
     e.preventDefault();
     // Handle form submission
     console.log(formData);
-  };
-
-  const handleGoHome = () => {
-    navigate("/");
   };
 
   return (
@@ -82,15 +76,6 @@ function ContactForm() {
         <li>
           <button type="submit" className={styles.actionSubmit}>
             Trimite
-          </button>
-        </li>
-        <li>
-          <button
-            type="button"
-            className={styles.actionGoHome}
-            onClick={handleGoHome}
-          >
-            Închide
           </button>
         </li>
       </ul>
