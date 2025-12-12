@@ -1,8 +1,18 @@
 .mapInfo {
   padding: 1.5rem;
-  border-radius: var(--border-radius-lg);
+
   text-align: center;
 }
+
+.mapDetails {
+  font-weight: var(--font-weight-bold);
+}
+.icon {
+  font-size: var(--font-size-h3);
+  color: var(--color-accent);
+  margin: 0 0.95rem;
+}
+
 @media (min-width: 768px) {
   .mapInfo {
     padding: 2rem;

@@ -14,20 +14,20 @@ const ContactInfo = () => {
       </div>
       <ul className={styles.contactList}>
         <li className={styles.contactListLink}>
-          <a href="tel:+40740123456">
+          <a href="tel:+40747662877">
             <FaPhoneSquareAlt className={styles.contactListIcon} /> +40 747 662
             877
           </a>
         </li>
         <li className={styles.contactListLink}>
-          <a href="tel:+40740654321">
+          <a href="tel:+40749290226">
             {" "}
             <FaPhoneSquareAlt className={styles.contactListIcon} /> +40 749 290
             226
           </a>
         </li>
         <li className={styles.contactListLink}>
-          <a href="mailto:office@technologyparts.ro">
+          <a href="mailto:technologyparts3@gmail.com">
             <MdEmail className={styles.contactListIcon} />
             technologyparts3@gmail.com
           </a>

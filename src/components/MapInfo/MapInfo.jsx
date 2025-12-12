@@ -12,7 +12,8 @@ function MapInfo() {
       </p>
       <div className={styles.mapDetails}>
         <p>
-          <FaLocationDot /> Str. Garda 41, Alba Iulia
+          <FaLocationDot className={styles.icon} /> Str. Garda 41, Alba Iulia,
+          510338
         </p>
       </div>
     </div>

@@ -16,9 +16,9 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   z-index: 9999;
-  transition: all 0.3s ease;
+  transition: var(--transition-base);
   opacity: 0;
-  transform: translateX(-20px);
+  /* transform: translateX(-20px); */
   pointer-events: none;
 }
 
@@ -29,7 +29,6 @@
 }
 
 .backToHome:hover {
-  transform: translateX(0) translateY(-4px);
   padding-right: 1.5rem;
 
   color: #f9f3e0;

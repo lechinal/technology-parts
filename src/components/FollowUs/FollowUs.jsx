@@ -22,7 +22,7 @@ const FollowUs = () => {
           </a>
         </li>
         <li>
-          <a href="https://tiktom.com" aria-label="TikTok">
+          <a href="https://tiktok.com" aria-label="TikTok">
             <FaTiktok className={styles.socialListIcon} />
           </a>
         </li>

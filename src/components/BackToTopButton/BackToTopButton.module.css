@@ -21,8 +21,8 @@
   cursor: pointer;
   transition: var(--transition-base);
 
-  opacity: 0;
-  transform: translateY(30px);
+  /* opacity: 0;
+  transform: translateY(30px); */
   visibility: hidden;
 
   box-shadow: none;
@@ -47,8 +47,6 @@
   transform: scale(1.1) translateY(-2px);
   transition: transform var(--transition-base);
 }
-
-/* Pe mobil puțin mai sus ca sa nu acopere footer-ul */
 
 /* LAPTOPURI (1024px - 1199px) */
 @media (max-width: 1199px) {

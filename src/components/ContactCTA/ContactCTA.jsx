@@ -1,3 +1,5 @@
+import ContactFAQ from "../ContactFAQ/ContactFAQ";
+import GradientText from "../GradientText/GradientText";
 import styles from "./ContactCTA.module.css";
 
 function ContactCTA() {
@@ -5,19 +7,14 @@ function ContactCTA() {
     <section className={styles.ctaContactSection}>
       <div className={styles.ctaLeftContactContainer}>
         <h1 className={styles.ctaLeftContainerTitle}>
-          cta Contact Section Title
+          <GradientText>Mai ai nelămuriri ?</GradientText>
         </h1>
-        <p className={styles.ctaLeftContainerText}>cta Contact Section Text</p>
+        <p className={styles.ctaLeftContainerText}>
+          Consultanța noastră gratuită este primul pas spre proiectul tău visat.
+          Contactează-ne pentru discuții detaliate și soluții personalizate.
+        </p>
       </div>
-      <div className={styles.ctaRightContactContainer}>
-        <h2 className={styles.ctaRightContainerTitle}>
-          cta Contact Right Title
-        </h2>
-        <p className={styles.ctaRightContainerText}>cta Right content text</p>
-        <p className={styles.ctaRightContainerText}>cta Right content text2</p>
-        <p className={styles.ctaRightContainerText}>cta Right content text3</p>
-        <p className={styles.ctaRightContainerText}>cta Right content text4</p>
-      </div>
+      <ContactFAQ />
     </section>
   );
 }

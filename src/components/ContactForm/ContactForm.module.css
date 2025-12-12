@@ -92,6 +92,7 @@
   border-radius: var(--border-radius);
 
   padding: 0 2rem;
+  margin-top: 0.95rem;
 
   cursor: pointer;
   transition: var(--transition-base);

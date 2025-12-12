@@ -1,12 +1,12 @@
 .rightContainer {
-  /* border: 2px solid yellow; */
   flex: 1;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   padding: var(--card-padding);
 }
 .rightContainer h2 {
   color: var(--color-accent);
-  /* padding-bottom: 1rem; */
 }
 .icon {
   font-size: var(--font-size-h3);
@@ -21,6 +21,13 @@
 .ctaText,
 .ctaNote {
   font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-bold);
+}
+
+.phoneLink,
+.visitUsText {
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-signature);
 }
 
 .phoneList,
@@ -33,6 +40,7 @@
   gap: 2rem;
   padding: 0.5rem 0;
 }
+
 .addressLines {
   display: flex;
   flex-direction: row;
@@ -56,10 +64,11 @@
   border: solid var(--border-width) var(--color-text);
   border-radius: var(--border-radius);
 
-  transform: translateY(-3px);
   transition: var(--transition-base);
 }
 .ctaButton:hover {
   background: var(--color-accent-dark);
   border-color: var(--color-accent-dark);
+  transform: translateY(-3px);
+  /* box-shadow: 0 10px 30px rgba(243, 144, 77, 0.3); */
 }

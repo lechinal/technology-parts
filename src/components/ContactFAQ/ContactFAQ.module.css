@@ -1,0 +1,40 @@
+.ctaRightContactContainer {
+  text-align: left;
+}
+
+.ctaRightContainerTitle {
+  font-size: 2rem;
+  font-size: clamp(1rem, 2.5vw, 3.5rem);
+  font-family: var(--font-family-signature);
+  color: var(--color-secondary);
+  text-align: center;
+  border-bottom: 2px solid var(--color-secondary);
+  display: inline-block;
+
+  margin-bottom: 2rem;
+}
+
+.faqItem {
+  padding: 1rem;
+  align-items: center;
+}
+
+.faqQuestion {
+  /* font-size: var(--font-size-h3); */
+  font-family: var(--font-family-signature);
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.faqAnswer {
+  font-size: var(--font-size-h5);
+  color: var(--color-text);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-bold);
+
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+.faqItem:hover .faqAnswer {
+  color: var(--color-secondary);
+}

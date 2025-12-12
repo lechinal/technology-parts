@@ -5,7 +5,7 @@
 }
 .titleContainer {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.75rem;
 }
 .sectionTitle {
   text-align: center;
@@ -32,7 +32,8 @@
 
 .links li {
   color: var(--color-text);
-  opacity: 0.95;
+  font-weight: var(--font-weight-medium);
+  /* opacity: 0.95; */
   text-decoration: none;
   transition: color var(--transition-base) ease,
     transform var(--transition-base) ease;

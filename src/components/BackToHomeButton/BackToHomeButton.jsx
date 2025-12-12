@@ -48,7 +48,7 @@ const BackToHomeButton = () => {
       className={`${styles.backToHome} ${isVisible ? styles.visible : ""}`}
       aria-label="Înapoi la pagina principală"
     >
-      <FaHome size={20} />
+      <FaHome size={24} />
       <span className={styles.buttonText}>Acasă</span>
     </button>
   );
