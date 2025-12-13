@@ -1,5 +1,6 @@
 import ContactFAQ from "../ContactFAQ/ContactFAQ";
 import GradientText from "../GradientText/GradientText";
+import ContactFinalCTA from "../ContactFinalCTA/ContactFinalCTA";
 import styles from "./ContactCTA.module.css";
 
 function ContactCTA() {
@@ -15,6 +16,8 @@ function ContactCTA() {
         </p>
       </div>
       <ContactFAQ />
+
+      <ContactFinalCTA />
     </section>
   );
 }

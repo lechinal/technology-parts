@@ -1,15 +1,12 @@
 import styles from "./ContactRightContainer.module.css";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneSquareAlt } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+
+import { CiFacebook } from "react-icons/ci";
+import { FaTiktok } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 
 function ContactRightContainer() {
-  const navigate = useNavigate();
-
-  const handleViewProjects = () => {
-    navigate("/projects");
-  };
-
   return (
     <div className={styles.rightContainer}>
       <div className={styles.callUs}>
@@ -36,33 +33,33 @@ function ContactRightContainer() {
         <p className={styles.visitUsSubtitle}>
           Programeaza o consultație la sediul nostru.
         </p>
+
         <div className={styles.locationInfo}>
           <FaLocationDot className={styles.icon} />
           <span className={styles.visitUsText}>
             Str. Garda 41, Alba Iulia, 510338
           </span>
         </div>
-        {/* <p className={styles.visitUsNote}>
-          Recomandăm programarea în prealabil pentru a vă asigura că un
-          specialist este disponibil să vă primească.
-        </p> */}
-      </div>
 
-      <div className={styles.ctaContainer}>
-        <h2 className={styles.ctaTitle}>Transformă-ți visul în realitate</h2>
-
-        <p className={styles.ctaText}>
-          De la planificare la finalizare, suntem partenerul tău de încredere în
-          construcții. Cu peste 7 ani de experiență și tehnologii moderne,
-          transformăm orice idee în proiect concret.
-        </p>
-        {/* <p className={styles.ctaNote}>
-          Vezi proiectele finalizate și inspiră-te pentru construcția ta.
-        </p> */}
-        <div className={styles.ctaButtonContainer}>
-          <button className={styles.ctaButton} onClick={handleViewProjects}>
-            Explorează portofoliul
-          </button>
+        <div className={styles.followUsContainer}>
+          <h2 className={styles.followUsTitle}>Urmărește-ne</h2>
+          <ul className={styles.socialList}>
+            <li>
+              <a href="https://facebook.com" aria-label="Facebook">
+                <CiFacebook className={styles.socialListIcon} />
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com" aria-label="Instagram">
+                <FaInstagram className={styles.socialListIcon} />
+              </a>
+            </li>
+            <li>
+              <a href="https://tiktok.com" aria-label="TikTok">
+                <FaTiktok className={styles.socialListIcon} />
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

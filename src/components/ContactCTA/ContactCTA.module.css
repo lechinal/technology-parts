@@ -2,6 +2,11 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "left ."
+    ". .";
+
   align-items: center;
   gap: 3rem;
   padding: 4rem 2rem;
@@ -9,7 +14,26 @@
   border-radius: 12px;
   margin-top: 3rem;
 }
+.ctaContactSection > :nth-child(1) {
+  /* Primul copil - left container */
+  grid-area: 1 / 1 / 2 / 2;
+  /* row-start / col-start / row-end / col-end */
+}
 
+.ctaContactSection > :nth-child(2) {
+  /* Al doilea copil - ContactFAQ */
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.ctaContactSection > :nth-child(3) {
+  /* Al treilea copil - ContactFinalCTA */
+  grid-area: 2 / 1 / 3 / 3;
+  /* Al doilea rând, ambele coloane */
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-top: 3rem;
+}
 .ctaLeftContactContainer {
   text-align: left;
 }
