@@ -23,6 +23,9 @@
   font-size: var(--font-size-h5);
   font-weight: var(--font-weight-bold);
   font-family: var(--font-family-signature);
+
+  letter-spacing: var(--letter-spacing-wide);
+  line-height: var(--line-height-base);
 }
 
 .phoneList,

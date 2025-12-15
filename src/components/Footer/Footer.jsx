@@ -28,14 +28,14 @@ const Footer = () => {
           <div className={styles.ctaRow}>
             <Link
               className={styles.ctaButton}
-              href="/contact"
+              to="/contact"
               aria-label="Cere o ofertă"
             >
               Ofertă
             </Link>
             <Link
               className={styles.ctaButton}
-              href="/projects"
+              to="/projects"
               aria-label="Vezi proiecte"
             >
               Proiecte

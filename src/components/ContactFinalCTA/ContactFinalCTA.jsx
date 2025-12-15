@@ -23,7 +23,9 @@ function ContactFinalCTA() {
         Vezi proiectele finalizate și inspiră-te pentru construcția ta.
       </p>
       <div className={styles.ctaButtonContainer}>
-        <button className={styles.ctaButton}>Explorează portofoliul</button>
+        <button className={styles.ctaButton} onClick={handleViewProjects}>
+          Explorează portofoliul
+        </button>
       </div>
     </div>
   );

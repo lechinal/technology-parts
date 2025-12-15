@@ -9,7 +9,8 @@ function ContactForm() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null); // 'success' sau 'error'
+  // 'success' sau 'error'
+  const [submitStatus, setSubmitStatus] = useState(null);
   const [submitMessage, setSubmitMessage] = useState("");
 
   const handleChange = (e) => {
@@ -32,13 +33,13 @@ function ContactForm() {
     const accessKey = import.meta.env.VITE_WEB3FORMS_KEY;
 
     //! Verific daca key-ul exista-pentru debugging)
-  if (!accessKey) {
-    console.error("Web3Forms access key is missing!");
-    setSubmitStatus("error");
-    setSubmitMessage("Eroare de configurare. Contactează administratorul.");
-    setIsSubmitting(false);
-    return;
-  }
+    if (!accessKey) {
+      console.error("Web3Forms access key is missing!");
+      setSubmitStatus("error");
+      setSubmitMessage("Eroare de configurare. Contactează administratorul.");
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
       const response = await fetch(formEndpoint, {
@@ -57,8 +58,6 @@ function ContactForm() {
           timestamp: new Date().toISOString(),
           page_url: window.location.href,
           from_name: "Technology Parts Website",
-          // Opțional: redirect după succes
-          // redirect: "https://web3forms.com/success",
         }),
       });
 
@@ -68,14 +67,14 @@ function ContactForm() {
         setSubmitStatus("success");
         setSubmitMessage("Mesajul tău a fost trimis cu succes!");
 
-        // Resetează formularul
+        // resetează formularul
         setFormData({
           name: "",
           email: "",
           message: "",
         });
 
-        // Ascunde mesajul după 5 secunde
+        // ascunde mesajul după 5 secunde
         setTimeout(() => {
           setSubmitStatus(null);
           setSubmitMessage("");

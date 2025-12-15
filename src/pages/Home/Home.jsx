@@ -8,7 +8,7 @@ import Stats from "../../components/Stats/Stats";
 
 const Home = () => {
   return (
-    <section className={styles.home}>
+    <section id="home" className={styles.home}>
       <Main />
       <About />
       <Services />

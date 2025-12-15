@@ -12,6 +12,9 @@
 .leftContainerHeaderText {
   font-size: var(--font-size-h5);
   font-weight: var(--font-weight-bold);
+
+  letter-spacing: var(--letter-spacing-wider);
+  line-height: var(--line-height-loose);
 }
 .highlight {
   color: var(--color-accent);

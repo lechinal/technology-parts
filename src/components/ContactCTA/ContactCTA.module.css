@@ -47,9 +47,12 @@
 
 .ctaLeftContainerText {
   font-size: var(--font-size-h5);
-  color: var(--color-text);
-  line-height: var(--line-height-base);
   font-weight: var(--font-weight-bold);
+
+  color: var(--color-text);
+  letter-spacing: var(--letter-spacing-wider);
+  line-height: var(--line-height-loose);
+  text-align: center;
 }
 
 /* Responsive */

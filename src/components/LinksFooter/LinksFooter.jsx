@@ -10,16 +10,19 @@ const LinksFooter = () => {
       </div>
       <ul>
         <li>
-          <NavLink href="/about">Despre noi</NavLink>
+          <NavLink to="/">Acasa</NavLink>
         </li>
         <li>
-          <NavLink href="/services">Servicii</NavLink>
+          <NavLink to="/#about">Despre noi</NavLink>
         </li>
         <li>
-          <NavLink href="/projects">Proiecte</NavLink>
+          <NavLink to="/#services">Servicii</NavLink>
         </li>
         <li>
-          <NavLink href="/contact">Contact</NavLink>
+          <NavLink to="/projects">Proiecte</NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact">Contact</NavLink>
         </li>
       </ul>
     </nav>

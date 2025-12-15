@@ -18,7 +18,7 @@ const Contact = () => {
         <h1 className={styles.headerTitle}>
           <GradientText>
             Solicită o consultanță{" "}
-            <span className={styles.uppercaseText}>gratuită</span>
+            <span className={styles.uppercaseText}>gratuită !</span>
           </GradientText>
         </h1>
       </div>
