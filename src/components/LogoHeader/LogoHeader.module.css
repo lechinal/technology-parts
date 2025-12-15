@@ -10,6 +10,8 @@
   align-items: center;
   margin-bottom: 3rem;
   margin-top: 1rem;
+
+  cursor: pointer;
 }
 
 .logo .icon {

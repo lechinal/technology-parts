@@ -28,7 +28,7 @@ const Footer = () => {
           <div className={styles.ctaRow}>
             <Link
               className={styles.ctaButton}
-              to="/contact"
+              to="/#contact"
               aria-label="Cere o ofertă"
             >
               Ofertă
