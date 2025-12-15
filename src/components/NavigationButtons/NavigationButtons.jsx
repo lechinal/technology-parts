@@ -11,7 +11,7 @@ const NavigationButtons = () => {
   return (
     <div type="button" className={styles.navButtons}>
       <button className={styles.button} onClick={goHome}>
-        Home
+        Acasa
       </button>
       <button type="button" className={styles.button} onClick={goBack}>
         Înapoi

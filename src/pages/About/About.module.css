@@ -128,15 +128,14 @@
   box-shadow: var(--shadow-card-secondary);
   border-color: var(--color-text);
   cursor: pointer;
-
-  perspective: 500px;
 }
 
 .benefitIcon {
   font-size: var(--font-size-h2);
   color: var(--color-secondary-dark);
-  margin-bottom: var(--space-xxs);
-  margin-top: var(--space-xxs);
+  /* margin-bottom: var(--space-xxs); */
+  /* margin-top: var(--space-xxs); */
+  padding: 1rem 0;
   text-shadow: var(--text-shadow-logo);
 
   transition: var(--transition-base);
@@ -162,11 +161,16 @@
   font-family: var(--font-family-primary);
   font-size: var(--font-size-h4);
   color: var(--color-logo);
-  margin-bottom: var(--space-xxs);
-  text-shadow: var(--text-shadow-subtle);
-  border-bottom: 2px dotted var(--color-text);
-}
 
+  margin-bottom: 0.05em;
+  margin-top: 0.05em;
+
+  text-shadow: var(--text-shadow-subtle);
+  border-bottom: 2px dotted var(--color-secondary);
+}
+.benefitCard:hover .benefitTitle {
+  border-bottom: 2px dotted var(--color-accent);
+}
 .benefitDescription {
   font-family: var(--font-family-signature);
   font-size: var(--font-size-h5);

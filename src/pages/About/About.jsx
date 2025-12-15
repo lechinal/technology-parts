@@ -66,7 +66,7 @@ const About = () => {
             <FaAward />
           </div>
           <div className={styles.benefitContent}>
-            <h4 className={styles.benefitTitle}>Excelență Construită</h4>
+            <h3 className={styles.benefitTitle}>Excelență Construită</h3>
             <p className={styles.benefitDescription}>
               Standarde germane aplicate în fiecare etapă.
             </p>
@@ -79,7 +79,7 @@ const About = () => {
             <FaLightbulb />
           </div>
           <div className={styles.benefitContent}>
-            <h4 className={styles.benefitTitle}>Soluții Inovatoare</h4>
+            <h3 className={styles.benefitTitle}>Soluții Inovatoare</h3>
             <p className={styles.benefitDescription}>
               Integrarea celor mai bune tehnici și materiale.
             </p>
@@ -92,7 +92,7 @@ const About = () => {
             <FaUsers />
           </div>
           <div className={styles.benefitContent}>
-            <h4 className={styles.benefitTitle}>Echipă Dedicată</h4>
+            <h3 className={styles.benefitTitle}>Echipă Dedicată</h3>
             <p className={styles.benefitDescription}>
               Suport tehnic și execuție profesionistă.
             </p>
