@@ -12,7 +12,6 @@ import GradientText from "../../components/GradientText/GradientText.jsx";
 const About = () => {
   return (
     <section id="about" className={styles.about}>
-      {/* <div className={styles.inner}> */}
       <header className={styles.header}>
         <h2 className={styles.headerTitle}>
           <GradientText className={styles.highlightAboutHeader}>
@@ -60,7 +59,6 @@ const About = () => {
       </section>
 
       <div className={styles.keyBenefitsGrid}>
-        {/* Cardul 1: Lucrări de Înaltă Calitate */}
         <div className={styles.benefitCard}>
           <div className={styles.benefitIcon}>
             <FaAward />
@@ -73,7 +71,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Cardul 2: Soluții Inovatoare */}
         <div className={styles.benefitCard}>
           <div className={styles.benefitIcon}>
             <FaLightbulb />
@@ -86,7 +83,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Cardul 3: Echipă Dedicată */}
         <div className={styles.benefitCard}>
           <div className={styles.benefitIcon}>
             <FaUsers />
@@ -102,7 +98,6 @@ const About = () => {
 
       <section className={styles.ctaContainer}>
         <div className={styles.ctaHeader}>
-          {/* <FaHandshake className={styles.ctaHeaderIcon} /> */}
           <h4 className={styles.ctaTitle}>
             Gata să-ți transformi viziunea în{" "}
             <GradientText className={styles.ctaTitleSpan}>
@@ -141,7 +136,6 @@ const About = () => {
           </div>
         </div>
       </section>
-      {/* </div> */}
     </section>
   );
 };

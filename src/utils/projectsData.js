@@ -343,10 +343,9 @@ export const projectData = [
   },
   {
     id: "ap-003",
-    title: "Pavaj și Alei - Casa Alba Iulia (Ionut)",
+    title: "Pavaj și Alei - Casa Alba Iulia",
     category: "Amenajari pavaje",
-    description:
-      "Amenajare completă pavaj exterior la Casa Ionuț din Alba Iulia.",
+    description: "Amenajare completă pavaj exterior din Alba Iulia.",
     images: [ap003_1, ap003_2],
   },
 

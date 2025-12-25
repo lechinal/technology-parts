@@ -48,7 +48,7 @@ const NavHeader = () => {
           block: "start",
         });
       }
-      // Setează hash în URL pentru bookmarking
+      // Setează hash in URL pentru bookmarking
       window.history.pushState(null, "", `#${sectionId}`);
     } else {
       // Navigăm la Home cu hash

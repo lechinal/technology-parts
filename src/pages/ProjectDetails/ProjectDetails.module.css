@@ -5,20 +5,27 @@
   text-align: center;
 }
 
-.projectDetails h1 {
+.projectDetailsTitle {
   margin-bottom: 1rem;
+  color: var(--color-secondary);
 }
 
-.projectDetails p {
+.projectDetailsText {
   margin-bottom: 2rem;
-  font-size: 1.1rem;
+  font-size: clamp(0.6rem, 0.9vw, 1.2rem);
+  font-family: var(--font-family-signature);
+  font-weight: var(--font-weight-medium);
+
+  font-style: italic;
+
+  color: var(--color-text);
 }
 
 .images {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .images img {
@@ -182,4 +189,41 @@
     opacity: 1;
     transform: scale(1);
   }
+}
+
+/* CTA Section */
+.ctaSection {
+  margin-top: 2.5rem;
+}
+.ctaTitle {
+  color: var(--color-accent);
+}
+
+.ctaSubtitle {
+  font-size: clamp(0.6rem, 0.9vw, 1.2rem);
+  font-family: var(--font-family-signature);
+  font-weight: var(--font-weight-medium);
+}
+
+.ctaButton {
+  margin-top: 2rem;
+  padding: 0.55rem 1.5rem;
+  text-transform: uppercase;
+
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--color-text);
+  background-color: transparent;
+  color: var(--color-text);
+
+  cursor: pointer;
+  transition: var(--transition-base);
+
+  font-family: var(--font-family-signature);
+  font-weight: var(--font-weight-bold);
+}
+
+.ctaButton:hover {
+  background-color: var(--color-secondary-dark);
+  border: var(--border-width) solid var(--color-secondary-dark);
+  transform: translateY(-2px);
 }

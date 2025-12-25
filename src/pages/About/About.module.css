@@ -143,7 +143,7 @@
 }
 
 .benefitCard:hover .benefitIcon {
-  color: var(--color-secondary);
+  color: var(--color-secondary-dark);
   /* transform: scale(1.3); */
   transform: scale(1.3) translateZ(20px);
 }
@@ -179,6 +179,9 @@
   color: var(--color-text);
 }
 
+.benefitCard:hover .benefitDescription {
+  color: var(--color-secondary-dark);
+}
 /* --- CTA Section --- */
 .ctaContainer {
   display: flex;

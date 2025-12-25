@@ -6,24 +6,20 @@
 }
 
 .button {
-  padding: 0.75rem 1.5rem;
+  padding: 0.65rem 1.5rem;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--color-border);
+  border: var(--border-width) solid var(--color-text);
   background-color: transparent;
-  color: var(--color-fg);
+  color: var(--color-text);
   cursor: pointer;
   transition: background-color var(--transition-base) ease;
-  font-family: var(--font-family);
+  font-family: var(--font-family-signature);
   font-weight: var(--font-weight-bold);
 }
 
 .button:hover {
-  background-color: var(--color-border-bg);
+  background-color: var(--color-accent-dark);
   transform: translateY(-2px);
-}
-
-.button i {
-  margin-right: 0.5rem;
 }
 
 @media (max-width: 768px) {

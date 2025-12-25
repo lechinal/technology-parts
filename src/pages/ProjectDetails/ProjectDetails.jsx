@@ -62,8 +62,8 @@ const ProjectDetails = () => {
   return (
     <section className={styles.projectDetails}>
       <NavigationButtons />
-      <h1>{project.title}</h1>
-      <p>{project.description}</p>
+      <h1 className={styles.projectDetailsTitle}>{project.title}</h1>
+      <p className={styles.projectDetailsText}>{project.description}</p>
 
       <div className={styles.images}>
         {project.images.map((img, index) => (
@@ -91,7 +91,8 @@ const ProjectDetails = () => {
               imageLoaded ? styles.show : ""
             }`}
             onLoad={() => setImageLoaded(true)}
-            onClick={(e) => e.stopPropagation()} // prevenim inchiderea la click pe imagine
+            // prevenim inchiderea la click pe imagine
+            onClick={(e) => e.stopPropagation()}
           />
 
           <button className={styles.arrowRight} onClick={showNextImage}>
@@ -102,6 +103,23 @@ const ProjectDetails = () => {
           </button>
         </div>
       )}
+      <section className={styles.ctaSection}>
+        <h2 className={styles.ctaTitle}>Începe-ți proiectul acum!</h2>
+        <p className={styles.ctaSubtitle}>
+          Sună sau trimite-ne mesaj și vom face o ofertă personalizată pentru
+          proiectul tău.
+        </p>
+        <button
+          className={styles.ctaButton}
+          onClick={() => {
+            // Poți adăuga logica pentru scroll la formular sau deschidere modal
+            window.location.href = "/contact#form";
+            // sau: window.open('/contact', '_blank');
+          }}
+        >
+          Cere o ofertă gratuită
+        </button>
+      </section>
     </section>
   );
 };

@@ -143,6 +143,11 @@
   .content .inner img {
     height: 3.2rem;
   }
+  .logo::after,
+  .content::after {
+    height: 3rem;
+    bottom: calc(-4rem - var(--border-width));
+  }
 }
 
 /* Telefoane mari (max 576px) */
@@ -155,11 +160,21 @@
   .content .inner img {
     height: 2.8rem;
   }
+  .logo::after,
+  .content::after {
+    height: 2.5rem;
+    bottom: calc(-3rem - var(--border-width));
+  }
 }
 
 /* Telefoane mici (max 400px) */
 @media (max-width: 400px) {
   .content .inner img {
     height: 2.5rem;
+  }
+  .logo::after,
+  .content::after {
+    height: 2.5rem;
+    bottom: calc(-2.5rem - var(--border-width));
   }
 }

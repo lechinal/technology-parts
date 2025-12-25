@@ -12,7 +12,7 @@ const Main = () => {
       <div className={styles.content}>
         <div className={styles.hero}>
           <h1 className={styles.mainTitle}>
-            TEHNOLOGIE. CONSTRUCȚII. PERFORMANȚĂ.
+            TEHNOLOGIE, CONSTRUCȚII, PERFORMANȚĂ.
           </h1>
           <h2 className={styles.subtitle}>
             De la fundație la finisaje, construim cu pasiune și expertiză

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { projectData, projectCategories } from "../../utils/projectsData.js";
 import NavigationButtons from "../../components/NavigationButtons/NavigationButtons";
 import styles from "./Projects.module.css";
+import GradientText from "../../components/GradientText/GradientText.jsx";
 // import CloseButton from "../../components/CloseButton/CloseButton.jsx";
 
 const Projects = () => {
@@ -21,13 +22,16 @@ const Projects = () => {
     <section className={styles.allProjects}>
       <div className={styles.container}>
         <header className={styles.header}>
-          <h1>Toate Proiectele</h1>
-          <p>
-            O privire detaliată asupra lucrărilor realizate de Technology Parts.
+          <h1 className={styles.headerTitle}>
+            <GradientText>Toate Proiectele</GradientText>
+          </h1>
+          <p className={styles.headerText}>
+            O privire detaliată asupra lucrărilor realizate de{" "}
+            <strong className={styles.highlight}>Technology Parts</strong>
           </p>
         </header>
         <NavigationButtons />
-        {/* <CloseButton /> */}
+
         {/* Butoanele de filtrare */}
         <div className={styles.categoryFilters}>
           {projectCategories.map((category) => (
