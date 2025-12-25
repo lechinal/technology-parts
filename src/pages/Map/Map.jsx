@@ -8,11 +8,12 @@ import styles from "./Map.module.css";
 import icon from "leaflet/dist/images/marker-icon.png";
 import iconShadow from "leaflet/dist/images/marker-shadow.png";
 import iconRetina from "leaflet/dist/images/marker-icon-2x.png";
-import { FaPhoneSquareAlt } from "react-icons/fa";
-import { FaLocationDot } from "react-icons/fa6";
+// import { FaPhoneSquareAlt } from "react-icons/fa";
+// import { FaLocationDot } from "react-icons/fa6";
 import MapInfo from "../../components/MapInfo/MapInfo";
+import GradientText from "../../components/GradientText/GradientText";
 
-// Configura iconita corect
+// Configuratie iconita
 const DefaultIcon = L.icon({
   iconUrl: icon,
   iconRetinaUrl: iconRetina,
@@ -31,7 +32,9 @@ const Map = () => {
   return (
     <div className={styles.mapOverlay}>
       <div className={styles.mapContainer}>
-        <h1 className={styles.mapTitle}>Locația Noastră</h1>
+        <h1 className={styles.mapTitle}>
+          <GradientText>Locația Noastră</GradientText>
+        </h1>
 
         <div className={styles.mapWrapper}>
           <MapContainer

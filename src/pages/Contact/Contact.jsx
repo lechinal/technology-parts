@@ -9,6 +9,7 @@ import Map from "../Map/Map";
 import GradientText from "../../components/GradientText/GradientText";
 import { FiHome } from "react-icons/fi";
 import BackToHomeButton from "../../components/BackToHomeButton/BackToHomeButton";
+import svgExclamation from "../../assets/svg/exclamation-alert.svg";
 
 const Contact = () => {
   return (
@@ -18,7 +19,14 @@ const Contact = () => {
         <h1 className={styles.headerTitle}>
           <GradientText>
             Solicită o consultanță{" "}
-            <span className={styles.uppercaseText}>gratuită !</span>
+            <span className={styles.uppercaseText}>
+              gratuită{" "}
+              <img
+                src={svgExclamation}
+                alt="Exlamation Alert"
+                className={styles.headerSVG}
+              />
+            </span>
           </GradientText>
         </h1>
       </div>

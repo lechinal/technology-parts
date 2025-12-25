@@ -7,13 +7,18 @@
 .headerContainer {
   display: flex;
   align-items: flex-start;
+  margin-bottom: 3rem;
 }
 .headerTitle {
   font-family: var(--font-family-primary);
   font-size: clamp(1.9rem, 4.5vw, 5rem);
+
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   letter-spacing: var(--letter-spacing-normal);
+}
+.headerSVG {
+  width: 100px;
 }
 .uppercaseText {
   text-transform: uppercase;
@@ -24,10 +29,96 @@
   flex-direction: row;
   align-items: flex-start;
 
-  text-align: center;
+  text-align: left;
   gap: 2rem;
 
   /* border: 3px solid red; */
 }
 
 /* --- Responsive --- */
+
+/* Tablete mari și desktop mici (737px - 1280px) */
+@media (min-width: 737px) and (max-width: 1280px) {
+  .contactSection {
+    padding: 3rem 1.5rem;
+  }
+
+  .headerTitle {
+    font-size: clamp(2.5rem, 2.5vw, 3.8rem);
+  }
+
+  .headerSVG {
+    width: 80px;
+  }
+  .contentContainer {
+    gap: 1.5rem;
+  }
+}
+
+/* Tablete mici și telefoane mari (481px - 736px) */
+@media (min-width: 481px) and (max-width: 736px) {
+  .contactSection {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .headerContainer {
+    margin-bottom: 2.5rem;
+  }
+
+  .headerTitle {
+    font-size: clamp(2.25rem, 2.5vw, 2.6rem);
+  }
+
+  .headerSVG {
+    width: 70px;
+  }
+  .contentContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 0; /* Eliminăm gap-ul deoarece avem margin-bottom pe componente */
+  }
+}
+
+/* Telefoane (sub 480px) */
+@media (max-width: 480px) {
+  .contactSection {
+    padding: 2rem 1rem;
+  }
+
+  .headerContainer {
+    margin-bottom: 2rem;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .headerTitle {
+    font-size: clamp(2rem, 2.3vw, 2.4rem);
+  }
+
+  .headerSVG {
+    width: 60px;
+    margin-left: 8px;
+  }
+  .contentContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    text-align: center;
+  }
+}
+
+/* Telefoane foarte mici (sub 360px) */
+@media (max-width: 360px) {
+  .contactSection {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .headerTitle {
+    font-size: clamp(1.8rem, 2vw, 2.2rem);
+  }
+
+  .headerSVG {
+    width: 50px;
+    margin-left: 5px;
+  }
+}

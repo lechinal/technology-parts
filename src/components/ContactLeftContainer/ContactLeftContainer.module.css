@@ -7,16 +7,98 @@
 }
 .leftContainerHeaderTitle {
   color: var(--color-accent);
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
 }
 
 .leftContainerHeaderText {
   font-size: var(--font-size-h5);
   font-weight: var(--font-weight-bold);
-
   letter-spacing: var(--letter-spacing-wider);
   line-height: var(--line-height-loose);
 }
 .highlight {
   color: var(--color-accent);
   font-weight: var(--font-weight-semi);
+}
+
+/* --- Responsive --- */
+/* Tablete mari și desktop mici (737px - 1280px) */
+@media (min-width: 737px) and (max-width: 1280px) {
+  .leftContainerHeaderTitle {
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  }
+
+  .leftContainerHeaderText {
+    font-size: calc(var(--font-size-h5) * 0.95);
+  }
+}
+
+/* Tablete mici și telefoane mari (481px - 736px) */
+@media (min-width: 481px) and (max-width: 736px) {
+  .leftContainer {
+    border-right: none; /* Înlăturăm bordura verticală pe mobil */
+    border-bottom: 2px solid var(--color-border); /* Adăugăm bordură orizontală */
+    padding-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .leftContainerHeaderTitle {
+    font-size: clamp(1.25rem, 2vw, 2rem);
+    margin-bottom: 1.25rem;
+  }
+
+  .leftContainerHeaderText {
+    font-size: calc(var(--font-size-h5) * 0.9);
+    letter-spacing: var(--letter-spacing-normal);
+    line-height: var(--line-height-normal);
+  }
+
+  .leftContainerForm {
+    margin-top: 1.5rem;
+  }
+}
+
+/* Telefoane (sub 480px) */
+@media (max-width: 480px) {
+  .leftContainer {
+    border-right: none;
+    border-bottom: 2px solid var(--color-border);
+    padding: var(--card-padding-mobile);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  .leftContainerHeaderTitle {
+    font-size: clamp(1rem, 1.3vw, 1.5rem);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .leftContainerHeaderText {
+    font-size: calc(var(--font-size-h5) * 0.85);
+    text-align: center;
+    letter-spacing: normal;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+
+  .leftContainerForm {
+    margin-top: 1rem;
+  }
+}
+
+/* Telefoane foarte mici (sub 360px) */
+@media (max-width: 360px) {
+  .leftContainer {
+    padding: 1rem 0.75rem;
+  }
+
+  .leftContainerHeaderTitle {
+    font-size: 1.1rem;
+  }
+
+  .leftContainerHeaderText {
+    font-size: 0.9rem;
+  }
 }

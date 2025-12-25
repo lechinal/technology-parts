@@ -5,8 +5,9 @@
   height: 100%;
   padding: var(--card-padding);
 }
-.rightContainer h2 {
+.callUsTitle {
   color: var(--color-accent);
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
 }
 .icon {
   font-size: var(--font-size-h3);
@@ -79,5 +80,182 @@
 }
 .socialListIcon {
   font-size: var(--font-size-h2);
-  color: var(--color-text);
+  color: var(--color-accent);
+}
+
+/* --- Responsive --- */
+/* Tablete mari și desktop mici (737px - 1280px) */
+@media (min-width: 737px) and (max-width: 1280px) {
+  .rightContainer {
+    padding: calc(var(--card-padding) * 0.9);
+    gap: 2rem;
+  }
+
+  .rightContainer h2 {
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  }
+
+  .phoneList,
+  .locationInfo {
+    gap: 1.5rem;
+  }
+
+  .socialList {
+    gap: 2.5rem;
+  }
+
+  .socialListIcon {
+    font-size: var(--font-size-h3);
+  }
+}
+
+/* Tablete mici și telefoane mari (481px - 736px) */
+@media (min-width: 481px) and (max-width: 736px) {
+  .rightContainer {
+    padding: var(--card-padding);
+    gap: 2rem;
+    width: 100%;
+    align-items: center; /* Centrare pe mobil */
+    text-align: center;
+  }
+
+  .rightContainer h2 {
+    font-size: clamp(1.25rem, 2vw, 2rem);
+    text-align: center;
+    width: 100%;
+  }
+
+  .callUs,
+  .visitUs {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .callUsNote,
+  .visitUsSubtitle {
+    text-align: center;
+  }
+
+  .phoneList,
+  .locationInfo {
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap; /* Pentru cazul în care numerele sunt prea lungi */
+  }
+
+  .phoneLink {
+    font-size: calc(var(--font-size-h5) * 0.95);
+  }
+
+  .socialList {
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .socialListIcon {
+    font-size: calc(var(--font-size-h2) * 0.85);
+  }
+
+  .ctaButton {
+    align-self: center;
+  }
+}
+
+/* Telefoane (sub 480px) */
+@media (max-width: 480px) {
+  .rightContainer {
+    padding: var(--card-padding-mobile, 1.5rem 1rem);
+    gap: 1.5rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .rightContainer h2 {
+    font-size: clamp(1rem, 1.3vw, 1.5rem);
+    text-align: center;
+    width: 100%;
+  }
+
+  .callUs,
+  .visitUs {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .callUsNote,
+  .visitUsSubtitle,
+  .visitUsText,
+  .phoneLink {
+    font-size: calc(var(--font-size-h5) * 0.85);
+    text-align: center;
+    letter-spacing: normal;
+  }
+
+  .phoneList,
+  .locationInfo {
+    flex-direction: column; /* Pe telefoane mici, stack vertical */
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+  }
+
+  .icon {
+    font-size: calc(var(--font-size-h3) * 0.9);
+  }
+
+  .phoneLink {
+    display: block;
+    margin: 0.25rem 0;
+  }
+
+  .socialList {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .socialListIcon {
+    font-size: calc(var(--font-size-h2) * 0.75);
+  }
+
+  .ctaButton {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+/* Telefoane foarte mici (sub 360px) */
+@media (max-width: 360px) {
+  .rightContainer {
+    padding: 1rem 0.75rem;
+    gap: 1rem;
+  }
+
+  .rightContainer h2 {
+    font-size: 1.1rem;
+  }
+
+  .callUsNote,
+  .visitUsSubtitle,
+  .visitUsText,
+  .phoneLink {
+    font-size: 0.85rem;
+  }
+
+  .phoneList,
+  .locationInfo {
+    gap: 0.5rem;
+  }
+
+  .socialList {
+    gap: 1rem;
+  }
+
+  .socialListIcon {
+    font-size: 1.5rem;
+  }
 }

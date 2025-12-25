@@ -39,3 +39,107 @@
 .faqItem:hover .faqAnswer {
   color: var(--color-secondary);
 }
+
+/* Responsive */
+/* Tablete mari și desktop mici (737px - 1280px) */
+@media (min-width: 737px) and (max-width: 1280px) {
+  .ctaRightContainerTitle {
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    margin-bottom: 1.75rem;
+  }
+
+  .faqItem {
+    padding: 0.875rem;
+  }
+
+  .faqQuestion {
+    font-size: var(--font-size-h4);
+    margin-bottom: 0.4rem;
+  }
+
+  .faqAnswer {
+    font-size: var(--font-size-h6);
+    letter-spacing: var(--letter-spacing-wide);
+    line-height: var(--line-height-normal);
+  }
+}
+
+/* Tablete mici și telefoane mari (481px - 736px) */
+@media (min-width: 481px) and (max-width: 736px) {
+  .ctaRightContactContainer {
+    text-align: center;
+  }
+
+  .ctaRightContainerTitle {
+    font-size: clamp(1.25rem, 2vw, 2rem);
+    margin-bottom: 1.5rem;
+    border-bottom-width: 1.5px;
+  }
+
+  .faqItem {
+    padding: 0.75rem;
+  }
+
+  .faqQuestion {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 0.4rem;
+  }
+
+  .faqAnswer {
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: var(--letter-spacing-normal);
+    line-height: 1.5;
+  }
+}
+
+/* Telefoane (sub 480px) */
+@media (max-width: 480px) {
+  .ctaRightContactContainer {
+    text-align: center;
+  }
+
+  .ctaRightContainerTitle {
+    font-size: clamp(1rem, 1.3vw, 1.5rem);
+    margin-bottom: 1.25rem;
+    border-bottom-width: 1px;
+  }
+
+  .faqItem {
+    padding: 0.6rem;
+  }
+
+  .faqQuestion {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 0.3rem;
+  }
+
+  .faqAnswer {
+    font-size: 0.9rem;
+    text-align: center;
+    letter-spacing: normal;
+    line-height: 1.4;
+  }
+}
+
+/* Telefoane foarte mici (sub 360px) */
+@media (max-width: 360px) {
+  .ctaRightContainerTitle {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .faqItem {
+    padding: 0.5rem;
+  }
+
+  .faqQuestion {
+    font-size: 1rem;
+  }
+
+  .faqAnswer {
+    font-size: 0.85rem;
+  }
+}
